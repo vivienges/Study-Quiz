@@ -31,8 +31,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ejP-zf-JUS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XZB-PV-LWn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XZB-PV-LWn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -138,14 +138,75 @@
                     <view key="view" contentMode="scaleToFill" id="rin-hx-fcn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z56-X4-k2H">
+                                <rect key="frame" x="16" y="766" width="382" height="80"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AdO-pN-zhj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="eYm-RO-oY5"/>
+                                </constraints>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBy-fE-3qd">
+                                <rect key="frame" x="16" y="670" width="382" height="80"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="9PX-tP-so2"/>
+                                    <constraint firstAttribute="height" constant="80" id="fdR-y0-vpX"/>
+                                </constraints>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-Gm-ZUJ">
+                                <rect key="frame" x="16" y="574" width="382" height="80"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Fnb-Lw-5wW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Ktp-Hq-dU4"/>
+                                </constraints>
+                                <state key="normal" title="B">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7b-3S-0ZI">
+                                <rect key="frame" x="16" y="478" width="382" height="80"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="JYy-jo-p4L"/>
+                                    <constraint firstAttribute="height" constant="80" id="utl-44-DYi"/>
+                                </constraints>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HBy-fE-3qd" firstAttribute="top" secondItem="JKc-Gm-ZUJ" secondAttribute="bottom" constant="16" id="9N9-ey-cTU"/>
+                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="R7b-3S-0ZI" secondAttribute="trailing" constant="16" id="DTu-7w-0Tn"/>
+                            <constraint firstItem="z56-X4-k2H" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="EWR-ZK-I1h"/>
+                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="JKc-Gm-ZUJ" secondAttribute="trailing" constant="16" id="GcF-sR-LkL"/>
+                            <constraint firstItem="JKc-Gm-ZUJ" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="NaU-tv-KKG"/>
+                            <constraint firstItem="z56-X4-k2H" firstAttribute="top" secondItem="HBy-fE-3qd" secondAttribute="bottom" constant="16" id="RIy-xf-oBw"/>
+                            <constraint firstItem="JKc-Gm-ZUJ" firstAttribute="top" secondItem="R7b-3S-0ZI" secondAttribute="bottom" constant="16" id="RhY-jN-Nng"/>
+                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="z56-X4-k2H" secondAttribute="trailing" constant="16" id="Uqp-J3-TK8"/>
+                            <constraint firstItem="R7b-3S-0ZI" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="Xaz-KG-Ldd"/>
+                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="HBy-fE-3qd" secondAttribute="trailing" constant="16" id="gHY-mR-vu0"/>
+                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="bottom" secondItem="z56-X4-k2H" secondAttribute="bottom" constant="16" id="r8q-J2-Cxv"/>
+                            <constraint firstItem="HBy-fE-3qd" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="rCn-IV-DXo"/>
+                            <constraint firstItem="z56-X4-k2H" firstAttribute="centerX" secondItem="rin-hx-fcn" secondAttribute="centerX" id="ybe-tV-XtD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uWJ-UY-D5u"/>
                     </view>
                     <navigationItem key="navigationItem" title="A question" id="c71-YE-JLs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsc-41-tz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3638" y="856"/>
+            <point key="canvasLocation" x="3637.68115942029" y="855.80357142857144"/>
         </scene>
     </scenes>
 </document>

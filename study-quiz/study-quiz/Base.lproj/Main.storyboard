@@ -22,11 +22,21 @@
                                     <segue destination="cTT-o7-az1" kind="show" id="tsQ-1q-xgd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKx-1j-gTN">
+                                <rect key="frame" x="149" y="550" width="116" height="30"/>
+                                <state key="normal" title="Go to some book"/>
+                                <connections>
+                                    <segue destination="XWm-Q7-TbB" kind="show" id="61j-b2-rhx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cKx-1j-gTN" firstAttribute="top" secondItem="R6v-n9-efs" secondAttribute="bottom" constant="87" id="O1R-ys-Q0b"/>
+                            <constraint firstItem="cKx-1j-gTN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="P6q-vG-cQW"/>
                             <constraint firstItem="R6v-n9-efs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bYT-DK-tOD"/>
                             <constraint firstItem="R6v-n9-efs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rRS-eu-F6I"/>
+                            <constraint firstItem="cKx-1j-gTN" firstAttribute="centerX" secondItem="R6v-n9-efs" secondAttribute="centerX" id="twR-Dt-whe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -111,11 +121,68 @@
         <!--A book-->
         <scene sceneID="fh8-vA-Pee">
             <objects>
-                <viewController id="XWm-Q7-TbB" sceneMemberID="viewController">
+                <viewController id="XWm-Q7-TbB" customClass="BookViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5lW-rW-K9v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-FD-JAy">
+                                <rect key="frame" x="16" y="766" width="382" height="80"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="WxD-aQ-5YT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="jqg-e6-a74"/>
+                                </constraints>
+                                <state key="normal" title="Quiz">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cTT-o7-az1" kind="show" id="liX-Xq-UZk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X59-jO-oxL">
+                                <rect key="frame" x="16" y="172" width="382" height="81.5"/>
+                                <string key="text">“Everything around you was architected by another person. Whether or not they were aware of what they were doing. Whether or not they did a good job.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-Fj-NJn">
+                                <rect key="frame" x="16" y="271.5" width="382" height="378.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9mg-Fj-NJn" secondAttribute="height" multiplier="1:1" id="Mux-kZ-KeS"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mje-fY-QrO">
+                                <rect key="frame" x="16" y="670" width="382" height="80"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="8Iz-iZ-evB"/>
+                                    <constraint firstAttribute="height" constant="80" id="l6t-iG-owi"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="lxZ-oM-o8N"/>
+                                </constraints>
+                                <state key="normal" title="Summary">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9mg-Fj-NJn" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="2lR-Ja-l3y"/>
+                            <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="9mg-Fj-NJn" secondAttribute="trailing" constant="16" id="4Yh-cw-9Sr"/>
+                            <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="mje-fY-QrO" secondAttribute="trailing" constant="16" id="7wX-Hn-Cnv"/>
+                            <constraint firstItem="xzg-FD-JAy" firstAttribute="top" secondItem="mje-fY-QrO" secondAttribute="bottom" constant="16" id="89N-z5-uVU"/>
+                            <constraint firstItem="X59-jO-oxL" firstAttribute="top" secondItem="5EB-bV-YkO" secondAttribute="top" constant="32" id="9vU-Mc-dNE"/>
+                            <constraint firstItem="xzg-FD-JAy" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="J2a-Zg-wGP"/>
+                            <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="X59-jO-oxL" secondAttribute="trailing" constant="16" id="JPL-RD-uer"/>
+                            <constraint firstItem="mje-fY-QrO" firstAttribute="centerX" secondItem="xzg-FD-JAy" secondAttribute="centerX" id="Pgu-b8-mtX"/>
+                            <constraint firstItem="5EB-bV-YkO" firstAttribute="bottom" secondItem="xzg-FD-JAy" secondAttribute="bottom" constant="16" id="RGX-I5-3MK"/>
+                            <constraint firstItem="X59-jO-oxL" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="SgM-nX-KRZ"/>
+                            <constraint firstItem="9mg-Fj-NJn" firstAttribute="top" secondItem="X59-jO-oxL" secondAttribute="bottom" constant="16" id="UOD-N6-z5t"/>
+                            <constraint firstItem="xzg-FD-JAy" firstAttribute="centerX" secondItem="5lW-rW-K9v" secondAttribute="centerX" id="Ycm-h8-qIb"/>
+                            <constraint firstItem="9mg-Fj-NJn" firstAttribute="centerX" secondItem="5lW-rW-K9v" secondAttribute="centerX" id="bEt-zd-ldi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5EB-bV-YkO"/>
                     </view>
                     <navigationItem key="navigationItem" title="A book" id="u0Z-fo-fKv"/>
@@ -126,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGH-Qc-PTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3639" y="138"/>
+            <point key="canvasLocation" x="3637.68115942029" y="137.94642857142856"/>
         </scene>
         <!--Your profile-->
         <scene sceneID="cL5-70-qMq">
@@ -243,7 +310,11 @@
             <point key="canvasLocation" x="2094" y="1120"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xjh-Xe-huf"/>
+        <segue reference="61j-b2-rhx"/>
     </inferredMetricsTieBreakers>
 </document>

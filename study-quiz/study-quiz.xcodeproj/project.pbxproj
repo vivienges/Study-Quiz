@@ -14,6 +14,8 @@
 		63CA15FA237EDF6F008DBC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CA15F9237EDF6F008DBC88 /* Assets.xcassets */; };
 		63CA15FD237EDF6F008DBC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CA15FB237EDF6F008DBC88 /* LaunchScreen.storyboard */; };
 		63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */; };
+		63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1606237F314D008DBC88 /* BookViewController.swift */; };
+		63CA1609237F33C2008DBC88 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1608237F33C2008DBC88 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		63CA15FC237EDF6F008DBC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63CA15FE237EDF6F008DBC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		63CA1606237F314D008DBC88 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		63CA1608237F33C2008DBC88 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
 				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
+				63CA1608237F33C2008DBC88 /* Book.swift */,
+				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				63CA15F9237EDF6F008DBC88 /* Assets.xcassets */,
 				63CA15FB237EDF6F008DBC88 /* LaunchScreen.storyboard */,
 				63CA15FE237EDF6F008DBC88 /* Info.plist */,
@@ -143,6 +149,8 @@
 			files = (
 				63CA15F5237EDF6B008DBC88 /* ViewController.swift in Sources */,
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
+				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
+				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
 				63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */,
 				63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */,
 			);

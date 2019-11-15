@@ -10,8 +10,25 @@ import UIKit
 
 class BookViewController: UIViewController {
 
+    
+    // UI Elements
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var bookDescription: UILabel!
+    
+    // Buttons
+    @IBOutlet weak var summaryBtn: UIButton!
+    @IBOutlet weak var startQuizBtn: UIButton!
+    
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let sampleBook: Book = Book()
+        
+        // Set data to book information
+        navigationBar.title = sampleBook.title
 
     }
     

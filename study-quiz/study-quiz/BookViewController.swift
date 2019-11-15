@@ -29,6 +29,7 @@ class BookViewController: UIViewController {
         
         // Set data to book information
         navigationBar.title = sampleBook.title
+        bookDescription.text = sampleBook.description
 
     }
     

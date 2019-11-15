@@ -13,6 +13,7 @@
 		63CA15F8237EDF6B008DBC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CA15F6237EDF6B008DBC88 /* Main.storyboard */; };
 		63CA15FA237EDF6F008DBC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CA15F9237EDF6F008DBC88 /* Assets.xcassets */; };
 		63CA15FD237EDF6F008DBC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CA15FB237EDF6F008DBC88 /* LaunchScreen.storyboard */; };
+		63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		63CA15F9237EDF6F008DBC88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63CA15FC237EDF6F008DBC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63CA15FE237EDF6F008DBC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */,
 				63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */,
+				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
 				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
 				63CA15F9237EDF6F008DBC88 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				63CA15F5237EDF6B008DBC88 /* ViewController.swift in Sources */,
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
+				63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */,
 				63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

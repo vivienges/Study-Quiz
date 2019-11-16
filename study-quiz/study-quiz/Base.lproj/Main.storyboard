@@ -22,11 +22,51 @@
                                     <segue destination="XWm-Q7-TbB" kind="show" id="8YW-3U-H1n"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-ns-fOg">
+                                <rect key="frame" x="8" y="96" width="398" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dha-yU-a2a">
+                                <rect key="frame" x="8" y="153" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-bf-stk">
+                                <rect key="frame" x="8" y="190" width="398" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4vL-9I-RrA"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fla-Tp-VCt">
+                                <rect key="frame" x="8" y="246" width="398" height="80"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JgH-cQ-JMC"/>
+                                </constraints>
+                                <state key="normal" title="Quiz on course content">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="xy7-ns-fOg" firstAttribute="top" secondItem="Lh2-zZ-NDJ" secondAttribute="top" constant="8" id="0uy-vB-aQN"/>
+                            <constraint firstItem="xy7-ns-fOg" firstAttribute="leading" secondItem="Lh2-zZ-NDJ" secondAttribute="leading" constant="8" id="JR7-kp-6rE"/>
+                            <constraint firstItem="Lh2-zZ-NDJ" firstAttribute="trailing" secondItem="Dha-yU-a2a" secondAttribute="trailing" constant="8" id="JvM-KA-iaQ"/>
                             <constraint firstItem="Srz-FW-oUU" firstAttribute="centerY" secondItem="RBR-s5-vca" secondAttribute="centerY" id="LqX-2g-jBE"/>
                             <constraint firstItem="Srz-FW-oUU" firstAttribute="centerX" secondItem="RBR-s5-vca" secondAttribute="centerX" id="UiI-GN-UdM"/>
+                            <constraint firstItem="Dha-yU-a2a" firstAttribute="leading" secondItem="Lh2-zZ-NDJ" secondAttribute="leading" constant="8" id="UpL-ge-Chm"/>
+                            <constraint firstItem="Lh2-zZ-NDJ" firstAttribute="trailing" secondItem="Zrg-bf-stk" secondAttribute="trailing" constant="8" id="UsT-6T-1YW"/>
+                            <constraint firstItem="Zrg-bf-stk" firstAttribute="top" secondItem="Dha-yU-a2a" secondAttribute="bottom" constant="16" id="gRr-4g-bOS"/>
+                            <constraint firstItem="Dha-yU-a2a" firstAttribute="top" secondItem="xy7-ns-fOg" secondAttribute="bottom" constant="16" id="i3S-Db-RTo"/>
+                            <constraint firstItem="fla-Tp-VCt" firstAttribute="leading" secondItem="Lh2-zZ-NDJ" secondAttribute="leading" constant="8" id="jp0-T4-HCv"/>
+                            <constraint firstItem="Zrg-bf-stk" firstAttribute="leading" secondItem="Lh2-zZ-NDJ" secondAttribute="leading" constant="8" id="nTE-9l-Vcp"/>
+                            <constraint firstItem="fla-Tp-VCt" firstAttribute="top" secondItem="Zrg-bf-stk" secondAttribute="bottom" constant="16" id="uRv-qd-81K"/>
+                            <constraint firstAttribute="trailing" secondItem="xy7-ns-fOg" secondAttribute="trailing" constant="8" id="ytE-1q-FzQ"/>
+                            <constraint firstItem="Lh2-zZ-NDJ" firstAttribute="trailing" secondItem="fla-Tp-VCt" secondAttribute="trailing" constant="8" id="zpx-x8-OpX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lh2-zZ-NDJ"/>
                     </view>
@@ -34,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHH-TJ-6Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3513" y="-889"/>
+            <point key="canvasLocation" x="3511.594202898551" y="-889.28571428571422"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ict-os-oty">

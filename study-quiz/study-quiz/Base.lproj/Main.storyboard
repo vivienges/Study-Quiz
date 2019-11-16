@@ -196,6 +196,7 @@
                     <navigationItem key="navigationItem" title="A book" id="u0Z-fo-fKv"/>
                     <connections>
                         <outlet property="bookDescription" destination="X59-jO-oxL" id="DLH-RF-SSD"/>
+                        <outlet property="bookReleaseYear" destination="4fa-ie-3Kc" id="vC2-fg-hA7"/>
                         <outlet property="coverImage" destination="9mg-Fj-NJn" id="XUf-hK-btI"/>
                         <outlet property="navigationBar" destination="u0Z-fo-fKv" id="ZTO-la-c67"/>
                         <outlet property="startQuizBtn" destination="xzg-FD-JAy" id="Ure-dY-0JP"/>

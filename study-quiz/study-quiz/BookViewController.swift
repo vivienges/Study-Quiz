@@ -14,6 +14,7 @@ class BookViewController: UIViewController {
     // UI Elements
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var bookDescription: UILabel!
+    @IBOutlet weak var bookReleaseYear: UILabel!
     
     // Buttons
     @IBOutlet weak var summaryBtn: UIButton!
@@ -30,6 +31,7 @@ class BookViewController: UIViewController {
         // Set data to book information
         navigationBar.title = sampleBook.title
         bookDescription.text = sampleBook.description
+        bookReleaseYear.text = "\(sampleBook.releaseYear)"
 
     }
     

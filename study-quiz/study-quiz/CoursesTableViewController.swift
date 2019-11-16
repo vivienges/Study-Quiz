@@ -13,6 +13,7 @@ class myTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,10 +31,10 @@ class CoursesTableViewController: UITableViewController {
     
     var courses: [Course] = [
     
-        Course(title: "Course 1", teacher: "Teacher 1", description: "Lorem Ipsum", courseTitleImageName: "none"),
-        Course(title: "Course 2", teacher: "Teacher 2", description: "Lorem Ipsum", courseTitleImageName: "none"),
-        Course(title: "Course 3", teacher: "Teacher 3", description: "Lorem Ipsum", courseTitleImageName: "none"),
-        Course(title: "Course 4", teacher: "Teacher 4", description: "Lorem Ipsum", courseTitleImageName: "none")
+        Course(title: "Course 1", teacher: "Teacher 1", description: "Lorem Ipsum", courseTitleImageName: "doc.fill"),
+        Course(title: "Course 2", teacher: "Teacher 2", description: "Lorem Ipsum", courseTitleImageName: "doc.fill"),
+        Course(title: "Course 3", teacher: "Teacher 3", description: "Lorem Ipsum", courseTitleImageName: "doc.fill"),
+        Course(title: "Course 4", teacher: "Teacher 4", description: "Lorem Ipsum", courseTitleImageName: "doc.fill")
     
     ]
     
@@ -45,8 +46,6 @@ class CoursesTableViewController: UITableViewController {
         
         myTableView.delegate = self
         
-        // Set height for section headers
-        self.tableView.sectionHeaderHeight = 50
     }
     
     // MARK: - Table view data source
@@ -57,7 +56,7 @@ class CoursesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 4
+        return courses.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,8 +69,14 @@ class CoursesTableViewController: UITableViewController {
         
         cell.cellTitle?.text = currentCourse.title
         cell.cellDetail?.text = currentCourse.teacher
+        cell.cellImage?.image = currentCourse.getCoverImage()
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: "showCourseSegue", sender: self)
     }
     
     

@@ -24,7 +24,9 @@ class Course {
 
     }
 
-    
+    func getCoverImage() -> UIImage! {
+        return UIImage(systemName: courseTitleImageName)
+    }
 
     
     

@@ -14,9 +14,14 @@ class myTableViewCell: UITableViewCell {
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        cellImage.layer.cornerRadius = 8
+        containerView.layer.cornerRadius = 12
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

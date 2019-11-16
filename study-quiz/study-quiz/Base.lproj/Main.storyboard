@@ -346,7 +346,6 @@
                                                     <rect key="frame" x="8" y="8.5" width="78.5" height="117"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="Kjo-dX-CED"/>
                                                         <constraint firstAttribute="width" secondItem="DEt-BE-Hxy" secondAttribute="height" multiplier="2:3" id="aTr-tK-2qK"/>
                                                     </constraints>
                                                 </imageView>
@@ -384,6 +383,7 @@
                                     <outlet property="cellDetail" destination="mUp-xj-QCW" id="mYY-Af-kbU"/>
                                     <outlet property="cellImage" destination="DEt-BE-Hxy" id="fCi-gO-MYT"/>
                                     <outlet property="cellTitle" destination="xvc-vf-xjw" id="ISJ-hD-HKA"/>
+                                    <outlet property="containerView" destination="oaQ-DC-aGz" id="GMG-EH-ZiX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -36,10 +36,10 @@ class CoursesTableViewController: UITableViewController {
     
     var courses: [Course] = [
     
-        Course(title: "Course 1", teacher: "Teacher 1", description: "Lorem Ipsum", courseTitleImageName: "doc.fill"),
-        Course(title: "Course 2", teacher: "Teacher 2", description: "Lorem Ipsum", courseTitleImageName: "doc.fill"),
-        Course(title: "Course 3", teacher: "Teacher 3", description: "Lorem Ipsum", courseTitleImageName: "doc.fill"),
-        Course(title: "Course 4", teacher: "Teacher 4", description: "Lorem Ipsum", courseTitleImageName: "doc.fill")
+        Course(title: "Course 1", teacher: "Teacher 1", description: "Lorem Ipsum", courseTitleImageName: "doc.fill", totalQuestions: 20),
+        Course(title: "Course 2", teacher: "Teacher 2", description: "Lorem Ipsum", courseTitleImageName: "doc.fill", totalQuestions: 25),
+        Course(title: "Course 3", teacher: "Teacher 3", description: "Lorem Ipsum", courseTitleImageName: "doc.fill",totalQuestions: 15),
+        Course(title: "Course 4", teacher: "Teacher 4", description: "Lorem Ipsum", courseTitleImageName: "doc.fill", totalQuestions: 18)
     
     ]
     
@@ -73,7 +73,7 @@ class CoursesTableViewController: UITableViewController {
         
         
         cell.cellTitle?.text = currentCourse.title
-        cell.cellDetail?.text = currentCourse.teacher
+        cell.cellDetail?.text = "\(currentCourse.answeredQuestions) / \(currentCourse.totalQuestions)"
         cell.cellImage?.image = currentCourse.getCoverImage()
         
         return cell

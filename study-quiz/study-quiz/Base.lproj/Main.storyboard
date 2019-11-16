@@ -43,21 +43,7 @@
                     <view key="view" contentMode="scaleToFill" id="Pvi-jm-RpS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NY6-AH-sPV">
-                                <rect key="frame" x="16" y="105.5" width="140" height="137"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="NY6-AH-sPV" secondAttribute="height" multiplier="1:1" id="J9Y-hi-cqc"/>
-                                    <constraint firstAttribute="width" constant="140" id="oub-FG-thT"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="NY6-AH-sPV" firstAttribute="top" secondItem="lQ7-SG-EhJ" secondAttribute="top" constant="16" id="3a7-cG-Np3"/>
-                            <constraint firstItem="NY6-AH-sPV" firstAttribute="leading" secondItem="lQ7-SG-EhJ" secondAttribute="leading" constant="16" id="6qw-kq-bg2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lQ7-SG-EhJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="5KH-5g-c6l"/>
@@ -66,35 +52,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4F-1g-8Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2602.898550724638" y="-889.28571428571422"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WyG-ED-qft">
-            <objects>
-                <viewController id="8Et-bE-Lck" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vSG-op-ZMk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj6-FW-f6l">
-                                <rect key="frame" x="175.5" y="433" width="63" height="30"/>
-                                <state key="normal" title="A Course"/>
-                                <connections>
-                                    <segue destination="iKX-aa-3yP" kind="show" id="mxP-NP-jPr"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Tj6-FW-f6l" firstAttribute="centerX" secondItem="vSG-op-ZMk" secondAttribute="centerX" id="Ls6-L7-bNV"/>
-                            <constraint firstItem="Tj6-FW-f6l" firstAttribute="centerY" secondItem="vSG-op-ZMk" secondAttribute="centerY" id="sNB-MT-m67"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="PNX-yy-wFv"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="UPg-vX-ihn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fVC-KY-769" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3513.04347826087" y="-1655.3571428571429"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mcb-N7-XwS">
@@ -153,11 +110,11 @@
             <objects>
                 <viewController id="XWm-Q7-TbB" customClass="BookViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5lW-rW-K9v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-FD-JAy">
-                                <rect key="frame" x="16" y="717" width="382" height="80"/>
+                                <rect key="frame" x="16" y="712" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="WxD-aQ-5YT"/>
@@ -171,21 +128,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X59-jO-oxL">
-                                <rect key="frame" x="16" y="133" width="382" height="81.5"/>
+                                <rect key="frame" x="16" y="45" width="382" height="81.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-Fj-NJn">
-                                <rect key="frame" x="16" y="232.5" width="382" height="378.5"/>
+                                <rect key="frame" x="16" y="144.5" width="382" height="378.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9mg-Fj-NJn" secondAttribute="height" multiplier="1:1" id="Mux-kZ-KeS"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mje-fY-QrO">
-                                <rect key="frame" x="16" y="621" width="382" height="80"/>
+                                <rect key="frame" x="16" y="616" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="8Iz-iZ-evB"/>
@@ -197,7 +154,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-ie-3Kc">
-                                <rect key="frame" x="16" y="104" width="43" height="21"/>
+                                <rect key="frame" x="16" y="16" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -242,11 +199,11 @@
             <objects>
                 <viewController id="cTT-o7-az1" customClass="QuestionViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rin-hx-fcn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z56-X4-k2H">
-                                <rect key="frame" x="16" y="717" width="382" height="80"/>
+                                <rect key="frame" x="16" y="712" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="AdO-pN-zhj"/>
@@ -260,7 +217,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBy-fE-3qd">
-                                <rect key="frame" x="16" y="621" width="382" height="80"/>
+                                <rect key="frame" x="16" y="616" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="9PX-tP-so2"/>
@@ -274,7 +231,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-Gm-ZUJ">
-                                <rect key="frame" x="16" y="525" width="382" height="80"/>
+                                <rect key="frame" x="16" y="520" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Fnb-Lw-5wW"/>
@@ -288,7 +245,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yen-Qy-CEv">
-                                <rect key="frame" x="16" y="429" width="382" height="80"/>
+                                <rect key="frame" x="16" y="424" width="382" height="80"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="RGV-83-GBh"/>
@@ -339,7 +296,7 @@
         <scene sceneID="Irh-a0-j1L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="si5-S8-ftq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Courses" id="kl1-5r-cLO"/>
+                    <tabBarItem key="tabBarItem" title="Courses" selectedImage="bookmark" catalog="system" id="kl1-5r-cLO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XJw-xo-7Jt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -347,17 +304,69 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8Et-bE-Lck" kind="relationship" relationship="rootViewController" id="vBL-H2-aT7"/>
+                        <segue destination="FOA-uG-HOO" kind="relationship" relationship="rootViewController" id="J85-UQ-wxD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSy-I9-jVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2602.898550724638" y="-1655.3571428571429"/>
         </scene>
+        <!--Your Courses-->
+        <scene sceneID="bae-aI-cWU">
+            <objects>
+                <tableViewController id="FOA-uG-HOO" customClass="CoursesTableViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="5" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="72L-wy-LAu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" textLabel="a8R-k5-WYx" detailTextLabel="aBY-dP-J3X" rowHeight="100" style="IBUITableViewCellStyleValue1" id="aEX-qr-aa8" customClass="myTableViewCell" customModule="study_quiz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aEX-qr-aa8" id="29u-r1-t0c">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a8R-k5-WYx">
+                                            <rect key="frame" x="20" y="40" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aBY-dP-J3X">
+                                            <rect key="frame" x="350" y="40" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellDetail" destination="aBY-dP-J3X" id="Dcg-yD-7nR"/>
+                                    <outlet property="cellTitle" destination="a8R-k5-WYx" id="3ny-VH-vP4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FOA-uG-HOO" id="FHa-dd-cfF"/>
+                            <outlet property="delegate" destination="FOA-uG-HOO" id="Dj9-TS-bx9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Courses" id="y15-h0-U56"/>
+                    <connections>
+                        <outlet property="myTableView" destination="72L-wy-LAu" id="TaX-99-m8j"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B45-Io-ip2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3386" y="-1655"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="64" height="50"/>
+        <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="person" catalog="system" width="64" height="58"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

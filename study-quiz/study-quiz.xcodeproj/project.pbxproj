@@ -16,6 +16,7 @@
 		63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */; };
 		63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1606237F314D008DBC88 /* BookViewController.swift */; };
 		63CA1609237F33C2008DBC88 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1608237F33C2008DBC88 /* Book.swift */; };
+		63CA160B237FF484008DBC88 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA160A237FF484008DBC88 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		63CA1606237F314D008DBC88 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		63CA1608237F33C2008DBC88 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		63CA160A237FF484008DBC88 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
 				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
+				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
 				63CA1608237F33C2008DBC88 /* Book.swift */,
 				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				63CA15F9237EDF6F008DBC88 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
+				63CA160B237FF484008DBC88 /* TabBarViewController.swift in Sources */,
 				63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */,
 				63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */,
 			);

@@ -28,6 +28,9 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerCBtn: UIButton!
     @IBOutlet weak var answerDBtn: UIButton!
     
+    // ProgressBar
+    @IBOutlet weak var quizProgressBar: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,9 +45,6 @@ class QuestionViewController: UIViewController {
         
         let currentTitle = answerABtn.titleLabel!.text
         answerABtn.setTitle("\(String(describing: currentTitle)) + lol", for: .normal)
-
-//        for button in buttons {
-//        }
         
     }
     

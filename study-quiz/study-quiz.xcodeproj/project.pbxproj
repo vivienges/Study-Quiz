@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63184C9823816734004C2781 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63184C9723816734004C2781 /* CourseViewController.swift */; };
 		63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */; };
 		63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */; };
 		63CA15F5237EDF6B008DBC88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA15F4237EDF6B008DBC88 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63184C9723816734004C2781 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		63CA15ED237EDF6B008DBC88 /* study-quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "study-quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63CA161223800827008DBC88 /* Course.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
+				63184C9723816734004C2781 /* CourseViewController.swift */,
 				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
 				63CA1608237F33C2008DBC88 /* Book.swift */,
@@ -159,6 +162,7 @@
 				63CA161323800827008DBC88 /* Course.swift in Sources */,
 				63CA15F5237EDF6B008DBC88 /* ViewController.swift in Sources */,
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
+				63184C9823816734004C2781 /* CourseViewController.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
 				63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */,

@@ -7,6 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PurpleVC-->
+        <scene sceneID="f7X-a4-7me">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileVC" storyboardName="Profile" referencedIdentifier="PurpleVC" id="869-GC-IKe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="SVe-vC-x3B"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cac-2z-hFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="-642"/>
+        </scene>
         <!--A course-->
         <scene sceneID="De2-AW-Lud">
             <objects>
@@ -40,7 +50,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="cTT-o7-az1" kind="show" id="uAt-Yc-2ra"/>
+                                            <segue destination="Mds-tI-yzk" kind="show" id="gks-ST-Jkt"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-ns-fOg">
@@ -139,24 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHH-TJ-6Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3511.594202898551" y="-889.28571428571422"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="ict-os-oty">
-            <objects>
-                <viewController title="Profile" id="QHr-YO-ufY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pvi-jm-RpS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="lQ7-SG-EhJ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="5KH-5g-c6l"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p4F-1g-8Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2602.898550724638" y="-889.28571428571422"/>
+            <point key="canvasLocation" x="3386" y="-891"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mcb-N7-XwS">
@@ -202,8 +195,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QHr-YO-ufY" kind="relationship" relationship="viewControllers" id="YmV-RL-hgp"/>
                         <segue destination="si5-S8-ftq" kind="relationship" relationship="viewControllers" id="nAh-tW-eYe"/>
+                        <segue destination="869-GC-IKe" kind="relationship" relationship="viewControllers" id="GtG-kO-WdW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7g-iV-sSx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,7 +222,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cTT-o7-az1" kind="show" id="liX-Xq-UZk"/>
+                                    <segue destination="Mds-tI-yzk" kind="show" id="H6I-ln-sOl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X59-jO-oxL">
@@ -298,116 +291,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGH-Qc-PTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4368" y="-471"/>
-        </scene>
-        <!--Question goes here lorem ipsum-->
-        <scene sceneID="nLD-or-47M">
-            <objects>
-                <viewController id="cTT-o7-az1" customClass="QuestionViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rin-hx-fcn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z56-X4-k2H">
-                                <rect key="frame" x="16" y="717" width="382" height="80"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="AdO-pN-zhj"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="eYm-RO-oY5"/>
-                                </constraints>
-                                <state key="normal" title="D">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="dBtnPressed:" destination="cTT-o7-az1" eventType="touchUpInside" id="N3C-9Z-Ry7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBy-fE-3qd">
-                                <rect key="frame" x="16" y="621" width="382" height="80"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="9PX-tP-so2"/>
-                                    <constraint firstAttribute="height" constant="80" id="fdR-y0-vpX"/>
-                                </constraints>
-                                <state key="normal" title="C">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="cBtnPressed:" destination="cTT-o7-az1" eventType="touchUpInside" id="qiL-EB-t7G"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-Gm-ZUJ">
-                                <rect key="frame" x="16" y="525" width="382" height="80"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Fnb-Lw-5wW"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Ktp-Hq-dU4"/>
-                                </constraints>
-                                <state key="normal" title="B">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="bBtnPressed:" destination="cTT-o7-az1" eventType="touchUpInside" id="zPX-OT-xqh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yen-Qy-CEv">
-                                <rect key="frame" x="16" y="429" width="382" height="80"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="RGV-83-GBh"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="r4n-ZR-V0u"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="tDB-7t-cVO"/>
-                                </constraints>
-                                <state key="normal" title="A">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="aBtnPressed:" destination="cTT-o7-az1" eventType="touchUpInside" id="0F2-OE-RRk"/>
-                                </connections>
-                            </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FkQ-Qy-lcn">
-                                <rect key="frame" x="8" y="104" width="398" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5Rv-L7-Jym"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="UeO-oF-urK"/>
-                                </constraints>
-                            </progressView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="FkQ-Qy-lcn" firstAttribute="centerX" secondItem="rin-hx-fcn" secondAttribute="centerX" id="6CK-Yn-eP0"/>
-                            <constraint firstItem="FkQ-Qy-lcn" firstAttribute="leading" secondItem="rin-hx-fcn" secondAttribute="leading" constant="8" id="8E0-Yl-MJp"/>
-                            <constraint firstItem="HBy-fE-3qd" firstAttribute="top" secondItem="JKc-Gm-ZUJ" secondAttribute="bottom" constant="16" id="9N9-ey-cTU"/>
-                            <constraint firstItem="Yen-Qy-CEv" firstAttribute="centerX" secondItem="rin-hx-fcn" secondAttribute="centerX" id="9tI-dx-bhI"/>
-                            <constraint firstItem="z56-X4-k2H" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="EWR-ZK-I1h"/>
-                            <constraint firstItem="Yen-Qy-CEv" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="Eax-sq-HPS"/>
-                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="JKc-Gm-ZUJ" secondAttribute="trailing" constant="16" id="GcF-sR-LkL"/>
-                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="Yen-Qy-CEv" secondAttribute="trailing" constant="16" id="Kbv-wo-Aw2"/>
-                            <constraint firstItem="JKc-Gm-ZUJ" firstAttribute="top" secondItem="Yen-Qy-CEv" secondAttribute="bottom" constant="16" id="L6A-kq-yX1"/>
-                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="FkQ-Qy-lcn" secondAttribute="trailing" constant="8" id="MW0-dg-Tim"/>
-                            <constraint firstItem="JKc-Gm-ZUJ" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="NaU-tv-KKG"/>
-                            <constraint firstItem="z56-X4-k2H" firstAttribute="top" secondItem="HBy-fE-3qd" secondAttribute="bottom" constant="16" id="RIy-xf-oBw"/>
-                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="z56-X4-k2H" secondAttribute="trailing" constant="16" id="Uqp-J3-TK8"/>
-                            <constraint firstItem="FkQ-Qy-lcn" firstAttribute="top" secondItem="uWJ-UY-D5u" secondAttribute="top" constant="16" id="Wn0-8b-2g1"/>
-                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="trailing" secondItem="HBy-fE-3qd" secondAttribute="trailing" constant="16" id="gHY-mR-vu0"/>
-                            <constraint firstItem="uWJ-UY-D5u" firstAttribute="bottom" secondItem="z56-X4-k2H" secondAttribute="bottom" constant="16" id="r8q-J2-Cxv"/>
-                            <constraint firstItem="HBy-fE-3qd" firstAttribute="leading" secondItem="uWJ-UY-D5u" secondAttribute="leading" constant="16" id="rCn-IV-DXo"/>
-                            <constraint firstItem="z56-X4-k2H" firstAttribute="centerX" secondItem="rin-hx-fcn" secondAttribute="centerX" id="ybe-tV-XtD"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="uWJ-UY-D5u"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Question goes here lorem ipsum" largeTitleDisplayMode="always" id="c71-YE-JLs"/>
-                    <connections>
-                        <outlet property="answerABtn" destination="Yen-Qy-CEv" id="tgs-Bm-BQa"/>
-                        <outlet property="answerBBtn" destination="JKc-Gm-ZUJ" id="il1-0E-xgd"/>
-                        <outlet property="answerCBtn" destination="HBy-fE-3qd" id="Yuq-tG-f9Y"/>
-                        <outlet property="answerDBtn" destination="z56-X4-k2H" id="pQk-O3-x1V"/>
-                        <outlet property="navigationBar" destination="c71-YE-JLs" id="oEB-43-5xA"/>
-                        <outlet property="quizProgressBar" destination="FkQ-Qy-lcn" id="Eeb-hV-wbF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vsc-41-tz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5190" y="-889"/>
         </scene>
         <!--Courses-->
         <scene sceneID="Irh-a0-j1L">
@@ -519,15 +402,24 @@
             </objects>
             <point key="canvasLocation" x="3385.507246376812" y="-1655.3571428571429"/>
         </scene>
+        <!--QuizQuestionVC-->
+        <scene sceneID="esK-BT-sZL">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="QuizQuestionVC" storyboardName="Quiz" referencedIdentifier="QuizQuestionVC" id="Mds-tI-yzk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="072-hX-Mt6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbv-iV-sWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5302" y="-923"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book.circle" catalog="system" width="64" height="60"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="chevron.right" catalog="system" width="48" height="64"/>
-        <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uAt-Yc-2ra"/>
+        <segue reference="gks-ST-Jkt"/>
     </inferredMetricsTieBreakers>
 </document>

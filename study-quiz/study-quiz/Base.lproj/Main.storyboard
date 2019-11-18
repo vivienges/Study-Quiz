@@ -10,12 +10,12 @@
         <!--PurpleVC-->
         <scene sceneID="f7X-a4-7me">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ProfileVC" storyboardName="Profile" referencedIdentifier="PurpleVC" id="869-GC-IKe" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="PurpleVC" storyboardName="Profile" referencedIdentifier="PurpleVC" id="869-GC-IKe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="SVe-vC-x3B"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cac-2z-hFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="-642"/>
+            <point key="canvasLocation" x="996" y="-600"/>
         </scene>
         <!--A course-->
         <scene sceneID="De2-AW-Lud">
@@ -149,40 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHH-TJ-6Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3386" y="-891"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mcb-N7-XwS">
-            <objects>
-                <viewController id="JlI-Hr-rjV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JTl-Tc-WmV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quiz app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRL-3R-s4n">
-                                <rect key="frame" x="136" y="333" width="142" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuJ-cv-wrs">
-                                <rect key="frame" x="181.5" y="433" width="51" height="30"/>
-                                <state key="normal" title="Launch"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="JuJ-cv-wrs" firstAttribute="centerY" secondItem="JTl-Tc-WmV" secondAttribute="centerY" id="0VI-HL-hml"/>
-                            <constraint firstItem="JuJ-cv-wrs" firstAttribute="top" secondItem="cRL-3R-s4n" secondAttribute="bottom" constant="53" id="Jwh-HY-zKw"/>
-                            <constraint firstItem="cRL-3R-s4n" firstAttribute="centerX" secondItem="JTl-Tc-WmV" secondAttribute="centerX" id="LeV-SA-9CR"/>
-                            <constraint firstItem="JuJ-cv-wrs" firstAttribute="centerX" secondItem="JTl-Tc-WmV" secondAttribute="centerX" id="iZx-ln-ep5"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="tBJ-7G-xgd"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cbB-Qb-0kM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="181" y="-1061"/>
+            <point key="canvasLocation" x="3319" y="-1061"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="Kcd-jU-qgU">
@@ -290,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGH-Qc-PTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4368" y="-471"/>
+            <point key="canvasLocation" x="4181" y="-1061"/>
         </scene>
         <!--Courses-->
         <scene sceneID="Irh-a0-j1L">
@@ -309,7 +276,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSy-I9-jVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2602.898550724638" y="-1655.3571428571429"/>
+            <point key="canvasLocation" x="1762" y="-1061"/>
         </scene>
         <!--Your Courses-->
         <scene sceneID="bae-aI-cWU">
@@ -400,7 +367,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B45-Io-ip2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3385.507246376812" y="-1655.3571428571429"/>
+            <point key="canvasLocation" x="2528" y="-1061"/>
         </scene>
         <!--QuizQuestionVC-->
         <scene sceneID="esK-BT-sZL">
@@ -410,7 +377,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbv-iV-sWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5302" y="-923"/>
+            <point key="canvasLocation" x="3776" y="-486"/>
         </scene>
     </scenes>
     <resources>
@@ -420,6 +387,6 @@
         <image name="chevron.right" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gks-ST-Jkt"/>
+        <segue reference="H6I-ln-sOl"/>
     </inferredMetricsTieBreakers>
 </document>

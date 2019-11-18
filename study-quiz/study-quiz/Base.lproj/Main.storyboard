@@ -297,21 +297,21 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaQ-DC-aGz">
                                             <rect key="frame" x="8" y="8" width="398" height="134"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ios Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvc-vf-xjw">
-                                                    <rect key="frame" x="114" y="27" width="128" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ios Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvc-vf-xjw">
+                                                    <rect key="frame" x="94.5" y="16" width="159.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10 / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUp-xj-QCW">
-                                                    <rect key="frame" x="114" y="56" width="50" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUp-xj-QCW">
+                                                    <rect key="frame" x="94.5" y="50.5" width="50" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-BE-Hxy">
                                                     <rect key="frame" x="8" y="8.5" width="78.5" height="117"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="DEt-BE-Hxy" secondAttribute="height" multiplier="2:3" id="aTr-tK-2qK"/>
                                                     </constraints>
@@ -324,21 +324,22 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xvc-vf-xjw" secondAttribute="trailing" constant="20" symbolic="YES" id="3vc-cC-pm8"/>
                                                 <constraint firstItem="DEt-BE-Hxy" firstAttribute="leading" secondItem="oaQ-DC-aGz" secondAttribute="leading" constant="8" id="5qr-3s-p5u"/>
                                                 <constraint firstAttribute="trailing" secondItem="ksD-B1-CjV" secondAttribute="trailing" constant="8" id="670-cs-cka"/>
                                                 <constraint firstItem="xvc-vf-xjw" firstAttribute="top" secondItem="oaQ-DC-aGz" secondAttribute="top" constant="16" id="98f-O1-IVz"/>
                                                 <constraint firstItem="mUp-xj-QCW" firstAttribute="top" secondItem="xvc-vf-xjw" secondAttribute="bottom" constant="8" id="MtU-bE-tjg"/>
                                                 <constraint firstItem="DEt-BE-Hxy" firstAttribute="top" secondItem="oaQ-DC-aGz" secondAttribute="top" constant="8" id="RaA-HI-p0U"/>
                                                 <constraint firstItem="ksD-B1-CjV" firstAttribute="centerY" secondItem="oaQ-DC-aGz" secondAttribute="centerY" id="Uft-AJ-MTG"/>
+                                                <constraint firstItem="ksD-B1-CjV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mUp-xj-QCW" secondAttribute="trailing" constant="8" symbolic="YES" id="Yge-tJ-kIN"/>
                                                 <constraint firstAttribute="bottom" secondItem="DEt-BE-Hxy" secondAttribute="bottom" constant="8" id="rZ6-25-9Ow"/>
                                                 <constraint firstItem="xvc-vf-xjw" firstAttribute="leading" secondItem="DEt-BE-Hxy" secondAttribute="trailing" constant="8" id="tbj-9A-uzg"/>
                                                 <constraint firstItem="mUp-xj-QCW" firstAttribute="leading" secondItem="DEt-BE-Hxy" secondAttribute="trailing" constant="8" id="xOu-im-Myr"/>
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="oaQ-DC-aGz" firstAttribute="leading" secondItem="29u-r1-t0c" secondAttribute="leading" constant="8" id="2DV-rm-j4t"/>
                                         <constraint firstAttribute="bottom" secondItem="oaQ-DC-aGz" secondAttribute="bottom" constant="8" id="FrG-N1-yi6"/>
@@ -387,6 +388,6 @@
         <image name="chevron.right" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H6I-ln-sOl"/>
+        <segue reference="gks-ST-Jkt"/>
     </inferredMetricsTieBreakers>
 </document>

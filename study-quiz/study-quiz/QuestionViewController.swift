@@ -49,28 +49,34 @@ class QuestionViewController: UIViewController {
         
     }
     
+    // This is repeating code and should be optimized later
+    
     @IBAction func aBtnPressed(_ sender: Any) {
         var index = 0
         print("A pressed")
         print(self.currentQuestion.getFeedback(indexAnswer: index))
+        answerABtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
     }
     
     @IBAction func bBtnPressed(_ sender: Any) {
         var index = 1
         print("B pressed")
         print(self.currentQuestion.getFeedback(indexAnswer: index))
+        answerBBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
     }
     
     @IBAction func cBtnPressed(_ sender: Any) {
         var index = 2
         print("C pressed")
         print(self.currentQuestion.getFeedback(indexAnswer: index))
+        answerCBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
     }
     
     @IBAction func dBtnPressed(_ sender: Any) {
         var index = 3
         print("D pressed")
         print(self.currentQuestion.getFeedback(indexAnswer: index))
+        answerDBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
     }
     
 }

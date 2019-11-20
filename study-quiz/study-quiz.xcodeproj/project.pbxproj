@@ -10,6 +10,8 @@
 		63184C9823816734004C2781 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63184C9723816734004C2781 /* CourseViewController.swift */; };
 		631C121823831E2D00101A67 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631C121723831E2D00101A67 /* Quiz.storyboard */; };
 		633781862383234D00ED31F3 /* Overlays.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633781852383234D00ED31F3 /* Overlays.storyboard */; };
+		636EFE8F2385D61100499A02 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EFE8E2385D61100499A02 /* Quiz.swift */; };
+		636EFE912385D69000499A02 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EFE902385D69000499A02 /* Question.swift */; };
 		6394B00A2383215300229B8B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6394B0092383215300229B8B /* Profile.storyboard */; };
 		63A3ED71238318CE000C8152 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3ED70238318CE000C8152 /* ProfileViewController.swift */; };
 		63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 		63184C9723816734004C2781 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		631C121723831E2D00101A67 /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
 		633781852383234D00ED31F3 /* Overlays.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overlays.storyboard; sourceTree = "<group>"; };
+		636EFE8E2385D61100499A02 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		636EFE902385D69000499A02 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		6394B0092383215300229B8B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		63A3ED70238318CE000C8152 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		63CA15ED237EDF6B008DBC88 /* study-quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "study-quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,24 +82,26 @@
 		63CA15EF237EDF6B008DBC88 /* study-quiz */ = {
 			isa = PBXGroup;
 			children = (
-				63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */,
-				63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */,
-				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
-				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63CA161223800827008DBC88 /* Course.swift */,
+				63CA1608237F33C2008DBC88 /* Book.swift */,
+				636EFE8E2385D61100499A02 /* Quiz.swift */,
+				636EFE902385D69000499A02 /* Question.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
 				633781852383234D00ED31F3 /* Overlays.storyboard */,
 				6394B0092383215300229B8B /* Profile.storyboard */,
 				631C121723831E2D00101A67 /* Quiz.storyboard */,
+				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
+				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63184C9723816734004C2781 /* CourseViewController.swift */,
 				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
-				63CA1608237F33C2008DBC88 /* Book.swift */,
 				63A3ED70238318CE000C8152 /* ProfileViewController.swift */,
 				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				63CA15F9237EDF6F008DBC88 /* Assets.xcassets */,
 				63CA15FB237EDF6F008DBC88 /* LaunchScreen.storyboard */,
 				63CA15FE237EDF6F008DBC88 /* Info.plist */,
+				63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */,
+				63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */,
 			);
 			path = "study-quiz";
 			sourceTree = "<group>";
@@ -176,11 +182,13 @@
 			files = (
 				63CA161323800827008DBC88 /* Course.swift in Sources */,
 				63CA15F5237EDF6B008DBC88 /* ViewController.swift in Sources */,
+				636EFE8F2385D61100499A02 /* Quiz.swift in Sources */,
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
 				63184C9823816734004C2781 /* CourseViewController.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
 				63A3ED71238318CE000C8152 /* ProfileViewController.swift in Sources */,
+				636EFE912385D69000499A02 /* Question.swift in Sources */,
 				63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */,
 				63CA160B237FF484008DBC88 /* TabBarViewController.swift in Sources */,
 				63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */,

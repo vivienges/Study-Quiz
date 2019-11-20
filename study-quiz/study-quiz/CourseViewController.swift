@@ -13,6 +13,7 @@ class bookTableViewCell : UITableViewCell {
     // Cell UI Elements
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -69,7 +70,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return books.count
-    }
+    }   
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,6 +81,10 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.cellTitle?.text = currentBook.title
         cell.cellDetail?.text = currentBook.author
+        
+        // The image has to come from the Book Object at a later point
+        cell.cellImage?.image = currentBook.getImage()
+          
         
         return cell
         

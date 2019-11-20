@@ -82,26 +82,26 @@
 		63CA15EF237EDF6B008DBC88 /* study-quiz */ = {
 			isa = PBXGroup;
 			children = (
-				63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */,
-				63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */,
-				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
-				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63CA161223800827008DBC88 /* Course.swift */,
+				63CA1608237F33C2008DBC88 /* Book.swift */,
+				636EFE8E2385D61100499A02 /* Quiz.swift */,
+				636EFE902385D69000499A02 /* Question.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
 				633781852383234D00ED31F3 /* Overlays.storyboard */,
 				6394B0092383215300229B8B /* Profile.storyboard */,
 				631C121723831E2D00101A67 /* Quiz.storyboard */,
+				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
+				63CA15F4237EDF6B008DBC88 /* ViewController.swift */,
 				63184C9723816734004C2781 /* CourseViewController.swift */,
 				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
-				63CA1608237F33C2008DBC88 /* Book.swift */,
-				636EFE8E2385D61100499A02 /* Quiz.swift */,
-				636EFE902385D69000499A02 /* Question.swift */,
 				63A3ED70238318CE000C8152 /* ProfileViewController.swift */,
 				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				63CA15F9237EDF6F008DBC88 /* Assets.xcassets */,
 				63CA15FB237EDF6F008DBC88 /* LaunchScreen.storyboard */,
 				63CA15FE237EDF6F008DBC88 /* Info.plist */,
+				63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */,
+				63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */,
 			);
 			path = "study-quiz";
 			sourceTree = "<group>";

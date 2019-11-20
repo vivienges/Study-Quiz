@@ -11,7 +11,7 @@ import UIKit
 class Question {
     
     let question: String
-    let answers: [String]
+    var answers: [String]
     let totalAnswers: Int
     let correctAnswer: String
     let indexCorrectAnswer: Int
@@ -21,8 +21,23 @@ class Question {
         self.question =  question
         self.answers = answers
         self.totalAnswers =  answers.count
-        self.correctAnswer = answers[indexCorrectAnswer]
         self.indexCorrectAnswer = indexCorrectAnswer
+        self.correctAnswer = answers[indexCorrectAnswer]
+        self.answered =  false
+    }
+    
+    init() {
+        self.question =  "What does the Cow say?"
+        self.answers = [
+            "Moo",
+            "Wuff",
+            "WOOO",
+            "Hi"
+        ]
+        self.totalAnswers =  answers.count
+        self.indexCorrectAnswer = 0
+        self.correctAnswer = answers[indexCorrectAnswer]
+        
         self.answered =  false
     }
     

@@ -128,6 +128,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellDetail" destination="iWw-KC-41D" id="Bx2-qF-Kt9"/>
+                                            <outlet property="cellImage" destination="NhW-jc-fSX" id="TCg-jG-6mI"/>
                                             <outlet property="cellTitle" destination="OqT-HB-HLe" id="QQ5-R4-Lcn"/>
                                         </connections>
                                     </tableViewCell>

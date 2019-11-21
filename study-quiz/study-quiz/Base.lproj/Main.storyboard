@@ -100,7 +100,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-jc-fSX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-jc-fSX">
                                                     <rect key="frame" x="8" y="8" width="60.5" height="60.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="bUl-jl-eXs"/>
@@ -395,12 +395,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="800" height="534"/>
         <image name="book.circle" catalog="system" width="64" height="60"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="chevron.right" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H6I-ln-sOl"/>
+        <segue reference="gks-ST-Jkt"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,32 +7,8 @@
 //
 
 import UIKit
-struct Constants {
-    
-    struct FlickrURLParams {
-        static let APIScheme = "https"
-        static let APIHost = "api.flickr.com"
-        static let APIPath = "/services/rest"
-    }
-}
-struct FlickrAPIKeys {
-    static let SearchMethod = "method"
-    static let APIKey = "api_key"
-    static let Extras = "extras"
-    static let ResponseFormat = "format"
-    static let DisableJSONCallback = "nojsoncallback"
-    static let SafeSearch = "safe_search"
-    static let Text = "text"
-}
 
-struct FlickrAPIValues {
-    static let SearchMethod = "flickr.photos.search"
-    static let APIKey = "101796e68db863912e66eebb072a223b"
-    static let ResponseFormat = "json"
-    static let DisableJSONCallback = "1"
-    static let MediumURL = "url_m"
-    static let SafeSearch = "1"
-}
+
 
 class BookViewController: UIViewController {
     
@@ -41,12 +17,10 @@ class BookViewController: UIViewController {
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var bookDescription: UILabel!
     @IBOutlet weak var bookReleaseYear: UILabel!
-    
-    // Buttons
     @IBOutlet weak var summaryBtn: UIButton!
     @IBOutlet weak var startQuizBtn: UIButton!
-    
     @IBOutlet weak var navigationBar: UINavigationItem!
+    
     let sampleBook: Book = Book()
     
     
@@ -58,20 +32,13 @@ class BookViewController: UIViewController {
         navigationBar.title = sampleBook.title
         bookDescription.text = sampleBook.description
         bookReleaseYear.text = "\(sampleBook.releaseYear)"
+        
         let searchText = sampleBook.title+" "+sampleBook.author
-        
-        
         let searchURL = flickrURLFromParameters(searchString: searchText)
         print("URL: \(searchURL)")
-        
         // Send the request
+        
         performFlickrSearch(searchURL)
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func flickrURLFromParameters(searchString: String)->URL{
@@ -162,10 +129,10 @@ class BookViewController: UIViewController {
         }
         task.resume()
     }
+    
     private func fetchImage(_ url: String) {
-        
+    
         let imageURL = URL(string: url)
-        
         let task = URLSession.shared.dataTask(with: imageURL!) { (data, response, error) in
             if error == nil {
                 let downloadImage = UIImage(data: data!)!
@@ -173,9 +140,6 @@ class BookViewController: UIViewController {
                 DispatchQueue.main.async() {
                     self.sampleBook.coverImage = downloadImage
                     self.coverImage.image = self.sampleBook.coverImage
-                    
-                    
-                    
                 }
                 
             }
@@ -183,15 +147,6 @@ class BookViewController: UIViewController {
         
         task.resume()
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 

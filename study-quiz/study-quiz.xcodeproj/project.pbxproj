@@ -27,6 +27,7 @@
 		63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161023800471008DBC88 /* CoursesTableViewController.swift */; };
 		63CA161323800827008DBC88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161223800827008DBC88 /* Course.swift */; };
 		A08F73D22386AC0A0016A376 /* FeedbackQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */; };
+		A08F73D42386BA320016A376 /* flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F73D32386BA320016A376 /* flickr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		63CA161023800471008DBC88 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		63CA161223800827008DBC88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackQuestionViewController.swift; sourceTree = "<group>"; };
+		A08F73D32386BA320016A376 /* flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +88,10 @@
 			children = (
 				63CA161223800827008DBC88 /* Course.swift */,
 				63CA1608237F33C2008DBC88 /* Book.swift */,
+				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				636EFE8E2385D61100499A02 /* Quiz.swift */,
 				636EFE902385D69000499A02 /* Question.swift */,
+				A08F73D32386BA320016A376 /* flickr.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
 				633781852383234D00ED31F3 /* Overlays.storyboard */,
 				6394B0092383215300229B8B /* Profile.storyboard */,
@@ -99,7 +103,6 @@
 				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
 				63A3ED70238318CE000C8152 /* ProfileViewController.swift */,
-				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				63CA15F9237EDF6F008DBC88 /* Assets.xcassets */,
 				63CA15FB237EDF6F008DBC88 /* LaunchScreen.storyboard */,
 				63CA15FE237EDF6F008DBC88 /* Info.plist */,
@@ -190,6 +193,7 @@
 				63184C9823816734004C2781 /* CourseViewController.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
+				A08F73D42386BA320016A376 /* flickr.swift in Sources */,
 				63A3ED71238318CE000C8152 /* ProfileViewController.swift in Sources */,
 				636EFE912385D69000499A02 /* Question.swift in Sources */,
 				A08F73D22386AC0A0016A376 /* FeedbackQuestionViewController.swift in Sources */,

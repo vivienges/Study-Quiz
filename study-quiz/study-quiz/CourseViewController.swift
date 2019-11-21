@@ -83,7 +83,10 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.cellTitle?.text = currentBook.title
         cell.cellDetail?.text = currentBook.author
         cell.cellImage.image = currentBook.getImage()
-          
+
+        
+        
+        
         
         return cell
         

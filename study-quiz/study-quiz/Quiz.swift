@@ -33,8 +33,7 @@ class Quiz {
         self.name = "Sample Quiz"
         self.questions = [
             Question(),
-            Question(),
-            Question()
+            Question(question: "Is this the second Question?", answers: ["No", "42", "No", "Yes"], indexCorrectAnswer: 3)
         ]
         self.totalQuestions = questions.count
         completedQuestions = 0

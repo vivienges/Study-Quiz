@@ -36,6 +36,11 @@ class FeedbackQuestionViewController: ViewController {
 
     }
 
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+           performSegue(withIdentifier: "nextQuestionSegue", sender: nil)
+        }
+     }
 //    @IBAction func pressNextQuestion(_ sender: Any) {
 //        self.performSegue(withIdentifier: "nextQuestionSegue", sender: self)
 //    }

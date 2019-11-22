@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--What is 3?-->
+        <!--QuestionVC-->
         <scene sceneID="H4t-A0-g71">
             <objects>
-                <viewController storyboardIdentifier="QuizQuestionVC" title="What is 3?" id="iph-2U-clP" customClass="QuestionViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizQuestionVC" title="QuestionVC" id="iph-2U-clP" customClass="QuestionViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JCt-3N-K2o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="5326" y="-798"/>
         </scene>
-        <!--Feedback-->
+        <!--CorrectQuestionFeedbackVC-->
         <scene sceneID="NGh-Zp-EnW">
             <objects>
-                <viewController title="Feedback" id="dQ7-Bc-Sct" customClass="FeedbackQuestionViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CorrectQuestionFeedbackVC" id="dQ7-Bc-Sct" customClass="FeedbackQuestionViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxz-mF-Ngs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,14 +150,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JLw-pn-KWg">
-                                <rect key="frame" x="87" y="270" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JLw-pn-KWg">
+                                <rect key="frame" x="70" y="211" width="274" height="117.5"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="QnU-x8-aLd"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="PjU-jO-Kuu" firstAttribute="leading" secondItem="jDC-LK-HOr" secondAttribute="leading" constant="32" id="1xE-z7-wd5"/>
+                            <constraint firstItem="JLw-pn-KWg" firstAttribute="centerX" secondItem="Gxz-mF-Ngs" secondAttribute="centerX" id="2WN-DJ-1VL"/>
+                            <constraint firstItem="JLw-pn-KWg" firstAttribute="leading" secondItem="Gxz-mF-Ngs" secondAttribute="leadingMargin" constant="50" id="BK4-hw-SRe"/>
                             <constraint firstItem="UEo-bf-s29" firstAttribute="centerY" secondItem="Gxz-mF-Ngs" secondAttribute="centerY" id="Cnc-5F-2Lr"/>
                             <constraint firstItem="PjU-jO-Kuu" firstAttribute="top" secondItem="HS3-RP-Ntp" secondAttribute="bottom" constant="8" id="ESz-zU-wBS"/>
                             <constraint firstItem="jDC-LK-HOr" firstAttribute="trailing" secondItem="bch-rm-w0h" secondAttribute="trailing" constant="32" id="Fxr-jS-YKp"/>
@@ -165,10 +170,12 @@
                             <constraint firstItem="bch-rm-w0h" firstAttribute="top" secondItem="jDC-LK-HOr" secondAttribute="top" constant="64" id="Yaz-9e-AHj"/>
                             <constraint firstItem="bch-rm-w0h" firstAttribute="leading" secondItem="jDC-LK-HOr" secondAttribute="leading" constant="32" id="eon-w9-WRJ"/>
                             <constraint firstItem="jDC-LK-HOr" firstAttribute="trailing" secondItem="PjU-jO-Kuu" secondAttribute="trailing" constant="32" id="evJ-h3-Zv8"/>
+                            <constraint firstItem="JLw-pn-KWg" firstAttribute="top" secondItem="PjU-jO-Kuu" secondAttribute="bottom" constant="25" id="fh6-70-X2P"/>
                             <constraint firstItem="jDC-LK-HOr" firstAttribute="trailing" secondItem="HS3-RP-Ntp" secondAttribute="trailing" constant="32" id="gBb-c3-guU"/>
                             <constraint firstItem="bch-rm-w0h" firstAttribute="centerX" secondItem="Gxz-mF-Ngs" secondAttribute="centerX" id="mOP-K3-k87"/>
                             <constraint firstItem="UEo-bf-s29" firstAttribute="centerX" secondItem="Gxz-mF-Ngs" secondAttribute="centerX" id="oRf-d4-zea"/>
                             <constraint firstItem="HS3-RP-Ntp" firstAttribute="leading" secondItem="jDC-LK-HOr" secondAttribute="leading" constant="32" id="oTo-ei-XSu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JLw-pn-KWg" secondAttribute="trailing" constant="50" id="sYS-Ta-Hqz"/>
                             <constraint firstItem="HS3-RP-Ntp" firstAttribute="top" secondItem="bch-rm-w0h" secondAttribute="bottom" constant="32" id="zRR-9I-93Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jDC-LK-HOr"/>
@@ -177,12 +184,16 @@
                     <connections>
                         <outlet property="answerHeadline" destination="HS3-RP-Ntp" id="Tdg-Sh-WjY"/>
                         <outlet property="correctAnswer" destination="PjU-jO-Kuu" id="jwy-8v-9Q4"/>
+                        <outlet property="feedbackIcon" destination="JLw-pn-KWg" id="7Zz-K9-IyJ"/>
                         <outlet property="questionLabel" destination="bch-rm-w0h" id="7fo-fY-GRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UlH-gw-gtD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6570" y="-1049"/>
+            <point key="canvasLocation" x="6569.5652173913049" y="-1049.3303571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.rectangle.fill" catalog="system" width="64" height="46"/>
+    </resources>
 </document>

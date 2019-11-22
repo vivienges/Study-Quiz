@@ -45,21 +45,13 @@ class QuestionViewController: UIViewController {
         
     }
     
-    // This is repeating code and should be optimized later
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? FeedbackQuestionViewController else {
-            //Handle the nil value, log, etc
-            return
-        }
-        vc.currentQuiz = currentQuiz
-      
-    }
+    var getFeedback =  false
+
     
     @IBAction func aBtnPressed(_ sender: Any) {
         let index = 0
         print("A pressed")
-        print(self.currentQuestion.getFeedback(indexAnswer: index))
+        getFeedback = self.currentQuestion.getFeedback(indexAnswer: index)
         answerABtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
         
         if currentQuestion.getFeedback(indexAnswer: index) {
@@ -73,8 +65,9 @@ class QuestionViewController: UIViewController {
     @IBAction func bBtnPressed(_ sender: Any) {
         let index = 1
         print("B pressed")
-        print(self.currentQuestion.getFeedback(indexAnswer: index))
         answerBBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
+        self.performSegue(withIdentifier: "feedbackViewSegue", sender: self)
+
     }
     
     @IBAction func cBtnPressed(_ sender: Any) {
@@ -82,6 +75,8 @@ class QuestionViewController: UIViewController {
         print("C pressed")
         print(self.currentQuestion.getFeedback(indexAnswer: index))
         answerCBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
+        self.performSegue(withIdentifier: "feedbackViewSegue", sender: self)
+
     }
     
     @IBAction func dBtnPressed(_ sender: Any) {
@@ -89,6 +84,20 @@ class QuestionViewController: UIViewController {
         print("D pressed")
         print(self.currentQuestion.getFeedback(indexAnswer: index))
         answerDBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
+        self.performSegue(withIdentifier: "feedbackViewSegue", sender: self)
+
+    }
+    
+    // This is repeating code and should be optimized later
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? FeedbackQuestionViewController else {
+            //Handle the nil value, log, etc
+            return
+        }
+        vc.currentQuiz = currentQuiz
+        vc.booleanAnswer = self.getFeedback
+      
     }
     
 }

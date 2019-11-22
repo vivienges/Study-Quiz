@@ -11,11 +11,13 @@ import UIKit
 class FeedbackQuestionViewController: ViewController {
 
     var currentQuiz = Quiz()
+    var booleanAnswer = false
     
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerHeadline: UILabel!
     @IBOutlet weak var correctAnswer: UILabel!
+    @IBOutlet weak var feedbackIcon: UIImageView!
     
     
     override func viewDidLoad() {
@@ -25,6 +27,15 @@ class FeedbackQuestionViewController: ViewController {
         questionLabel.text = currentQuestion.question
         correctAnswer.text = currentQuestion.correctAnswer
 
+        if booleanAnswer == false {
+            correctAnswer.textColor = UIColor.red
+            self.feedbackIcon.image = UIImage(systemName: "xmark.rectangle.fill")
+            self.feedbackIcon.tintColor = UIColor.red
+        } else {
+            correctAnswer.textColor = UIColor.green
+            self.feedbackIcon.image = UIImage(systemName: "checkmark.rectangle.fill")
+            self.feedbackIcon.tintColor = UIColor.green
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,7 +52,5 @@ class FeedbackQuestionViewController: ViewController {
            performSegue(withIdentifier: "nextQuestionSegue", sender: nil)
         }
      }
-//    @IBAction func pressNextQuestion(_ sender: Any) {
-//        self.performSegue(withIdentifier: "nextQuestionSegue", sender: self)
-//    }
+
 }

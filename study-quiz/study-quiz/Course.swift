@@ -13,9 +13,7 @@ class Course {
     var title: String
     var teacher: String
     var description: String
-    
     var courseTitleImageName: String
-    
     var answeredQuestions: Int
     let totalQuestions: Int
     

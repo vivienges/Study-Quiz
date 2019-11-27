@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedbackQuestionViewController: ViewController {
+class FeedbackQuestionViewController: UIViewController {
 
     var currentQuiz = Quiz()
     var booleanAnswer = false

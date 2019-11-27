@@ -86,8 +86,16 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 var title = volumeInfo!["title"] as? String;
                                 title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
+                                
+                                
                                 var subTitle = volumeInfo!["subtitle"] as? String;
                                 subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                
+                                var publisher = volumeInfo!["publisher"] as? String;
+                                
+                                var publishedDate = volumeInfo!["publishedDate"] as? String;
+                                
+                        
                                 
                                 var description = volumeInfo!["description"] as? String;
                                 description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
@@ -98,8 +106,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                     
                                     //print(volumeInfo)
                                     if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
-                                        //self.listBook.append(Book(title: title!, subTitle: subTitle, smallThumbnail: smallThumbnail))
-                                        self.books.append(Book(title: title!, subTitle: subTitle ?? "Empty", releaseYear: 10, coverImage: smallThumbnail, summary: "Empty", description: description ?? "Empty"))
+                                        self.books.append(Book(title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing"))
                                     }
                                 }
                             }
@@ -140,7 +147,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let currentBook: Book = books[indexPath.row]
         
         cell.cellTitle?.text = currentBook.title
-        cell.cellDetail?.text = currentBook.author
+        cell.cellDetail?.text = currentBook.publisher
 
         
         

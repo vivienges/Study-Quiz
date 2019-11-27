@@ -3,16 +3,17 @@ import UIKit
 
 class Book {
     var title: String?
-    var author: String
-    var releaseYear: Int
+    var publisher: String
+    var releaseYear: String
     var coverImage: String?
     var summary: String
     var description: String?
+    //var author: String?
     
     
-    init(title: String, subTitle: String, releaseYear: Int, coverImage: String, summary: String, description: String) {
+    init(title: String, publisher: String, releaseYear: String, coverImage: String, summary: String, description: String) {
         self.title = title;
-        self.author = subTitle;
+        self.publisher = publisher;
         self.releaseYear = releaseYear
         self.summary = summary
         self.description = description
@@ -20,9 +21,9 @@ class Book {
     }
     
     init() {
-        self.author = "Empty";
+        self.publisher = "Empty";
         self.title = "Empty";
-        self.releaseYear = 0
+        self.releaseYear = "0"
         self.summary = "Empty"
         self.description = "Empty"
         self.coverImage = "Empty"

@@ -89,13 +89,17 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 var subTitle = volumeInfo!["subtitle"] as? String;
                                 subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
+                                var description = volumeInfo!["description"] as? String;
+                                description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                
+                                
                                 if (volumeInfo != nil && imageLinks != nil) {
                                     var smallThumbnail = imageLinks!["smallThumbnail"] as! String;
                                     
                                     //print(volumeInfo)
                                     if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
                                         //self.listBook.append(Book(title: title!, subTitle: subTitle, smallThumbnail: smallThumbnail))
-                                        self.books.append(Book(title: title!, subTitle: subTitle ?? "Empty", releaseYear: 10, coverImage: smallThumbnail, summary: "Empty", description: "Empty"))
+                                        self.books.append(Book(title: title!, subTitle: subTitle ?? "Empty", releaseYear: 10, coverImage: smallThumbnail, summary: "Empty", description: description ?? "Empty"))
                                     }
                                 }
                             }

@@ -28,10 +28,7 @@ let jsonString = """
 
 let jsonData = Data(jsonString.utf8)
 
-//class JsonObject {
-//    static func downloadCourseObject(completion:((_ json: Data?) -> Void)) {
-//        completion(Data(CourseObject.utf8))
-//}
+
 
 
 

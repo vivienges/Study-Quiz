@@ -13,7 +13,9 @@ class bookTableViewCell : UITableViewCell {
     // Cell UI Elements
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
-    @IBOutlet weak var cellImage: UIImageView!
+   @IBOutlet weak var cellImage: UIImageView!
+    
+    
     
     
     override func awakeFromNib() {
@@ -32,7 +34,14 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var navigationBar: UINavigationItem!
     
+    
     @IBOutlet weak var courseDescription: UILabel!
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
@@ -45,13 +54,20 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Book()
     ]
     
+    var currentCourse = Course(title: "", teacher: "", description: "", totalQuestions: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print("Vorhandene Bücher: \(books.count)")
+       
         
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.delegate = self
+        
+        
+        navigationBar.title = currentCourse.title
+        courseDescription.text = currentCourse.description
+        
     }
     
     

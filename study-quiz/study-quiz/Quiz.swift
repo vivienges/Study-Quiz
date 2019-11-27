@@ -15,7 +15,6 @@ class Quiz {
     
     let name: String
     var questions: [Question]
-    
     let totalQuestions: Int
     var completedQuestions: Int
     var isCompleted: Bool

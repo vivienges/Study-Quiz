@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class myTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellTitle: UILabel!
@@ -19,7 +20,7 @@ class myTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cellImage.layer.cornerRadius = 8
+        //cellImage.layer.cornerRadius = 8
         containerView.layer.cornerRadius = 12
         
     }
@@ -30,24 +31,40 @@ class myTableViewCell: UITableViewCell {
     
 }
 
+struct Course: Codable {
+    var title: String
+    var teacher: String
+    var description: String
+    var totalQuestions: Int
+}
+
 
 class CoursesTableViewController: UITableViewController {
     
     
-    var courses: [Course] = [
-    
-        Course(title: "Course 1", teacher: "Teacher 1", description: "Lorem Ipsum", courseTitleImageName: "doc.fill", totalQuestions: 20),
-        Course(title: "Course 2", teacher: "Teacher 2", description: "Lorem Ipsum", courseTitleImageName: "doc.fill", totalQuestions: 25),
-        Course(title: "Course 3", teacher: "Teacher 3", description: "Lorem Ipsum", courseTitleImageName: "doc.fill",totalQuestions: 15),
-        Course(title: "Course 4", teacher: "Teacher 4", description: "Lorem Ipsum", courseTitleImageName: "doc.fill", totalQuestions: 18)
-    
-    ]
+    var courses: [Course] = []
     
     
     @IBOutlet var myTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let decoder = JSONDecoder()
+        
+        do {
+            let course = try decoder.decode([Course].self, from: jsonData)
+            
+            for index in 0...(course.count-1) {
+                courses.append(Course.init(title: course[index].title, teacher: course[index].teacher, description: course[index].description, totalQuestions: course[index].totalQuestions))
+             
+            }
+           
+            
+        } catch {
+            print(error.localizedDescription)
+        }
         
         myTableView.delegate = self
         
@@ -73,8 +90,8 @@ class CoursesTableViewController: UITableViewController {
         
         
         cell.cellTitle?.text = currentCourse.title
-        cell.cellDetail?.text = "\(currentCourse.answeredQuestions) / \(currentCourse.totalQuestions)"
-        cell.cellImage?.image = currentCourse.getCoverImage()
+        cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
+       // cell.cellImage?.image = currentCourse.getCoverImage()
         
         return cell
     }
@@ -84,6 +101,18 @@ class CoursesTableViewController: UITableViewController {
         self.performSegue(withIdentifier: "showCourseSegue", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? CourseViewController {
+            destination.currentCourse = courses[(tableView.indexPathForSelectedRow?.row)!]
+            
+            tableView.deselectRow(at: tableView!.indexPathForSelectedRow!, animated: true)
+            
+            
+        }
+        
+        
+    }
     
     
 }

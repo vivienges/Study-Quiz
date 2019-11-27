@@ -21,7 +21,7 @@ class BookViewController: UIViewController {
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
-    let sampleBook: Book = Book()
+    var currentBook: Book = Book()
     
     
     override func viewDidLoad() {
@@ -29,9 +29,9 @@ class BookViewController: UIViewController {
         
         
         // Set data to book information
-        navigationBar.title = sampleBook.title
-        bookDescription.text = sampleBook.description
-        bookReleaseYear.text = "\(sampleBook.releaseYear)"
+        navigationBar.title = currentBook.title
+        bookDescription.text = currentBook.description
+        bookReleaseYear.text = "\(currentBook.releaseYear)"
     }
 }
 

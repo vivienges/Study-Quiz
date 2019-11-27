@@ -49,9 +49,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var myTableView: UITableView!
     
     var books: [Book] = [
-        Book(),
-        Book(),
-        Book()
     ]
     
     var currentCourse = Course(title: "", teacher: "", description: "", totalQuestions: 0)
@@ -68,13 +65,55 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         navigationBar.title = currentCourse.title
         courseDescription.text = currentCourse.description
         
+        
+        // load data
+        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=learnswift") // get the list of book from google book api
+        URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
+            if (error != nil) {
+                print(error?.localizedDescription)
+            } else {
+                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                    
+                    if let actorArray = jsonObj.value(forKey: "items") as? NSArray {
+                        for actor in actorArray{
+                            //print (actor);
+                            if let actorDict = actor as? NSDictionary {
+                                
+                                let volumeInfo = actorDict["volumeInfo"] as? [String: AnyObject]
+                                
+                                let imageLinks = volumeInfo!["imageLinks"] as? [String: AnyObject]
+                                
+                                var title = volumeInfo!["title"] as? String;
+                                title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                
+                                var subTitle = volumeInfo!["subtitle"] as? String;
+                                subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                
+                                if (volumeInfo != nil && imageLinks != nil) {
+                                    var smallThumbnail = imageLinks!["smallThumbnail"] as! String;
+                                    
+                                    //print(volumeInfo)
+                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
+                                        //self.listBook.append(Book(title: title!, subTitle: subTitle, smallThumbnail: smallThumbnail))
+                                        self.books.append(Book(title: title!, subTitle: subTitle ?? "Empty", releaseYear: 10, coverImage: smallThumbnail, summary: "Empty", description: "Empty"))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    OperationQueue.main.addOperation({
+                        self.myTableView.reloadData()
+                    })
+                }
+            }
+        }).resume()
+        
+        reloadInputViews();
+        
+        
+        
     }
-    
-    
-    
-    
-    
-    
     
     // TABLE VIEW FUNCTIONS
     
@@ -98,10 +137,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.cellTitle?.text = currentBook.title
         cell.cellDetail?.text = currentBook.author
-        cell.cellImage.image = currentBook.getImage()
 
-        
-        
         
         
         return cell
@@ -113,5 +149,16 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.performSegue(withIdentifier: "showBookSegue", sender: self)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? BookViewController {
+            destination.currentBook = books[(myTableView.indexPathForSelectedRow?.row)!]
+            
+            myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
+
+        }
+
     }
 }

@@ -20,18 +20,11 @@ let jsonString = """
         "title": "Android Development",
         "teacher": "Mikael Bergman",
         "description": "Käsekuchen",
-        "totalQuestions": 25,
-        "
+        "totalQuestions": 25
     }
 ]
 """
 
 let jsonData = Data(jsonString.utf8)
-
-//class JsonObject {
-//    static func downloadCourseObject(completion:((_ json: Data?) -> Void)) {
-//        completion(Data(CourseObject.utf8))
-//}
-
 
 

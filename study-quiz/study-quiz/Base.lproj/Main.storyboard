@@ -219,18 +219,6 @@
                                     <constraint firstAttribute="width" secondItem="9mg-Fj-NJn" secondAttribute="height" multiplier="1:1" id="Mux-kZ-KeS"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mje-fY-QrO">
-                                <rect key="frame" x="16" y="621" width="382" height="80"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="8Iz-iZ-evB"/>
-                                    <constraint firstAttribute="height" constant="80" id="l6t-iG-owi"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="lxZ-oM-o8N"/>
-                                </constraints>
-                                <state key="normal" title="Summary">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-ie-3Kc">
                                 <rect key="frame" x="16" y="104" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -243,11 +231,8 @@
                             <constraint firstItem="4fa-ie-3Kc" firstAttribute="top" secondItem="5EB-bV-YkO" secondAttribute="top" constant="16" id="0b1-ul-ghR"/>
                             <constraint firstItem="9mg-Fj-NJn" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="2lR-Ja-l3y"/>
                             <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="9mg-Fj-NJn" secondAttribute="trailing" constant="16" id="4Yh-cw-9Sr"/>
-                            <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="mje-fY-QrO" secondAttribute="trailing" constant="16" id="7wX-Hn-Cnv"/>
-                            <constraint firstItem="xzg-FD-JAy" firstAttribute="top" secondItem="mje-fY-QrO" secondAttribute="bottom" constant="16" id="89N-z5-uVU"/>
                             <constraint firstItem="xzg-FD-JAy" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="J2a-Zg-wGP"/>
                             <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="X59-jO-oxL" secondAttribute="trailing" constant="16" id="JPL-RD-uer"/>
-                            <constraint firstItem="mje-fY-QrO" firstAttribute="centerX" secondItem="xzg-FD-JAy" secondAttribute="centerX" id="Pgu-b8-mtX"/>
                             <constraint firstItem="5EB-bV-YkO" firstAttribute="bottom" secondItem="xzg-FD-JAy" secondAttribute="bottom" constant="16" id="RGX-I5-3MK"/>
                             <constraint firstItem="X59-jO-oxL" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="SgM-nX-KRZ"/>
                             <constraint firstItem="9mg-Fj-NJn" firstAttribute="top" secondItem="X59-jO-oxL" secondAttribute="bottom" constant="16" id="UOD-N6-z5t"/>
@@ -265,7 +250,6 @@
                         <outlet property="coverImage" destination="9mg-Fj-NJn" id="XUf-hK-btI"/>
                         <outlet property="navigationBar" destination="u0Z-fo-fKv" id="ZTO-la-c67"/>
                         <outlet property="startQuizBtn" destination="xzg-FD-JAy" id="Ure-dY-0JP"/>
-                        <outlet property="summaryBtn" destination="mje-fY-QrO" id="Mn7-s4-YzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGH-Qc-PTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -402,6 +386,6 @@
         <image name="chevron.right" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gks-ST-Jkt"/>
+        <segue reference="H6I-ln-sOl"/>
     </inferredMetricsTieBreakers>
 </document>

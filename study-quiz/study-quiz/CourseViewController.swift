@@ -13,7 +13,7 @@ class bookTableViewCell : UITableViewCell {
     // Cell UI Elements
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
-   @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellImage: UIImageView!
     
     
     
@@ -33,20 +33,14 @@ class bookTableViewCell : UITableViewCell {
 class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var navigationBar: UINavigationItem!
-    
-    
     @IBOutlet weak var courseDescription: UILabel!
-    
-    
-    
-    
-    
-    
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
     // Book Table View
     @IBOutlet weak var myTableView: UITableView!
+    
+    let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     
     var books: [Book] = [
     ]
@@ -55,7 +49,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -76,7 +70,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     
                     if let actorArray = jsonObj.value(forKey: "items") as? NSArray {
                         for actor in actorArray{
-                            //print (actor);
+                            
                             if let actorDict = actor as? NSDictionary {
                                 
                                 let volumeInfo = actorDict["volumeInfo"] as? [String: AnyObject]
@@ -95,8 +89,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 
                                 var publishedDate = volumeInfo!["publishedDate"] as? String;
                                 
-                        
-                                
                                 var description = volumeInfo!["description"] as? String;
                                 description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
@@ -107,6 +99,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                     //print(volumeInfo)
                                     if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
                                         self.books.append(Book(title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing"))
+                                        print(smallThumbnail)
                                     }
                                 }
                             }
@@ -148,7 +141,19 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.cellTitle?.text = currentBook.title
         cell.cellDetail?.text = currentBook.publisher
-
+        
+        
+        if let url = URL(string: currentBook.coverImage ?? urlKey){
+            do {
+                let data = try Data(contentsOf: url)
+                cell.cellImage?.image = UIImage(data: data)
+                
+            }catch let err {
+                print("Error wegen Thumbnail: \(err.localizedDescription)")
+                cell.cellImage.image = UIImage(systemName: "book.fill")
+            }
+        }
+        
         
         
         return cell
@@ -168,8 +173,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             destination.currentBook = books[(myTableView.indexPathForSelectedRow?.row)!]
             
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
-
+            
         }
-
+        
     }
 }

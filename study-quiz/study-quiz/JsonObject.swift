@@ -8,45 +8,58 @@
 
 import Foundation
 
-let jsonString = """
+let jsonString =
+"""
 [
-   {
-      "title":"iOS Development",
-      "teacher":"Mikael Bergman",
-      "description":"Käsekuchen",
-      "totalQuestions":20,
-      "books":[
-         {
-            "isbn":"1234",
-            "quiz":[
-               {
-                  "questions":[
-                     {
-                        "question":"1"
-                     },
-                     {
-                        "question":"2"
-                     }
-                  ],
-                  "answers":[
-                     {
-                        "answer":"bla"
-                     },
-                     {
-                        "answer":"blabla"
-                     }
-                  ]
-               }
+{
+   "title":"iOS Development",
+   "teacher":"Mikael Bergman",
+   "description":"Käsekuchen",
+   "totalQuestions":20,
+   "books":[
+      {
+         "isbn":"1234",
+         "title": "df",
+         "publisher": "efrg",
+         "releaseYear": "efgr",
+         "coverImage": "efwgr",
+         "summary": "ewgr",
+         "description": "wgr",
+        "quiz": [
+                {
+                "questions":
+                            [
+                          {
+                              "title": "wie gehts?",
+                              "answeredRight": false
+                          },
+                        {
+                            "title": "wie gehts?",
+                            "answeredRight": false
+                        },
+                        {
+                            "title": "wie gehts?",
+                            "answeredRight": false
+                        }
+                        ],
+                      
+                "answers":[
+                      ["Answer1", "Answer1", "Answer1", "Answer1"]
+                      ]
+                
+                }
             ]
-         }
-      ]
-   }
+       }
+   ]
+}
 ]
 """
 
 
 
+
 let jsonData = Data(jsonString.utf8)
+
 
 
 

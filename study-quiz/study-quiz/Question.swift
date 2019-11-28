@@ -8,45 +8,15 @@
 
 import UIKit
 
-class Question {
+
+struct Question : Codable {
     
-    let question: String
-    var answers: [String]
-    let totalAnswers: Int
-    let correctAnswer: String
-    let indexCorrectAnswer: Int
-    var answered: Bool
-    
-    init(question: String, answers: [String], indexCorrectAnswer: Int) {
-        self.question =  question
-        self.answers = answers
-        self.totalAnswers =  answers.count
-        self.indexCorrectAnswer = indexCorrectAnswer
-        self.correctAnswer = answers[indexCorrectAnswer]
-        self.answered =  false
-    }
-    
-    init() {
-        self.question =  "What does the Cow say?"
-        self.answers = [
-            "Moo",
-            "Wuff",
-            "WOOO",
-            "Hi"
-        ]
-        self.totalAnswers =  answers.count
-        self.indexCorrectAnswer = 0
-        self.correctAnswer = answers[indexCorrectAnswer]
+    var title : String
+    var answeredRight : Bool
         
-        self.answered =  false
+    init(title: String, answeredRight : Bool) {
+            self.title = title
+        self.answeredRight = answeredRight
+        }
     }
-    
-    func getFeedback(indexAnswer: Int) -> Bool {
-        if indexAnswer == indexCorrectAnswer {
-            answered = true
-            return true
-        }; return false
-        
-    }
-    
-}
+

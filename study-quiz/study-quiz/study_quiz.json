@@ -49,3 +49,65 @@
        }
 
    }
+
+
+   [{
+      "title":"iOS Development",
+      "teacher":"Mikael Bergman",
+      "description":"Käsekuchen",
+      "totalQuestions":20,
+       "books": [
+                   {"isbn" : "1234",
+                   "quiz" : "bla"}
+   ,               {"isbn" : "456",
+                   "quiz" : "blablabla"
+   }
+   ]
+   }]
+
+
+[
+{
+      "title":"iOS Development",
+      "teacher":"Mikael Bergman",
+      "description":"Käsekuchen",
+      "totalQuestions":20,
+      "books":[
+         {
+            "isbn":"1234",
+            "quiz":[
+               {
+                  "questions":
+                        [
+                           {
+                               "title": "wie gehts?",
+                               "answeredRight": false
+                           },
+                           {
+                               "title": "wie alt?",
+                               "answeredRight": false
+                           },
+                           {
+                               "title": "wie gehts?",
+                               "answeredRight": false
+                           },
+                           {
+                               "title": "wie gehts?",
+                               "answeredRight": false
+                           },
+                           {
+                               "title": "wie gehts?",
+                               "answeredRight": false
+                           },
+                        ],
+                  "answers":[
+                        ["Answer1", "Answer1", "Answer1", "Answer1"],
+                        ["Answer2", "Answer2", "Answer2", "Answer2"],
+                        ["Answer3", "Answer3", "Answer3", "Answer3"]
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+]

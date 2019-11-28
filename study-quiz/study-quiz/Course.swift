@@ -14,9 +14,9 @@ struct Course: Codable {
     var teacher: String
     var description: String
     let totalQuestions: Int
-   var books: [bookJSON]
+    var books: [Book]
 
-    init(title: String, teacher: String, description: String, totalQuestions: Int, books: [bookJSON]) {
+    init(title: String, teacher: String, description: String, totalQuestions: Int, books: [Book]) {
         self.title = title
         self.teacher = teacher
         self.description = description

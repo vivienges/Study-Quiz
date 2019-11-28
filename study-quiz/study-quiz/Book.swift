@@ -1,35 +1,40 @@
 import UIKit
 
 
-class Book {
+struct Book : Codable {
+    var isbn : String
     var title: String?
     var publisher: String
     var releaseYear: String
     var coverImage: String?
     var summary: String
     var description: String?
-    //var author: String?
+    var quiz : [Quiz]
+
     
-    //var isbn: Int
+
     
     
-    init(title: String, publisher: String, releaseYear: String, coverImage: String, summary: String, description: String) {
+    init(isbn : String, title: String, publisher: String, releaseYear: String, coverImage: String, summary: String, description: String, quiz : [Quiz]) {
+        self.isbn = isbn
         self.title = title;
         self.publisher = publisher;
         self.releaseYear = releaseYear
         self.summary = summary
         self.description = description
         self.coverImage = coverImage
+        self.quiz = quiz
     }
     
     init() {
+        self.isbn = "0"
         self.publisher = "Empty";
         self.title = "Empty";
         self.releaseYear = "0"
         self.summary = "Empty"
         self.description = "Empty"
         self.coverImage = "Empty"
-        
+        self.quiz = [Quiz(questions: [Question(title: "", answeredRight: false)], answers: [[""]])]
     }
     
     func getDate() -> Date? {

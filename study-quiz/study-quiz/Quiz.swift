@@ -11,42 +11,15 @@ import UIKit
 // This class organized a Quiz. It mainly consists of multiple Questions that can be answered or not
 // Right now this is not able to set the completedQuestions variable automatically
 
-class Quiz {
+struct Quiz : Codable {
     
-    let name: String
-    var questions: [Question]
-    let totalQuestions: Int
-    var completedQuestions: Int
-    var isCompleted: Bool
+    var questions : [Question]
+    var answers : [[String]]
     
-    init(name: String, questions: [Question] ,totalQuestions: Int) {
-        self.name = name
+    init(questions: [Question], answers: [[String]]) {
         self.questions = questions
-        self.totalQuestions = questions.count
-        completedQuestions = 0
-        isCompleted = false
+        self.answers = answers
     }
-    
-    init() {
-                
-        self.name = "Sample Quiz"
-        self.questions = [
-            Question(),
-            Question(question: "Is this the second Question?", answers: ["No", "42", "No", "Yes"], indexCorrectAnswer: 3)
-        ]
-        self.totalQuestions = questions.count
-        completedQuestions = 0
-        isCompleted = false
-    }
-    
-    func getState() -> String {
-        if isCompleted ==  true {
-            return "Quiz is completed"
-        } else {
-            return "\(totalQuestions-completedQuestions) left to answer."
-        }
-    }
-
-    
+   
     
 }

@@ -33,8 +33,9 @@ class myTableViewCell: UITableViewCell {
 
 class CoursesTableViewController: UITableViewController {
     
-    
+    var questions: [Question] = []
     var courses: [Course] = []
+    var quizes: [Quiz] = []
     
     
     @IBOutlet var myTableView: UITableView!
@@ -48,12 +49,20 @@ class CoursesTableViewController: UITableViewController {
         do {
             let course = try decoder.decode([Course].self, from: jsonData)
             
-            print(course[0].books[0])
+            print(course[0])
             
 //            for index in 0...(course.count-1) {
-//                courses.append(Course.init(title: course[index].title, teacher: course[index].teacher, description: course[index].description, totalQuestions: course[index].totalQuestions), books: course[index].books)
-             
-          //  }
+//
+////                questions.append(Question.init(title: Course.init, answeredRight: <#T##Bool#>))
+////
+////                quizes.append(Quiz.init(questions: <#T##[Question]#>, answers: <#T##[[String]]#>))
+//
+//                
+////                courses.append(Course.init(title: course[index].title, teacher: course[index].teacher, description: course[index].description, totalQuestions: course[index].totalQuestions), books: [(course[index].books[0])])
+//
+//
+//
+//            }
            
             
         } catch {

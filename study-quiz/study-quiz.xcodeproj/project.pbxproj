@@ -28,10 +28,6 @@
 		63CA161323800827008DBC88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161223800827008DBC88 /* Course.swift */; };
 		A08F73D22386AC0A0016A376 /* FeedbackQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */; };
 		A0EB8544238EA06A005F30FA /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8543238EA06A005F30FA /* JsonObject.swift */; };
-		A0EB8546238EE515005F30FA /* bookJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8545238EE515005F30FA /* bookJSON.swift */; };
-		A0EB8548238EE631005F30FA /* quizJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8547238EE631005F30FA /* quizJSON.swift */; };
-		A0EB854A238EE69D005F30FA /* questionJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8549238EE69D005F30FA /* questionJSON.swift */; };
-		A0EB854C238EE734005F30FA /* answerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB854B238EE734005F30FA /* answerJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,10 +54,6 @@
 		63CA161223800827008DBC88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackQuestionViewController.swift; sourceTree = "<group>"; };
 		A0EB8543238EA06A005F30FA /* JsonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
-		A0EB8545238EE515005F30FA /* bookJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookJSON.swift; sourceTree = "<group>"; };
-		A0EB8547238EE631005F30FA /* quizJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizJSON.swift; sourceTree = "<group>"; };
-		A0EB8549238EE69D005F30FA /* questionJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionJSON.swift; sourceTree = "<group>"; };
-		A0EB854B238EE734005F30FA /* answerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answerJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +89,8 @@
 				63CA161223800827008DBC88 /* Course.swift */,
 				63184C9723816734004C2781 /* CourseViewController.swift */,
 				63CA1608237F33C2008DBC88 /* Book.swift */,
-				A0EB8545238EE515005F30FA /* bookJSON.swift */,
 				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				636EFE8E2385D61100499A02 /* Quiz.swift */,
-				A0EB8547238EE631005F30FA /* quizJSON.swift */,
-				A0EB854B238EE734005F30FA /* answerJSON.swift */,
-				A0EB8549238EE69D005F30FA /* questionJSON.swift */,
 				636EFE902385D69000499A02 /* Question.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
 				631C121723831E2D00101A67 /* Quiz.storyboard */,
@@ -198,7 +186,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0EB854C238EE734005F30FA /* answerJSON.swift in Sources */,
 				63CA161323800827008DBC88 /* Course.swift in Sources */,
 				636EFE8F2385D61100499A02 /* Quiz.swift in Sources */,
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
@@ -206,7 +193,6 @@
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63A0EF94238EE24900702DF6 /* extensions.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
-				A0EB854A238EE69D005F30FA /* questionJSON.swift in Sources */,
 				63A3ED71238318CE000C8152 /* ProfileViewController.swift in Sources */,
 				636EFE912385D69000499A02 /* Question.swift in Sources */,
 				A08F73D22386AC0A0016A376 /* FeedbackQuestionViewController.swift in Sources */,
@@ -214,8 +200,6 @@
 				A0EB8544238EA06A005F30FA /* JsonObject.swift in Sources */,
 				63CA160B237FF484008DBC88 /* TabBarViewController.swift in Sources */,
 				63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */,
-				A0EB8546238EE515005F30FA /* bookJSON.swift in Sources */,
-				A0EB8548238EE631005F30FA /* quizJSON.swift in Sources */,
 				63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

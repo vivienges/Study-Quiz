@@ -27,11 +27,28 @@ class BookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Set data to book information
         navigationBar.title = currentBook.title
         bookDescription.text = currentBook.description
-        bookReleaseYear.text = "\(currentBook.releaseYear)"
+        
+        // Set the release year
+        let releaseYear = "Release year: " + currentBook.getYear()
+        bookReleaseYear.text = releaseYear
+        
+        // Set cover Image
+        let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        if let url = URL(string: currentBook.coverImage ?? urlKey){
+            do {
+                let data = try Data(contentsOf: url)
+                coverImage.image = UIImage(data: data)
+                
+            }catch let err {
+                print("Error wegen Thumbnail: \(err.localizedDescription)")
+                coverImage.image = UIImage(systemName: "book.fill")
+            }
+        }
+        
+        
     }
 }
 

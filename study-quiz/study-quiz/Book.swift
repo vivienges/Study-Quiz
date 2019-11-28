@@ -10,6 +10,8 @@ class Book {
     var description: String?
     //var author: String?
     
+    //var isbn: Int
+    
     
     init(title: String, publisher: String, releaseYear: String, coverImage: String, summary: String, description: String) {
         self.title = title;
@@ -30,6 +32,28 @@ class Book {
         
     }
     
+    func getDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.date(from: "2015-04-01") // replace Date String
+        
+    }
+    
+    
+    func getYear() -> String {
+        
+        let date = self.getDate()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        
+        let now = dateFormatter.string(from: Date())
+        
+        return now
+        
+    }
     
     
     

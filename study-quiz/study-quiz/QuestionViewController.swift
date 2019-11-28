@@ -20,10 +20,6 @@ class QuestionViewController: UIViewController {
     // UI Elements
     
     // Buttons
-    @IBOutlet weak var answerABtn: UIButton!
-    @IBOutlet weak var answerBBtn: UIButton!
-    @IBOutlet weak var answerCBtn: UIButton!
-    @IBOutlet weak var answerDBtn: UIButton!
     
     // ProgressBar
     @IBOutlet weak var quizProgressBar: UIProgressView!
@@ -41,56 +37,16 @@ class QuestionViewController: UIViewController {
         print("You answered: \(currentQuiz.completedQuestions) questions")
         
         self.navigationItem.title = currentQuestion.question
+
         
-        answerABtn.setTitle(currentQuestion.answers[0], for: .normal)
-        answerBBtn.setTitle(currentQuestion.answers[1], for: .normal)
-        answerCBtn.setTitle(currentQuestion.answers[2], for: .normal)
-        answerDBtn.setTitle(currentQuestion.answers[3], for: .normal)
         
     }
-    
-    var getFeedback =  false
+
 
     
-    @IBAction func aBtnPressed(_ sender: Any) {
-        let index = 0
-        print("A pressed")
-        getFeedback = self.currentQuestion.getFeedback(indexAnswer: index)
-        answerABtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
-        
-        if currentQuestion.getFeedback(indexAnswer: index) {
-            currentQuiz.completedQuestions += 1
-            print("You answered: \(currentQuiz.completedQuestions) questions")
-        }
-        
-        self.performSegue(withIdentifier: "feedbackViewSegue", sender: self)
-    }
     
-    @IBAction func bBtnPressed(_ sender: Any) {
-        let index = 1
-        print("B pressed")
-        answerBBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
-        self.performSegue(withIdentifier: "feedbackViewSegue", sender: self)
 
-    }
-    
-    @IBAction func cBtnPressed(_ sender: Any) {
-        let index = 2
-        print("C pressed")
-        print(self.currentQuestion.getFeedback(indexAnswer: index))
-        answerCBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
-        self.performSegue(withIdentifier: "feedbackViewSegue", sender: self)
 
-    }
-    
-    @IBAction func dBtnPressed(_ sender: Any) {
-        let index = 3
-        print("D pressed")
-        print(self.currentQuestion.getFeedback(indexAnswer: index))
-        answerDBtn.setTitle("\(currentQuestion.getFeedback(indexAnswer: index))", for: .normal)
-        self.performSegue(withIdentifier: "feedbackViewSegue", sender: self)
-
-    }
     
     // This is repeating code and should be optimized later
     
@@ -100,7 +56,6 @@ class QuestionViewController: UIViewController {
             return
         }
         vc.currentQuiz = currentQuiz
-        vc.booleanAnswer = self.getFeedback
       
     }
     

@@ -54,7 +54,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Book()
     ]
     
-    var currentCourse = Course(title: "", teacher: "", description: "", totalQuestions: 0)
+    var currentCourse = Course(title: "", teacher: "", description: "", totalQuestions: 0, books: [bookJSON(isbn: "", quiz: [quizJSON(questions: [questionJSON(question: "")], answers: [answerJSON(answer: "")])])])
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,7 +1,7 @@
 import UIKit
 
 
-class Book {
+class Book   {
     var title: String
     var author: String
     var releaseYear: Int
@@ -9,7 +9,7 @@ class Book {
     var summary: String
     var description: String
     
-    let searchText = "book"
+    //let searchText = "book"
     
     
     init(title: String, author: String, releaseYear: Int, coverImageName: String, summary: String, description: String) {

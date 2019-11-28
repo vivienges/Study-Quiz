@@ -8,34 +8,28 @@
 
 import UIKit
 
-//class Course: Codable {
+struct Course: Codable {
+
+    var title: String
+    var teacher: String
+    var description: String
+    let totalQuestions: Int
+   var books: [bookJSON]
+
+    init(title: String, teacher: String, description: String, totalQuestions: Int, books: [bookJSON]) {
+        self.title = title
+        self.teacher = teacher
+        self.description = description
+        self.totalQuestions = totalQuestions
+        self.books = books
+        
+        //answeredQuestions = 0
+
+    }
 //
-//    var title: String
-//    var teacher: String
-//    var description: String
-//    //var courseTitleImageName: String
-//    //var answeredQuestions: Int
-//    let totalQuestions: Int
-//    
-//    init(title: String,teacher: String,description: String, totalQuestions: Int) {
-//        self.title = title
-//        self.teacher = teacher
-//        self.description = description
-//       // self.courseTitleImageName = courseTitleImageName
-//        self.totalQuestions = totalQuestions
-//        
-//        answeredQuestions = 0
-//
-//    }
-//
-////    func getCoverImage() -> UIImage! {
-////        return UIImage(systemName: courseTitleImageName)
-////    }
 //    
 //    func setAnsweredQUestions(answeredQuestions: Int) {
 //        self.answeredQuestions = answeredQuestions
 //    }
-//
-//    
-//    
-//}
+
+}

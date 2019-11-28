@@ -31,14 +31,6 @@ class myTableViewCell: UITableViewCell {
     
 }
 
-struct Course: Codable {
-    var title: String
-    var teacher: String
-    var description: String
-    var totalQuestions: Int
-}
-
-
 class CoursesTableViewController: UITableViewController {
     
     
@@ -56,10 +48,12 @@ class CoursesTableViewController: UITableViewController {
         do {
             let course = try decoder.decode([Course].self, from: jsonData)
             
-            for index in 0...(course.count-1) {
-                courses.append(Course.init(title: course[index].title, teacher: course[index].teacher, description: course[index].description, totalQuestions: course[index].totalQuestions))
+            print(course[0].books[0])
+            
+//            for index in 0...(course.count-1) {
+//                courses.append(Course.init(title: course[index].title, teacher: course[index].teacher, description: course[index].description, totalQuestions: course[index].totalQuestions), books: course[index].books)
              
-            }
+          //  }
            
             
         } catch {

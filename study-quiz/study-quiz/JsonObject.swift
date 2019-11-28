@@ -10,21 +10,45 @@ import Foundation
 
 let jsonString = """
 [
-    {
-        "title": "iOS Development",
-        "teacher": "Mikael Bergman",
-        "description": "Käsekuchen",
-        "totalQuestions": 20
-    },
-    {
-        "title": "Android Development",
-        "teacher": "Mikael Bergman",
-        "description": "Käsekuchen",
-        "totalQuestions": 25
-    }
+   {
+      "title":"iOS Development",
+      "teacher":"Mikael Bergman",
+      "description":"Käsekuchen",
+      "totalQuestions":20,
+      "books":[
+         {
+            "isbn":"1234",
+            "quiz":[
+               {
+                  "questions":[
+                     {
+                        "question":"1"
+                     },
+                     {
+                        "question":"2"
+                     }
+                  ],
+                  "answers":[
+                     {
+                        "answer":"bla"
+                     },
+                     {
+                        "answer":"blabla"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
 ]
 """
 
+
+
 let jsonData = Data(jsonString.utf8)
+
+
+
 
 

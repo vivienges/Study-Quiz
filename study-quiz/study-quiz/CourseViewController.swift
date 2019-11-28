@@ -50,52 +50,54 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        
+        // Set UI to course info
         navigationBar.title = currentCourse.title
         courseDescription.text = currentCourse.description
+        progressLabel.text = "0 / \(currentCourse.totalQuestions)"
         
+        // MARK: ProgressBar
+        // TODO: Make use of course info so the info is not hardcoded
+        let progress = Progress(totalUnitCount: 10)
+        progress.completedUnitCount = 3
+        let progressFloat = Float(progress.fractionCompleted)
+        progressBar.setProgress(progressFloat, animated: true)
+
         
-        // load data
-        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=learnswift") // get the list of book from google book api
+        // MARK: FETCH INFO FROM GOOGLE BOOKS API
+        
+        // API URL
+        // get the list of book from google book api
+        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=learnswift")
         URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
             if (error != nil) {
                 print(error?.localizedDescription)
             } else {
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                    
                     if let actorArray = jsonObj.value(forKey: "items") as? NSArray {
                         for actor in actorArray{
-                            
                             if let actorDict = actor as? NSDictionary {
                                 
+                                // saving the data we need for the user interface
                                 let volumeInfo = actorDict["volumeInfo"] as? [String: AnyObject]
-                                
                                 let imageLinks = volumeInfo!["imageLinks"] as? [String: AnyObject]
-                                
                                 var title = volumeInfo!["title"] as? String;
-                                title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
-                                
-                                
                                 
                                 var subTitle = volumeInfo!["subtitle"] as? String;
-                                subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
-                                
                                 var publisher = volumeInfo!["publisher"] as? String;
-                                
                                 var publishedDate = volumeInfo!["publishedDate"] as? String;
-                                
                                 var description = volumeInfo!["description"] as? String;
-                                description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
+                                // Trimming Characters to correct character set
+                                description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
                                 if (volumeInfo != nil && imageLinks != nil) {
                                     var smallThumbnail = imageLinks!["smallThumbnail"] as! String;
-                                    
                                     //print(volumeInfo)
                                     if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
                                         self.books.append(Book(title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing"))
@@ -105,7 +107,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                             }
                         }
                     }
-                    
                     OperationQueue.main.addOperation({
                         self.myTableView.reloadData()
                     })
@@ -114,12 +115,14 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }).resume()
         
         reloadInputViews();
-        
-        
-        
     }
     
-    // TABLE VIEW FUNCTIONS
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
+    }
+    
+    // MARK: TABLE VIEW FUNCTIONS
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -159,6 +162,9 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
         
     }
+    
+    
+    // MARK: SETUP SEGUEWAYS
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

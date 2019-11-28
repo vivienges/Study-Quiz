@@ -31,7 +31,11 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // MARK: ProgressBar
+        let progress = Progress(totalUnitCount: Int64(currentQuiz.totalQuestions))
+        progress.completedUnitCount = Int64(currentQuiz.completedQuestions)
+        let progressFloat = Float(progress.fractionCompleted)
+        quizProgressBar.setProgress(progressFloat, animated: true)
 
         currentQuestion = currentQuiz.questions[currentQuiz.completedQuestions]
         print("You answered: \(currentQuiz.completedQuestions) questions")

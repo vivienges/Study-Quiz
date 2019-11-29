@@ -26,6 +26,7 @@
 		63CA160B237FF484008DBC88 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA160A237FF484008DBC88 /* TabBarViewController.swift */; };
 		63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161023800471008DBC88 /* CoursesTableViewController.swift */; };
 		63CA161323800827008DBC88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161223800827008DBC88 /* Course.swift */; };
+		A06D3B7B23914DDB00CF286A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D3B7A23914DDB00CF286A /* CustomButton.swift */; };
 		A08F73D22386AC0A0016A376 /* FeedbackQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */; };
 		A0EB8544238EA06A005F30FA /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8543238EA06A005F30FA /* JsonObject.swift */; };
 		A0EB8546238EE515005F30FA /* bookJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8545238EE515005F30FA /* bookJSON.swift */; };
@@ -56,6 +57,7 @@
 		63CA160A237FF484008DBC88 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		63CA161023800471008DBC88 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		63CA161223800827008DBC88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		A06D3B7A23914DDB00CF286A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackQuestionViewController.swift; sourceTree = "<group>"; };
 		A0EB8543238EA06A005F30FA /* JsonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
 		A0EB8545238EE515005F30FA /* bookJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookJSON.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				6394B0092383215300229B8B /* Profile.storyboard */,
 				A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */,
 				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
+				A06D3B7A23914DDB00CF286A /* CustomButton.swift */,
 				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				A0EB8543238EA06A005F30FA /* JsonObject.swift */,
 				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
@@ -202,6 +205,7 @@
 				63CA161323800827008DBC88 /* Course.swift in Sources */,
 				636EFE8F2385D61100499A02 /* Quiz.swift in Sources */,
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
+				A06D3B7B23914DDB00CF286A /* CustomButton.swift in Sources */,
 				63184C9823816734004C2781 /* CourseViewController.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63A0EF94238EE24900702DF6 /* extensions.swift in Sources */,

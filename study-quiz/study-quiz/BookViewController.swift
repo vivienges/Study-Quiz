@@ -17,7 +17,6 @@ class BookViewController: UIViewController {
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var bookDescription: UILabel!
     @IBOutlet weak var bookReleaseYear: UILabel!
-    @IBOutlet weak var summaryBtn: UIButton!
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
@@ -34,6 +33,9 @@ class BookViewController: UIViewController {
         // Set the release year
         let releaseYear = "Release year: " + currentBook.getYear()
         bookReleaseYear.text = releaseYear
+        
+        // Style
+        startQuizBtn.layer.cornerRadius = 8
         
         // Set cover Image
         let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"

@@ -85,7 +85,6 @@ class CoursesTableViewController: UITableViewController {
         
         cell.cellTitle?.text = currentCourse.title
         cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
-       // cell.cellImage?.image = currentCourse.getCoverImage()
         
         return cell
     }

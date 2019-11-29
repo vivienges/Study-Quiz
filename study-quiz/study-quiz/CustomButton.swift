@@ -1,11 +1,3 @@
-//
-//  CustomButton.swift
-//  study-quiz
-//
-//  Created by David Bielenberg on 2019-11-29.
-//  Copyright © 2019 David Bielenberg. All rights reserved.
-//
-
 import UIKit
 
 class CustomButton: UIButton {
@@ -25,6 +17,12 @@ class CustomButton: UIButton {
     // Style the button
     func setupButton() {
         layer.cornerRadius = 8
+        
+        let buttonColor = UIColor(named: "Primary")
+        self.backgroundColor = buttonColor
+        
+        let labelColor = UIColor(named: "White")
+        self.setTitleColor(labelColor, for: .normal)
     }
 
 }

@@ -10,14 +10,16 @@ import Foundation
 
 let jsonString =
 """
+{
+"courses":
 [{
-       "title": "Object-oriented Software Development",
+       "courseTitle": "Object-oriented Software Development",
        "teacher": "Johannes Schmidt",
        "description": "The purpose of the course is to provide students with knowledge required to carry out object-oriented design in accordance with established practice, and to be able to implement the results of said design in program code.",
        "totalQuestions": 10,
        "books": [{
                "isbn": "9780131489066",
-               "title": "applying UML and patterns",
+               "bookTitle": "applying UML and patterns",
                "publisher": "Prentice Hall PTR",
                "releaseYear": "2005",
                "coverImage": "efwgr",
@@ -25,43 +27,43 @@ let jsonString =
                "description": "wgr",
                "quiz": [{
                    "questions": [{
-                           "title": "Which is a reason for IT-project failure?",
+                           "questionTitle": "Which is a reason for IT-project failure?",
                            "answeredRight": false
                        },
                        {
-                           "title": "What happens according to the triple contraint if you reduce cost (budget)?",
+                           "questionTitle": "What happens according to the triple contraint if you reduce cost (budget)?",
                            "answeredRight": false
                        },
                        {
-                           "title": "A Project is ...?",
+                           "questionTitle": "A Project is ...?",
                            "answeredRight": false
                        },
                        {
-                           "title": "Use cases are...?",
+                           "questionTitle": "Use cases are...?",
                            "answeredRight": false
                        },
                        {
-                           "title": "We consider responsibilities in the following two categories?",
+                           "questionTitle": "We consider responsibilities in the following two categories?",
                            "answeredRight": false
                        },
                        {
-                           "title": "Which of the following is no GoF pattern?",
+                           "questionTitle": "Which of the following is no GoF pattern?",
                            "answeredRight": false
                        },
                        {
-                           "title": "In the context of software development, which two types of requirements did we define?",
+                           "questionTitle": "In the context of software development, which two types of requirements did we define?",
                            "answeredRight": false
                        },
                        {
-                           "title": "A domain model does not contain…",
+                           "questionTitle": "A domain model does not contain…",
                            "answeredRight": false
                        },
                        {
-                           "title": "What is good design?",
+                           "questionTitle": "What is good design?",
                            "answeredRight": false
                        },
                        {
-                           "title": "Which of the following is no GRASPattern?",
+                           "questionTitle": "Which of the following is no GRASPattern?",
                            "answeredRight": false
                        }
                    ],
@@ -85,13 +87,13 @@ let jsonString =
        ]
    },
    {
-       "title": "introduktion till programmering",
+       "courseTitle": "introduktion till programmering",
        "teacher": "anders cartensen",
        "description": "Kursen ämnar ge studenten grundläggande förståelse för och kunskaper i strukturerad programmering, inklusive modellering, programdesign, och implementation med hjälp av imperativ programmering. Kursen ämnar även ge studenten en kortare introduktion till olika licensformer och andra för programmerare relevanta immaterialrättsliga frågor.",
        "totalQuestions": 8,
        "books": [{
            "isbn": "0201721686",
-           "title": "C++ from the Beginning",
+           "bookTitle": "C++ from the Beginning",
            "publisher": "Addison-Wesley;",
            "releaseYear": "2010",
            "coverImage": "efwgr",
@@ -99,39 +101,39 @@ let jsonString =
            "description": "wgr",
            "quiz": [{
                "questions": [{
-                       "title": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
+                       "questionTitle": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
                        "answeredRight": false
                    },
                    {
-                       "title": "Får jag klippa och klistra kod från internet och använda denna i program som jag själv gör publikt tillgängligt?",
+                       "questionTitle": "Får jag klippa och klistra kod från internet och använda denna i program som jag själv gör publikt tillgängligt?",
                        "answeredRight": false
                    },
                    {
-                       "title": "Vad innebär explicit typkonvertering?",
+                       "questionTitle": "Vad innebär explicit typkonvertering?",
                        "answeredRight": false
                    },
                    {
-                       "title": "Vilka av följande alternativ beskriver tre viktiga egenskaper för en konstant i C",
+                       "questionTitle": "Vilka av följande alternativ beskriver tre viktiga egenskaper för en konstant i C",
                        "answeredRight": false
                    },
                    {
-                       "title": "Vilket av följande feltyper innebär att programmet ser ut att fungera men ger sporadiskt felaktiga beräkningar?",
+                       "questionTitle": "Vilket av följande feltyper innebär att programmet ser ut att fungera men ger sporadiskt felaktiga beräkningar?",
                        "answeredRight": false
                    },
                    {
-                       "title": "vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
+                       "questionTitle": "vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
                        "answeredRight": false
                    },
                    {
-                       "title": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
+                       "questionTitle": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
                        "answeredRight": false
                    },
                    {
-                       "title": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
+                       "questionTitle": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
                        "answeredRight": false
                    },
                    {
-                       "title": "Öppen Källkod, Free Software är namn på mjukvara som är släppt under en licens som tillåter ett dig till?",
+                       "questionTitle": "Öppen Källkod, Free Software är namn på mjukvara som är släppt under en licens som tillåter ett dig till?",
                        "answeredRight": false
                    }
                ],
@@ -156,13 +158,13 @@ let jsonString =
    },
 
    {
-       "title": "user research",
+       "courseTitle": "user research",
        "teacher": "Bruce Ferwerda",
        "description": "The course introduces the students to user research concepts, methods and techniques as they are used throughout the design process to identify needs, behavioral patterns, and functionalities. It provides students with a basic understanding of the differences between interviews and surveys, cultural probes and ethnography, behavioral or attitudinal approaches, qualitative and quantitative methodologies, and practically illustrates how to turn user research results into communicable synthetic deliverables such as personas or user journeys. The course also stresses the importance of culture and context in the practice of user research.",
        "totalQuestions": 10,
        "books": [{
                "isbn": "0123848695",
-               "title": "Observing the User Experience",
+               "bookTitle": "Observing the User Experience",
                "publisher": "Morgan Kaufmann",
                "releaseYear": "2010",
                "coverImage": "efwgr",
@@ -170,23 +172,23 @@ let jsonString =
                "description": "wgr",
                "quiz": [{
                    "questions": [{
-                           "title": "Which of the following is most important in user-centered design?",
+                           "questionTitle": "Which of the following is most important in user-centered design?",
                            "answeredRight": false
                        },
                        {
-                           "title": "Usability testing for a Web site can be performed with:",
+                           "questionTitle": "Usability testing for a Web site can be performed with:",
                            "answeredRight": false
                        },
                        {
-                           "title": "Which is most important to a user experience designer?",
+                           "questionTitle": "Which is most important to a user experience designer?",
                            "answeredRight": false
                        },
                        {
-                           "title": "Diary studies ask participants to capture information about their activities, habits, thoughts, or opinions as they go about their daily activities.Diaries allow a researcher to collect, in situ, longitudinal data from a large sample.Diaries are: ",
+                           "questionTitle": "Diary studies ask participants to capture information about their activities, habits, thoughts, or opinions as they go about their daily activities.Diaries allow a researcher to collect, in situ, longitudinal data from a large sample.Diaries are: ",
                            "answeredRight": false
                        },
                        {
-                           "title": "There are many definitions for task analysis, but a simple interpretation is:",
+                           "questionTitle": "There are many definitions for task analysis, but a simple interpretation is:",
                            "answeredRight": false
                        }
                    ],
@@ -204,7 +206,7 @@ let jsonString =
            },
            {
                "isbn": "149195129X",
-               "title": "UX Research",
+               "bookTitle": "UX Research",
                "publisher": "O'Reilly Media",
                "releaseYear": "2010",
                "coverImage": "efwgr",
@@ -212,23 +214,23 @@ let jsonString =
                "description": "wgr",
                "quiz": [{
                    "questions": [{
-                           "title": "Some affordances are obvious and are some learned. What are/is a typical factor(s) that influence peoples’ affordances?",
+                           "questionTitle": "Some affordances are obvious and are some learned. What are/is a typical factor(s) that influence peoples’ affordances?",
                            "answeredRight": false
                        },
                        {
-                           "title": "If one wished to understand how people engage in tasks in the “real world” in order to design interactions to support this, what method would you use?",
+                           "questionTitle": "If one wished to understand how people engage in tasks in the “real world” in order to design interactions to support this, what method would you use?",
                            "answeredRight": false
                        },
                        {
-                           "title": "What is an advantage of focus groups?",
+                           "questionTitle": "What is an advantage of focus groups?",
                            "answeredRight": false
                        },
                        {
-                           "title": "What is true about surveys?",
+                           "questionTitle": "What is true about surveys?",
                            "answeredRight": false
                        },
                        {
-                           "title": "You drag a folder to make a copy of its contents. An animation appears on the screen, showing files moving from one folder to another. This is an example of which of the following:",
+                           "questionTitle": "You drag a folder to make a copy of its contents. An animation appears on the screen, showing files moving from one folder to another. This is an example of which of the following:",
                            "answeredRight": false
                        }
                    ],
@@ -249,7 +251,7 @@ let jsonString =
        ]
    }
 
-]
+]}
 """
 
 

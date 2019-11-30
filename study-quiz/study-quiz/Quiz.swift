@@ -13,8 +13,8 @@ import UIKit
 
 struct Quiz : Codable {
     
-    var questions : [Question]
-    var answers : [[String]]
+    var questions : [Question]?
+    var answers : [[String]]?
     
     init(questions: [Question], answers: [[String]]) {
         self.questions = questions

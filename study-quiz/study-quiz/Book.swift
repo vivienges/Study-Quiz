@@ -2,22 +2,22 @@ import UIKit
 
 
 struct Book : Codable {
-    var isbn : String
-    var title: String?
-    var publisher: String
-    var releaseYear: String
+    var isbn : String?
+    var bookTitle: String?
+    var publisher: String?
+    var releaseYear: String?
     var coverImage: String?
-    var summary: String
+    var summary: String?
     var description: String?
-    var quiz : [Quiz]
+    var quiz : [Quiz]?
 
     
 
     
     
-    init(isbn : String, title: String, publisher: String, releaseYear: String, coverImage: String, summary: String, description: String, quiz : [Quiz]) {
+    init(isbn : String, bookTitle: String, publisher: String, releaseYear: String, coverImage: String, summary: String, description: String, quiz : [Quiz]) {
         self.isbn = isbn
-        self.title = title;
+        self.bookTitle = bookTitle;
         self.publisher = publisher;
         self.releaseYear = releaseYear
         self.summary = summary
@@ -29,7 +29,7 @@ struct Book : Codable {
     init() {
         self.isbn = "0"
         self.publisher = "Empty";
-        self.title = "Empty";
+        self.bookTitle = "Empty";
         self.releaseYear = "0"
         self.summary = "Empty"
         self.description = "Empty"

@@ -27,7 +27,7 @@ class BookViewController: UIViewController {
         super.viewDidLoad()
         
         // Set data to book information
-        navigationBar.title = currentBook.title
+        navigationBar.title = currentBook.bookTitle
         bookDescription.text = currentBook.description
         
         // Set the release year

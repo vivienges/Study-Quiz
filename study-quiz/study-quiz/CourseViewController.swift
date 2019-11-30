@@ -45,7 +45,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var books: [Book] = [
     ]
     
-    var currentCourse = Course(title: "", teacher: "", description: "", totalQuestions: 0, books: [Book(isbn: "", title: "", publisher: "", releaseYear: "", coverImage: "", summary: "", description: "", quiz: [Quiz(questions: [Question(title: "", answeredRight: false)], answers: [[""]])])])
+    var currentCourse = Course(courseTitle: "", teacher: "", description: "", totalQuestions: 0, books: [Book(isbn: "", bookTitle: "", publisher: "", releaseYear: "", coverImage: "", summary: "", description: "", quiz: [Quiz(questions: [Question(title: "", answeredRight: false)], answers: [[""]])])])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         myTableView.delegate = self
         
         // Set UI to course info
-        navigationBar.title = currentCourse.title
+        navigationBar.title = currentCourse.courseTitle
         courseDescription.text = currentCourse.description
         progressLabel.text = "0 / \(currentCourse.totalQuestions)"
         
@@ -96,14 +96,14 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
-                                if (volumeInfo != nil && imageLinks != nil) {
-                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
-                                    //print(volumeInfo)
-                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
-                                        self.books.append(Book(title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing"))
-                                        print(smallThumbnail)
-                                    }
-                                }
+//                                if (volumeInfo != nil && imageLinks != nil) {
+//                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
+//                                    //print(volumeInfo)
+//                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
+//                                        self.books.append(Book(title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing"))
+//                                        print(smallThumbnail)
+//                                    }
+//                                }
                             }
                         }
                     }
@@ -142,7 +142,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let currentBook: Book = books[indexPath.row]
         
-        cell.cellTitle?.text = currentBook.title
+        cell.cellTitle?.text = currentBook.bookTitle
         cell.cellDetail?.text = currentBook.publisher
         
         

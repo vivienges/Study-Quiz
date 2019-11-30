@@ -43,14 +43,26 @@ class CoursesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let decoder = JSONDecoder()
+       // let decoder = JSONDecoder()
         
         do {
-            let course = try decoder.decode([Course].self, from: jsonData)
             
-            print(course[0])
+            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+                
+                if let courses = json["courses"] as? Array<Dictionary<String, Course>> {
+                    
+                
+                    for course in courses {
+                        print(course["courseTitle"] ?? "")
+                    }
+                }
+                
+            }
             
+//            let course = try decoder.decode([Course].self, from: jsonData)
+//
+//            print(course[0])
+//
 //            for index in 0...(course.count-1) {
 //
 ////                questions.append(Question.init(title: Course.init, answeredRight: <#T##Bool#>))
@@ -92,7 +104,7 @@ class CoursesTableViewController: UITableViewController {
         
         
         
-        cell.cellTitle?.text = currentCourse.title
+        cell.cellTitle?.text = currentCourse.courseTitle
         cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
         
         return cell

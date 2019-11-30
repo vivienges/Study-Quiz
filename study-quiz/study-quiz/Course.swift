@@ -10,14 +10,14 @@ import UIKit
 
 struct Course: Codable {
 
-    var title: String
-    var teacher: String
-    var description: String
-    let totalQuestions: Int
-    var books: [Book]
+    var courseTitle: String?
+    var teacher: String?
+    var description: String?
+    let totalQuestions: Int?
+    var books: [Book]?
 
-    init(title: String, teacher: String, description: String, totalQuestions: Int, books: [Book]) {
-        self.title = title
+    init(courseTitle: String, teacher: String, description: String, totalQuestions: Int, books: [Book]) {
+        self.courseTitle = courseTitle
         self.teacher = teacher
         self.description = description
         self.totalQuestions = totalQuestions

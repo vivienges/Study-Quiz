@@ -87,8 +87,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 var title = volumeInfo!["title"] as? String;
                                 
                                 var subTitle = volumeInfo!["subtitle"] as? String;
-                                var publisher = volumeInfo!["publisher"] as? String;
-                                var publishedDate = volumeInfo!["publishedDate"] as? String;
+                                let publisher = volumeInfo!["publisher"] as? String;
+                                let publishedDate = volumeInfo!["publishedDate"] as? String;
                                 var description = volumeInfo!["description"] as? String;
                                 
                                 // Trimming Characters to correct character set
@@ -96,14 +96,14 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
-//                                if (volumeInfo != nil && imageLinks != nil) {
-//                                    var smallThumbnail = imageLinks!["smallThumbnail"] as! String;
-//                                    //print(volumeInfo)
-//                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
-//                                        self.books.append(Book(isbn: "" title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing", quiz: ))
-//                                        print(smallThumbnail)
-//                                    }
-//                                }
+                                if (volumeInfo != nil && imageLinks != nil) {
+                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
+                                    //print(volumeInfo)
+                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
+                                        self.books.append(Book(title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing"))
+                                        print(smallThumbnail)
+                                    }
+                                }
                             }
                         }
                     }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,9 @@
         <scene sceneID="f7X-a4-7me">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="ProfileVC" storyboardName="Profile" referencedIdentifier="ProfileVC" id="869-GC-IKe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SVe-vC-x3B"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" selectedImage="person.fill" id="SVe-vC-x3B">
+                        <color key="badgeColor" name="Secondary"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cac-2z-hFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ar-NZ-nNN">
-                                <rect key="frame" x="0.0" y="88" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dha-yU-a2a">
                                         <rect key="frame" x="8" y="65" width="398" height="21"/>
@@ -40,9 +43,9 @@
                                             <constraint firstAttribute="height" constant="40" id="4vL-9I-RrA"/>
                                         </constraints>
                                     </progressView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fla-Tp-VCt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fla-Tp-VCt" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
                                         <rect key="frame" x="8" y="212" width="398" height="80"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="Pimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="JgH-cQ-JMC"/>
                                         </constraints>
@@ -78,13 +81,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5p-e4-HeF">
-                                <rect key="frame" x="8" y="404" width="398" height="31.5"/>
+                                <rect key="frame" x="8" y="456" width="398" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dQR-Lh-DWV">
-                                <rect key="frame" x="0.0" y="443.5" width="414" height="369.5"/>
+                                <rect key="frame" x="0.0" y="495.5" width="414" height="317.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookCell" id="lEM-bG-vFT" customClass="bookTableViewCell" customModule="study_quiz" customModuleProvider="target">
@@ -94,21 +97,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="76.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqT-HB-HLe">
-                                                    <rect key="frame" x="76.5" y="19" width="309.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqT-HB-HLe">
+                                                    <rect key="frame" x="57" y="19" width="350" height="27"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-jc-fSX">
-                                                    <rect key="frame" x="8" y="8" width="60.5" height="60.5"/>
+                                                    <rect key="frame" x="8" y="8" width="40.5" height="60.5"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="bUl-jl-eXs"/>
-                                                        <constraint firstAttribute="width" secondItem="NhW-jc-fSX" secondAttribute="height" multiplier="1:1" id="ePe-rR-Q6d"/>
+                                                        <constraint firstAttribute="width" secondItem="NhW-jc-fSX" secondAttribute="height" multiplier="2:3" id="ePe-rR-Q6d"/>
+                                                        <constraint firstAttribute="width" constant="70" id="lEY-I4-JrX"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWw-KC-41D">
-                                                    <rect key="frame" x="76.5" y="48" width="329.5" height="21"/>
+                                                    <rect key="frame" x="56.5" y="54" width="349.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -126,6 +131,7 @@
                                                 <constraint firstItem="iWw-KC-41D" firstAttribute="leading" secondItem="NhW-jc-fSX" secondAttribute="trailing" constant="8" id="nU6-Ev-vGk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="cellDetail" destination="iWw-KC-41D" id="Bx2-qF-Kt9"/>
                                             <outlet property="cellImage" destination="NhW-jc-fSX" id="TCg-jG-6mI"/>
@@ -162,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHH-TJ-6Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3319" y="-1061"/>
+            <point key="canvasLocation" x="3318.840579710145" y="-1061.3839285714284"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="Kcd-jU-qgU">
@@ -173,6 +179,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Secondary"/>
+                        <color key="selectedImageTintColor" name="Secondary"/>
                     </tabBar>
                     <connections>
                         <segue destination="si5-S8-ftq" kind="relationship" relationship="viewControllers" id="nAh-tW-eYe"/>
@@ -191,9 +199,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-FD-JAy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-FD-JAy" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
                                 <rect key="frame" x="16" y="717" width="382" height="80"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Pimary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="WxD-aQ-5YT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="jqg-e6-a74"/>
@@ -206,21 +214,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X59-jO-oxL">
-                                <rect key="frame" x="16" y="133" width="382" height="81.5"/>
+                                <rect key="frame" x="16" y="185" width="382" height="81.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-Fj-NJn">
-                                <rect key="frame" x="16" y="232.5" width="382" height="378.5"/>
+                                <rect key="frame" x="16" y="284.5" width="382" height="378.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9mg-Fj-NJn" secondAttribute="height" multiplier="1:1" id="Mux-kZ-KeS"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-ie-3Kc">
-                                <rect key="frame" x="16" y="104" width="43" height="21"/>
+                                <rect key="frame" x="16" y="156" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -260,11 +268,12 @@
         <scene sceneID="Irh-a0-j1L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="si5-S8-ftq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Courses" selectedImage="bookmark" catalog="system" id="kl1-5r-cLO"/>
+                    <tabBarItem key="tabBarItem" title="Courses" image="book" catalog="system" selectedImage="book.fill" id="kl1-5r-cLO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XJw-xo-7Jt">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XJw-xo-7Jt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Secondary"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -380,10 +389,18 @@
     </scenes>
     <resources>
         <image name="Image" width="800" height="534"/>
+        <image name="book" catalog="system" width="64" height="50"/>
         <image name="book.circle" catalog="system" width="64" height="60"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
-        <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="chevron.right" catalog="system" width="48" height="64"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <namedColor name="Pimary">
+            <color red="0.27450980392156865" green="0.70980392156862748" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.90196078431372551" green="0.43137254901960786" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gks-ST-Jkt"/>

@@ -32,6 +32,8 @@
 		A0EB8548238EE631005F30FA /* quizJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8547238EE631005F30FA /* quizJSON.swift */; };
 		A0EB854A238EE69D005F30FA /* questionJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8549238EE69D005F30FA /* questionJSON.swift */; };
 		A0EB854C238EE734005F30FA /* answerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB854B238EE734005F30FA /* answerJSON.swift */; };
+		FE6B7AEC2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B7AEB2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift */; };
+		FE6B7AEE2392A52D001488DB /* QuizFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B7AED2392A52D001488DB /* QuizFeedbackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		A0EB8547238EE631005F30FA /* quizJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizJSON.swift; sourceTree = "<group>"; };
 		A0EB8549238EE69D005F30FA /* questionJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionJSON.swift; sourceTree = "<group>"; };
 		A0EB854B238EE734005F30FA /* answerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answerJSON.swift; sourceTree = "<group>"; };
+		FE6B7AEB2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFeedbackPopUpViewController.swift; sourceTree = "<group>"; };
+		FE6B7AED2392A52D001488DB /* QuizFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFeedbackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,16 +105,17 @@
 				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				636EFE8E2385D61100499A02 /* Quiz.swift */,
 				A0EB8547238EE631005F30FA /* quizJSON.swift */,
+				631C121723831E2D00101A67 /* Quiz.storyboard */,
 				A0EB854B238EE734005F30FA /* answerJSON.swift */,
 				A0EB8549238EE69D005F30FA /* questionJSON.swift */,
 				636EFE902385D69000499A02 /* Question.swift */,
 				63CA15F6237EDF6B008DBC88 /* Main.storyboard */,
-				631C121723831E2D00101A67 /* Quiz.storyboard */,
 				63A0EF93238EE24900702DF6 /* extensions.swift */,
 				633781852383234D00ED31F3 /* Overlays.storyboard */,
 				6394B0092383215300229B8B /* Profile.storyboard */,
-				A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */,
 				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
+				FE6B7AEB2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift */,
+				FE6B7AED2392A52D001488DB /* QuizFeedbackViewController.swift */,
 				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				A0EB8543238EA06A005F30FA /* JsonObject.swift */,
 				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
@@ -120,6 +125,7 @@
 				63CA15FE237EDF6F008DBC88 /* Info.plist */,
 				63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */,
 				63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */,
+				A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */,
 			);
 			path = "study-quiz";
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 				63CA161323800827008DBC88 /* Course.swift in Sources */,
 				636EFE8F2385D61100499A02 /* Quiz.swift in Sources */,
 				63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */,
+				FE6B7AEE2392A52D001488DB /* QuizFeedbackViewController.swift in Sources */,
+				FE6B7AEC2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift in Sources */,
 				63184C9823816734004C2781 /* CourseViewController.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63A0EF94238EE24900702DF6 /* extensions.swift in Sources */,

@@ -45,7 +45,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var books: [Book] = [
     ]
     
-    var currentCourse = Course(courseTitle: "", teacher: "", description: "", totalQuestions: 0, books: [Book(isbn: "", bookTitle: "", publisher: "", releaseYear: "", coverImage: "", summary: "", description: "", quiz: [Quiz(questions: [Question(title: "", answeredRight: false)], answers: [[""]])])])
+    var currentCourse = Course(courseTitle: "", teacher: "", description: "", totalQuestions: 0, books: [Book(isbn: "", bookTitle: "", publisher: "", releaseYear: "", coverImage: "", summary: "", description: "", quiz: [Quiz(questions: [Question(questionTitle: "", answeredRight: false)], answers: [[""]])])])
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -34,7 +34,7 @@ class myTableViewCell: UITableViewCell {
 class CoursesTableViewController: UITableViewController {
     
     var questions: [Question] = []
-    var courses: [Course] = []
+    //var courses: [Course] = []
     var quizes: [Quiz] = []
     
     
@@ -43,22 +43,26 @@ class CoursesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
        // let decoder = JSONDecoder()
         
-        do {
-            
-            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-                
-                if let courses = json["courses"] as? Array<Dictionary<String, Course>> {
-                    
-                
-                    for course in courses {
-                        print(course["courseTitle"] ?? "")
-                    }
-                }
-                
-            }
-            
+        
+        print(courses)
+//        do {
+//
+//            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+//
+//                if let courses = json["courses"] as? Array<Dictionary<String, Course>> {
+//
+//
+//                    for course in courses {
+//                        print(course["courseTitle"] ?? "")
+//                    }
+//                }
+//
+//            }
+//
 //            let course = try decoder.decode([Course].self, from: jsonData)
 //
 //            print(course[0])
@@ -74,13 +78,13 @@ class CoursesTableViewController: UITableViewController {
 //
 //
 //
-//            }
+    //        }
            
             
-        } catch {
-            print(error.localizedDescription)
-        }
-        
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//
         myTableView.delegate = self
         
     }

@@ -34,7 +34,7 @@ struct Book : Codable {
         self.summary = "Empty"
         self.description = "Empty"
         self.coverImage = "Empty"
-        self.quiz = [Quiz(questions: [Question(title: "", answeredRight: false)], answers: [[""]])]
+        self.quiz = [Quiz(questions: [Question(questionTitle: "", answeredRight: false)], answers: [[""]])]
     }
     
     func getDate() -> Date? {

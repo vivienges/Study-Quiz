@@ -26,9 +26,10 @@
 		63CA160B237FF484008DBC88 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA160A237FF484008DBC88 /* TabBarViewController.swift */; };
 		63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161023800471008DBC88 /* CoursesTableViewController.swift */; };
 		63CA161323800827008DBC88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161223800827008DBC88 /* Course.swift */; };
+		A01B707C2392BFE20089B80A /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B707B2392BFE20089B80A /* JsonObject.swift */; };
+		A01B707E2392BFE80089B80A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A01B707D2392BFE70089B80A /* data.json */; };
 		A06D3B7B23914DDB00CF286A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D3B7A23914DDB00CF286A /* CustomButton.swift */; };
 		A08F73D22386AC0A0016A376 /* FeedbackQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */; };
-		A0EB8544238EA06A005F30FA /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB8543238EA06A005F30FA /* JsonObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +54,10 @@
 		63CA160A237FF484008DBC88 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		63CA161023800471008DBC88 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		63CA161223800827008DBC88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		A01B707B2392BFE20089B80A /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
+		A01B707D2392BFE70089B80A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A06D3B7A23914DDB00CF286A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A08F73D12386AC0A0016A376 /* FeedbackQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackQuestionViewController.swift; sourceTree = "<group>"; };
-		A0EB8543238EA06A005F30FA /* JsonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,8 @@
 				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
 				A06D3B7A23914DDB00CF286A /* CustomButton.swift */,
 				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
-				A0EB8543238EA06A005F30FA /* JsonObject.swift */,
+				A01B707B2392BFE20089B80A /* JsonObject.swift */,
+				A01B707D2392BFE70089B80A /* data.json */,
 				63CA160A237FF484008DBC88 /* TabBarViewController.swift */,
 				63A3ED70238318CE000C8152 /* ProfileViewController.swift */,
 				63CA15F9237EDF6F008DBC88 /* Assets.xcassets */,
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6394B00A2383215300229B8B /* Profile.storyboard in Resources */,
+				A01B707E2392BFE80089B80A /* data.json in Resources */,
 				63CA15FD237EDF6F008DBC88 /* LaunchScreen.storyboard in Resources */,
 				631C121823831E2D00101A67 /* Quiz.storyboard in Resources */,
 				633781862383234D00ED31F3 /* Overlays.storyboard in Resources */,
@@ -201,7 +205,7 @@
 				636EFE912385D69000499A02 /* Question.swift in Sources */,
 				A08F73D22386AC0A0016A376 /* FeedbackQuestionViewController.swift in Sources */,
 				63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */,
-				A0EB8544238EA06A005F30FA /* JsonObject.swift in Sources */,
+				A01B707C2392BFE20089B80A /* JsonObject.swift in Sources */,
 				63CA160B237FF484008DBC88 /* TabBarViewController.swift in Sources */,
 				63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */,
 				63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */,

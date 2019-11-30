@@ -11,11 +11,11 @@ import UIKit
 
 struct Question : Codable {
     
-    var title : String
+    var questionTitle : String
     var answeredRight : Bool
         
-    init(title: String, answeredRight : Bool) {
-            self.title = title
+    init(questionTitle: String, answeredRight : Bool) {
+            self.questionTitle = questionTitle
         self.answeredRight = answeredRight
         }
     }

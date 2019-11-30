@@ -28,9 +28,6 @@
                                 </state>
                                 <connections>
                                     <action selector="answerButton:" destination="iph-2U-clP" eventType="touchUpInside" id="cqs-j3-EOB"/>
-                                    <segue destination="LIK-rc-39Z" kind="popoverPresentation" identifier="popUpSegue" popoverAnchorView="Bor-Em-yKx" id="NDG-Xn-NfR">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-0C-P04" userLabel="Button">
@@ -117,6 +114,7 @@
                     <connections>
                         <outlet property="questionNameLabel" destination="mRb-c8-iEi" id="yj3-83-9va"/>
                         <outlet property="quizProgressBar" destination="X4j-F2-Yf9" id="oVX-CB-zYH"/>
+                        <segue destination="LIK-rc-39Z" kind="show" identifier="popUpSegue" id="bbm-wD-80Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeI-cO-lfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -126,9 +124,9 @@
         <!--Question Feedback Pop Up View Controller-->
         <scene sceneID="QIW-pI-qbS">
             <objects>
-                <viewController id="LIK-rc-39Z" customClass="QuestionFeedbackPopUpViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="LIK-rc-39Z" customClass="QuestionFeedbackPopUpViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wbJ-iQ-QGm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaO-5n-jHQ">
@@ -171,6 +169,7 @@
                         <color key="backgroundColor" red="0.66363746759999998" green="0.66363746759999998" blue="0.66363746759999998" alpha="0.40355413732394368" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="cb0-IK-G1s"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hME-6d-ccA"/>
                     <connections>
                         <outlet property="correctAnswerLabel" destination="f9f-6R-axw" id="LZw-gO-A6n"/>
                         <outlet property="feedbackImageView" destination="UGh-wP-0pD" id="25R-ta-2In"/>

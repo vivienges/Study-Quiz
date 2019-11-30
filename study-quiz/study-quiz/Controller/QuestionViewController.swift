@@ -106,6 +106,12 @@ class QuestionViewController: UIViewController {
         }
         
     }
+    
+    //    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+    //        if motion == .motionShake {
+    //           performSegue(withIdentifier: "nextQuestionSegue", sender: nil)
+    //        }
+    //     }
 
     
     

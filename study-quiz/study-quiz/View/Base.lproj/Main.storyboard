@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XWm-Q7-TbB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMU-Bx-7fw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -173,7 +173,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="Kcd-jU-qgU">
             <objects>
-                <tabBarController id="tMU-Bx-7fw" customClass="TabBarViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="tMU-Bx-7fw" customClass="TabBarViewController" customModule="study_quiz" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="usJ-Ys-cNt"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h2E-Li-YD3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

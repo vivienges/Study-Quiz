@@ -5,7 +5,7 @@
 	"totalQuestions": 10,
 	"books": [{
 		"isbn": "9780131489066",
-		"bookTitle": "applying UML and patterns",
+		"bookTitle": "Applying UML and patterns",
 		"publisher": "Prentice Hall PTR",
 		"releaseYear": "2005",
 		"coverImage": "efwgr",
@@ -69,7 +69,7 @@
 	}]
 },{
 	"courseTitle": "Introduktion till programmering",
-	"teacher": "Anders cartensen",
+	"teacher": "Anders Cartensen",
 	"description": "Kursen ämnar ge studenten grundläggande förståelse för och kunskaper i strukturerad programmering, inklusive modellering, programdesign, och implementation med hjälp av imperativ programmering. Kursen ämnar även ge studenten en kortare introduktion till olika licensformer och andra för programmerare relevanta immaterialrättsliga frågor.",
 	"totalQuestions": 8,
 	"books": [{

@@ -34,10 +34,11 @@ class BookViewController: UIViewController {
         let releaseYear = "Release year: " + currentBook.getYear()
         bookReleaseYear.text = releaseYear
         
-        // Style
-        startQuizBtn.layer.cornerRadius = 8
-        
-        // Set cover Image
+        // Fetch Cover Image
+        fetchCoverImage()
+    }
+    
+    func fetchCoverImage() {
         let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         if let url = URL(string: currentBook.coverImage ?? urlKey){
             do {
@@ -49,8 +50,6 @@ class BookViewController: UIViewController {
                 coverImage.image = UIImage(systemName: "book.fill")
             }
         }
-        
-        
     }
 }
 

@@ -42,48 +42,7 @@ class CoursesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-       // let decoder = JSONDecoder()
-        
-        
-   
-//        do {
-//
-//            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-//
-//                if let courses = json["courses"] as? Array<Dictionary<String, Course>> {
-//
-//
-//                    for course in courses {
-//                        print(course["courseTitle"] ?? "")
-//                    }
-//                }
-//
-//            }
-//
-//            let course = try decoder.decode([Course].self, from: jsonData)
-//
-//            print(course[0])
-//
-//            for index in 0...(course.count-1) {
-//
-////                questions.append(Question.init(title: Course.init, answeredRight: <#T##Bool#>))
-////
-////                quizes.append(Quiz.init(questions: <#T##[Question]#>, answers: <#T##[[String]]#>))
-//
-//                
-////                courses.append(Course.init(title: course[index].title, teacher: course[index].teacher, description: course[index].description, totalQuestions: course[index].totalQuestions), books: [(course[index].books[0])])
-//
-//
-//
-    //        }
-           
-            
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//
+ 
         myTableView.delegate = self
         
     }

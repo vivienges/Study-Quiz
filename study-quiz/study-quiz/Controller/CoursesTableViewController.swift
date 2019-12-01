@@ -20,8 +20,8 @@ class myTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //cellImage.layer.cornerRadius = 8
         containerView.layer.cornerRadius = 12
+        cellTitle.font = .boldSystemFont(ofSize: 18)
         
     }
     

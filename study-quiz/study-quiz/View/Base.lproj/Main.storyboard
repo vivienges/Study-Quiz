@@ -31,12 +31,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ar-NZ-nNN">
                                 <rect key="frame" x="0.0" y="140" width="414" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dha-yU-a2a">
-                                        <rect key="frame" x="8" y="65" width="398" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-bf-stk" customClass="CustomProgressBar" customModule="study_quiz" customModuleProvider="target">
                                         <rect key="frame" x="8" y="148" width="398" height="40"/>
                                         <constraints>
@@ -56,7 +50,7 @@
                                             <segue destination="Mds-tI-yzk" kind="show" id="gks-ST-Jkt"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-ns-fOg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitrundefined" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-ns-fOg">
                                         <rect key="frame" x="8" y="16" width="398" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -66,13 +60,9 @@
                                 <color key="backgroundColor" name="White"/>
                                 <constraints>
                                     <constraint firstItem="xy7-ns-fOg" firstAttribute="leading" secondItem="5ar-NZ-nNN" secondAttribute="leading" constant="8" id="00y-fL-KHR"/>
-                                    <constraint firstItem="Dha-yU-a2a" firstAttribute="top" secondItem="xy7-ns-fOg" secondAttribute="bottom" constant="8" id="5sj-C3-p5a"/>
                                     <constraint firstItem="fla-Tp-VCt" firstAttribute="leading" secondItem="5ar-NZ-nNN" secondAttribute="leading" constant="8" id="HA5-OP-baq"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dha-yU-a2a" secondAttribute="trailing" constant="8" id="P8g-sf-Ukf"/>
                                     <constraint firstItem="Zrg-bf-stk" firstAttribute="leading" secondItem="5ar-NZ-nNN" secondAttribute="leading" constant="8" id="QrT-8c-Mcf"/>
                                     <constraint firstAttribute="trailing" secondItem="Zrg-bf-stk" secondAttribute="trailing" constant="8" id="Sb7-qZ-om2"/>
-                                    <constraint firstItem="Dha-yU-a2a" firstAttribute="leading" secondItem="5ar-NZ-nNN" secondAttribute="leading" constant="8" id="Y18-o3-utx"/>
-                                    <constraint firstItem="Zrg-bf-stk" firstAttribute="top" secondItem="Dha-yU-a2a" secondAttribute="bottom" constant="16" id="cne-qi-svC"/>
                                     <constraint firstAttribute="height" constant="300" id="eul-Jn-xOF"/>
                                     <constraint firstItem="xy7-ns-fOg" firstAttribute="top" secondItem="5ar-NZ-nNN" secondAttribute="top" constant="16" id="ezh-BM-IHX"/>
                                     <constraint firstAttribute="trailing" secondItem="fla-Tp-VCt" secondAttribute="trailing" constant="8" id="lDG-og-d1o"/>
@@ -163,7 +153,6 @@
                         <outlet property="myTableView" destination="dQR-Lh-DWV" id="Voc-4s-NJJ"/>
                         <outlet property="navigationBar" destination="jJh-AI-FGS" id="ZQe-EK-shg"/>
                         <outlet property="progressBar" destination="Zrg-bf-stk" id="skF-9f-WqR"/>
-                        <outlet property="progressLabel" destination="Dha-yU-a2a" id="6xq-aQ-iPr"/>
                         <segue destination="XWm-Q7-TbB" kind="show" identifier="showBookSegue" id="q8t-sH-vts"/>
                     </connections>
                 </viewController>
@@ -315,14 +304,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaQ-DC-aGz">
                                             <rect key="frame" x="8" y="8" width="398" height="134"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ios Development" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvc-vf-xjw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Development" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvc-vf-xjw">
                                                     <rect key="frame" x="94.5" y="32" width="287.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUp-xj-QCW">
-                                                    <rect key="frame" x="94.5" y="60.5" width="50" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="teacher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUp-xj-QCW">
+                                                    <rect key="frame" x="94.5" y="60.5" width="58.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -424,6 +413,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Baw-1n-VvU"/>
+        <segue reference="gks-ST-Jkt"/>
     </inferredMetricsTieBreakers>
 </document>

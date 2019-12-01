@@ -55,8 +55,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Set UI to course info
         navigationBar.title = currentCourse.courseTitle
         courseDescription.text = currentCourse.description
-        progressLabel.text = "0 / \(currentCourse.totalQuestions)"
-        
         
         
         // MARK: ProgressBar
@@ -162,7 +160,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let data = try Data(contentsOf: url)
                 cell.cellImage?.image = UIImage(data: data)
             }catch let err {
-                print("Error wegen Thumbnail: \(err.localizedDescription)") //english?
+                print("Thumbnail Error: \(err.localizedDescription)") //english?
                 cell.cellImage.image = UIImage(systemName: "book.fill")
             }
         }

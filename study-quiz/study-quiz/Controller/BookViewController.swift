@@ -55,7 +55,7 @@ class BookViewController: UIViewController {
                 coverImage.image = UIImage(data: data)
                 
             }catch let err {
-                print("Error wegen Thumbnail: \(err.localizedDescription)")
+                print("Thumbnail Error: \(err.localizedDescription)")
                 coverImage.image = UIImage(systemName: "book.fill")
             }
         }

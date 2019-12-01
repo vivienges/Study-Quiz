@@ -23,7 +23,7 @@ struct Quiz : Codable {
     
     init() {
         self.questions = [Question()]
-        self.answers = [["answerA","answerB","answerC","answerD"]]
+        self.answers = [["answer A","answer B","answer C","answer D"]]
     }
    
     

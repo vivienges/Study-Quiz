@@ -45,7 +45,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var books: [Book] = [
     ]
     
-    var currentCourse = Course(courseTitle: "", teacher: "", description: "", totalQuestions: 0, books: [Book(isbn: "", bookTitle: "", publisher: "", releaseYear: "", coverImage: "", summary: "", description: "", quiz: [Quiz(questions: [Question(questionTitle: "", answeredRight: false)], answers: [[""]])])])
+    var currentCourse = Course()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,13 +65,26 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         progress.completedUnitCount = 3
         let progressFloat = Float(progress.fractionCompleted)
         progressBar.setProgress(progressFloat, animated: true)
-
         
         // MARK: FETCH INFO FROM GOOGLE BOOKS API
+        for book in currentCourse.books {
+            if book.isbn != nil && book.isbn != "" {
+                let isbn = book.isbn!
+                self.addBook(isbn: isbn)
+            }
+        }
         
-        // API URL
-        // get the list of book from google book api
-        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=learnswift")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+    }
+    
+    func addBook(isbn: String) {
+        
+        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn)
+        
         URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
             if (error != nil) {
                 print(error?.localizedDescription)
@@ -96,14 +109,13 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
-//                                if (volumeInfo != nil && imageLinks != nil) {
-//                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
-//                                    //print(volumeInfo)
-//                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
-//                                        self.books.append(Book(title: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing"))
-//                                        print(smallThumbnail)
-//                                    }
-//                                }
+                                if (volumeInfo != nil && imageLinks != nil) {
+                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
+                                    //print(volumeInfo)
+                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
+                                        self.books.append(Book(isbn: "sample", bookTitle: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing", quiz: [Quiz()]))
+                                    }
+                                }
                             }
                         }
                     }
@@ -115,11 +127,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }).resume()
         
         reloadInputViews();
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-
+        
     }
     
     // MARK: TABLE VIEW FUNCTIONS

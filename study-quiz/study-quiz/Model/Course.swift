@@ -23,7 +23,16 @@ struct Course: Codable {
         self.totalQuestions = totalQuestions
         self.books = books
         
-        //answeredQuestions = 0
+
+    }
+    
+    init() {
+        self.courseTitle = "Sample"
+        self.teacher = "Sample"
+        self.description = "Sample"
+        self.totalQuestions = 1
+        self.books = [Book()]
+        
 
     }
 //

@@ -20,6 +20,10 @@ struct Quiz : Codable {
         self.questions = questions
         self.answers = answers
     }
+    
+    init() {
+        
+    }
    
     
 }

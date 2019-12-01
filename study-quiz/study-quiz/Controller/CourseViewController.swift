@@ -61,6 +61,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // MARK: ProgressBar
         // TODO: Make use of course info so the info is not hardcoded
+        
         let progress = Progress(totalUnitCount: 10)
         progress.completedUnitCount = 3
         let progressFloat = Float(progress.fractionCompleted)

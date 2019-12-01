@@ -171,6 +171,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hME-6d-ccA"/>
                     <connections>
+                        <outlet property="container" destination="qaO-5n-jHQ" id="gIp-0K-TRI"/>
                         <outlet property="correctAnswerLabel" destination="f9f-6R-axw" id="LZw-gO-A6n"/>
                         <outlet property="feedbackImageView" destination="UGh-wP-0pD" id="25R-ta-2In"/>
                         <outlet property="nextQuestionOutlet" destination="YLe-6j-1kC" id="mhJ-si-LJG"/>

@@ -25,8 +25,8 @@ class CustomProgressBar: UIProgressView {
     }
     
     func setupBar() {
-        self.trackTintColor = UIColor(named: "Gray")
-        self.progressTintColor = UIColor(named: "Primary")
+        self.trackTintColor = UIColor(named: "Light-Gray")
+        self.progressTintColor = UIColor(named: "Secondary")
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
         self.layer.sublayers![1].cornerRadius = 8

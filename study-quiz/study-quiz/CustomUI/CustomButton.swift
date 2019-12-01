@@ -18,9 +18,11 @@ class CustomButton: UIButton {
     func setupButton() {
         layer.cornerRadius = 8
         
-        let buttonColor = UIColor(named: "Primary")
+        let buttonColor = UIColor(named: "Secondary")
         self.backgroundColor = buttonColor
         
+        self.titleLabel?.font = .boldSystemFont(ofSize: 20)
+    
         let labelColor = UIColor(named: "White")
         self.setTitleColor(labelColor, for: .normal)
     }

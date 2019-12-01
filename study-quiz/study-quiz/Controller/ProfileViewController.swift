@@ -11,22 +11,27 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileHeaderContainer: UIView!
+    
     @IBOutlet weak var avatarImage: UIImageView!
-    @IBOutlet weak var iconBox: UIView!
-//    @IBOutlet weak var hoursStudiedContainer: UIView!
-//    @IBOutlet weak var favCourseContainer: UIView!
+    
+    @IBOutlet weak var iconBox1: UIView!
+    @IBOutlet weak var iconBox2: UIView!
+    @IBOutlet weak var iconBox3: UIView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        iconBox1.layer.cornerRadius = 4
+        iconBox2.layer.cornerRadius = 4
+        iconBox3.layer.cornerRadius = 4
 
         profileHeaderContainer.layer.cornerRadius = 8
         avatarImage.layer.cornerRadius = avatarImage.frame.height / 2
-        iconBox.layer.cornerRadius = 8
-//        hoursStudiedContainer.layer.cornerRadius = 8
-//        favCourseContainer.layer.cornerRadius = 8
+        
+        
+        
     }
     
 

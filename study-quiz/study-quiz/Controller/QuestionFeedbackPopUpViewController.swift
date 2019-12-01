@@ -12,12 +12,15 @@ class QuestionFeedbackPopUpViewController: UIViewController {
 
     @IBOutlet weak var correctAnswerLabel: UILabel!
     @IBOutlet weak var feedbackImageView: UIImageView!
+    @IBOutlet weak var container: UIView!
     
     var rightAnswer = ""
     var answeredCorrect = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        container.layer.cornerRadius = 16
         
         correctAnswerLabel.text = rightAnswer
         

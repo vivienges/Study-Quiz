@@ -20,8 +20,8 @@ class myTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //cellImage.layer.cornerRadius = 8
         containerView.layer.cornerRadius = 12
+        cellTitle.font = .boldSystemFont(ofSize: 18)
         
     }
     
@@ -34,7 +34,6 @@ class myTableViewCell: UITableViewCell {
 class CoursesTableViewController: UITableViewController {
     
     var questions: [Question] = []
-    //var courses: [Course] = []
     var quizes: [Quiz] = []
     
     
@@ -109,7 +108,8 @@ class CoursesTableViewController: UITableViewController {
         
         
         cell.cellTitle?.text = currentCourse.courseTitle
-        cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
+        //cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
+        cell.cellDetail?.text = currentCourse.teacher
         
         return cell
     }

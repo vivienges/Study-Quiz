@@ -15,7 +15,7 @@ class bookTableViewCell : UITableViewCell {
     @IBOutlet weak var cellDetail: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
     
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -38,10 +38,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // Book Table View
     @IBOutlet weak var myTableView: UITableView!
     
-
     
-    var books: [Book] = [
-    ]
     
     var currentCourse = Course()
     
@@ -68,11 +65,14 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         progressBar.setProgress(progressFloat, animated: true)
         
         // MARK: FETCH INFO FROM GOOGLE BOOKS API
+        var index = 0
         for book in currentCourse.books {
             if book.isbn != nil && book.isbn != "" {
                 let isbn = book.isbn!
-                self.addBook(isbn: isbn)
+                addBookInfo(isbn: isbn, index: index)
+                print("PLEASE: \(book.coverImage!)")
             }
+            index = index + 1
         }
         
     }
@@ -114,7 +114,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                     let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
                                     //print(volumeInfo)
                                     if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
-                                        self.books.append(Book(isbn: "sample", bookTitle: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing", quiz: [Quiz()]))
+                                        //                                        self.books.append(Book(isbn: "sample", bookTitle: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing", quiz: [Quiz()]))
                                     }
                                 }
                             }
@@ -131,6 +131,57 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func addBookInfo(isbn: String, index: Int) {
+        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn)
+        
+        
+        URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
+            if (error != nil) {
+                print(error?.localizedDescription)
+            } else {
+                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                    if let actorArray = jsonObj.value(forKey: "items") as? NSArray {
+                        for actor in actorArray{
+                            if let actorDict = actor as? NSDictionary {
+                                
+                                // saving the data we need for the user interface
+                                let volumeInfo = actorDict["volumeInfo"] as? [String: AnyObject]
+                                let imageLinks = volumeInfo!["imageLinks"] as? [String: AnyObject]
+                                var title = volumeInfo!["title"] as? String;
+                                
+                                var subTitle = volumeInfo!["subtitle"] as? String;
+                                let publisher = volumeInfo!["publisher"] as? String;
+                                let publishedDate = volumeInfo!["publishedDate"] as? String;
+                                var description = volumeInfo!["description"] as? String;
+                                
+                                // Trimming Characters to correct character set
+                                description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
+                                
+                                if (volumeInfo != nil && imageLinks != nil) {
+                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
+                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
+                                        print("smallThumnail! : \(smallThumbnail)")
+                                        self.currentCourse.books[index].coverImage! = smallThumbnail
+                                        self.currentCourse.books[index].description! = subTitle ?? ""
+                                        //print("PLEASE: \(self.currentCourse.books[index].coverImage!)")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    OperationQueue.main.addOperation({
+                        self.myTableView.reloadData()
+                    })
+                }
+            }
+        }).resume()
+        
+        reloadInputViews();
+    }
+    
+    
     // MARK: TABLE VIEW FUNCTIONS
     
     
@@ -140,7 +191,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
+        return currentCourse.books.count
     }   
     
     
@@ -148,7 +199,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
             as! bookTableViewCell
         
-        let currentBook: Book = books[indexPath.row]
+        //let currentBook: Book = books[indexPath.row]
+        let currentBook: Book = currentCourse.books[indexPath.row]
         cell.cellTitle?.text = currentBook.bookTitle
         cell.cellDetail?.text = currentBook.publisher
         
@@ -190,9 +242,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             //print("Current Book Quiz: \(currentBook.quiz)")
             destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
-        
-            
-            
+
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
             
         }

@@ -22,9 +22,6 @@ class BookViewController: UIViewController {
     
     var currentBook = Book()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

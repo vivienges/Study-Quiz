@@ -34,7 +34,6 @@ class myTableViewCell: UITableViewCell {
 class CoursesTableViewController: UITableViewController {
     
     var questions: [Question] = []
-    //var courses: [Course] = []
     var quizes: [Quiz] = []
     
     
@@ -109,7 +108,8 @@ class CoursesTableViewController: UITableViewController {
         
         
         cell.cellTitle?.text = currentCourse.courseTitle
-        cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
+        //cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
+        cell.cellDetail?.text = currentCourse.teacher
         
         return cell
     }

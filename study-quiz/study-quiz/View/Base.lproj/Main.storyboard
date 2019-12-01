@@ -103,7 +103,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-jc-fSX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-jc-fSX" customClass="coverUIImageView" customModule="study_quiz" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="40.5" height="60.5"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
@@ -199,14 +199,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X59-jO-oxL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X59-jO-oxL">
                                 <rect key="frame" x="16" y="185" width="382" height="81.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="YEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-ie-3Kc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-ie-3Kc">
                                 <rect key="frame" x="16" y="156" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -225,20 +225,20 @@
                                     <segue destination="Mds-tI-yzk" kind="show" id="H6I-ln-sOl"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-D5-3cc">
-                                <rect key="frame" x="16" y="300" width="382" height="402"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-D5-3cc">
+                                <rect key="frame" x="16" y="282.5" width="382" height="300"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-Fj-NJn">
-                                        <rect key="frame" x="0.0" y="2" width="273" height="408"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-Fj-NJn" customClass="coverUIImageView" customModule="study_quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2" width="200" height="296.5"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9mg-Fj-NJn" secondAttribute="height" multiplier="2:3" id="Mux-kZ-KeS"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="9mg-Fj-NJn" firstAttribute="top" secondItem="IrJ-D5-3cc" secondAttribute="top" id="YzD-ol-6kt"/>
+                                    <constraint firstAttribute="height" constant="300" id="fkI-Gi-7Qw"/>
                                     <constraint firstItem="9mg-Fj-NJn" firstAttribute="leading" secondItem="IrJ-D5-3cc" secondAttribute="leading" id="r6C-6y-1Ak"/>
                                     <constraint firstAttribute="bottom" secondItem="9mg-Fj-NJn" secondAttribute="bottom" id="uT9-fG-Yql"/>
                                 </constraints>
@@ -248,7 +248,6 @@
                         <constraints>
                             <constraint firstItem="4fa-ie-3Kc" firstAttribute="top" secondItem="5EB-bV-YkO" secondAttribute="top" constant="16" id="0b1-ul-ghR"/>
                             <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="4fa-ie-3Kc" secondAttribute="trailing" constant="16" id="83v-7D-B7z"/>
-                            <constraint firstItem="xzg-FD-JAy" firstAttribute="top" secondItem="IrJ-D5-3cc" secondAttribute="bottom" constant="16" id="Bnx-ML-qd8"/>
                             <constraint firstItem="xzg-FD-JAy" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="J2a-Zg-wGP"/>
                             <constraint firstItem="5EB-bV-YkO" firstAttribute="trailing" secondItem="X59-jO-oxL" secondAttribute="trailing" constant="16" id="JPL-RD-uer"/>
                             <constraint firstItem="IrJ-D5-3cc" firstAttribute="leading" secondItem="5EB-bV-YkO" secondAttribute="leading" constant="16" id="QBv-de-sM6"/>
@@ -315,18 +314,18 @@
                                             <rect key="frame" x="8" y="8" width="398" height="134"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ios Development" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvc-vf-xjw">
-                                                    <rect key="frame" x="94.5" y="16" width="295.5" height="26.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <rect key="frame" x="94.5" y="16" width="295.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUp-xj-QCW">
-                                                    <rect key="frame" x="94.5" y="50.5" width="50" height="21"/>
+                                                    <rect key="frame" x="94.5" y="44.5" width="50" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-BE-Hxy">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-BE-Hxy" customClass="coverUIImageView" customModule="study_quiz" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8.5" width="78.5" height="117"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <color key="tintColor" name="Gray"/>
@@ -343,6 +342,7 @@
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" name="Secondary"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xvc-vf-xjw" secondAttribute="trailing" constant="20" symbolic="YES" id="3vc-cC-pm8"/>
                                                 <constraint firstItem="DEt-BE-Hxy" firstAttribute="leading" secondItem="oaQ-DC-aGz" secondAttribute="leading" constant="8" id="5qr-3s-p5u"/>
@@ -419,6 +419,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gks-ST-Jkt"/>
+        <segue reference="H6I-ln-sOl"/>
     </inferredMetricsTieBreakers>
 </document>

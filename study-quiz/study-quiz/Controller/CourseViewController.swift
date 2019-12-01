@@ -15,9 +15,7 @@ class bookTableViewCell : UITableViewCell {
     @IBOutlet weak var cellDetail: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
     
-    
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -40,7 +38,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // Book Table View
     @IBOutlet weak var myTableView: UITableView!
     
-    let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+
     
     var books: [Book] = [
     ]
@@ -140,7 +138,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return books.count
     }   
     
@@ -150,16 +147,18 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             as! bookTableViewCell
         
         let currentBook: Book = books[indexPath.row]
-        
         cell.cellTitle?.text = currentBook.bookTitle
         cell.cellDetail?.text = currentBook.publisher
+        
+        // TODO: Move the image fetching to the Book class in its own function
+        
+        let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         
         
         if let url = URL(string: currentBook.coverImage ?? urlKey){
             do {
                 let data = try Data(contentsOf: url)
                 cell.cellImage?.image = UIImage(data: data)
-                
             }catch let err {
                 print("Error wegen Thumbnail: \(err.localizedDescription)")
                 cell.cellImage.image = UIImage(systemName: "book.fill")

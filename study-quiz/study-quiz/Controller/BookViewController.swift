@@ -34,7 +34,7 @@ class BookViewController: UIViewController {
         let releaseYear = "Release year: " + currentBook.getYear()
         bookReleaseYear.text = releaseYear
         
-        // Fetch Cover Image
+        //Cover Image
         fetchCoverImage()
     }
     

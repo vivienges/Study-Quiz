@@ -18,5 +18,10 @@ struct Question : Codable {
             self.questionTitle = questionTitle
         self.answeredRight = answeredRight
         }
+    
+    init() {
+        self.questionTitle = "sample question"
+        self.answeredRight = false
+    }
     }
 

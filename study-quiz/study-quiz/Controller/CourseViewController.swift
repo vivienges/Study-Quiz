@@ -59,6 +59,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         courseDescription.text = currentCourse.description
         progressLabel.text = "0 / \(currentCourse.totalQuestions)"
         
+        
+        
         // MARK: ProgressBar
         // TODO: Make use of course info so the info is not hardcoded
         
@@ -161,7 +163,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 cell.cellImage?.image = UIImage(data: data)
                 
             }catch let err {
-                print("Error wegen Thumbnail: \(err.localizedDescription)")
+                print("Error wegen Thumbnail: \(err.localizedDescription)") //english?
                 cell.cellImage.image = UIImage(systemName: "book.fill")
             }
         }
@@ -178,6 +180,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
         self.performSegue(withIdentifier: "showBookSegue", sender: self)
         
     }
@@ -185,7 +188,11 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? BookViewController {
-            destination.currentBook = books[(myTableView.indexPathForSelectedRow?.row)!]
+            
+            //print("Current Book Quiz: \(currentBook.quiz)")
+            destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
+        
+            
             
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
             

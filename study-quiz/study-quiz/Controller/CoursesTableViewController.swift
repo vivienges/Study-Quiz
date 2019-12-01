@@ -48,7 +48,7 @@ class CoursesTableViewController: UITableViewController {
        // let decoder = JSONDecoder()
         
         
-        print(courses)
+   
 //        do {
 //
 //            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {

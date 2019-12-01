@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMU-Bx-7fw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMU-Bx-7fw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -222,7 +222,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mds-tI-yzk" kind="show" id="H6I-ln-sOl"/>
+                                    <action selector="pressQuizBtn:" destination="XWm-Q7-TbB" eventType="touchUpInside" id="fEA-SW-JQB"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-D5-3cc">
@@ -269,6 +269,7 @@
                         <outlet property="coverImage" destination="9mg-Fj-NJn" id="XUf-hK-btI"/>
                         <outlet property="navigationBar" destination="u0Z-fo-fKv" id="ZTO-la-c67"/>
                         <outlet property="startQuizBtn" destination="xzg-FD-JAy" id="Ure-dY-0JP"/>
+                        <segue destination="Mds-tI-yzk" kind="show" identifier="startQuiz" id="Baw-1n-VvU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGH-Qc-PTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -419,6 +420,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gks-ST-Jkt"/>
+        <segue reference="Baw-1n-VvU"/>
     </inferredMetricsTieBreakers>
 </document>

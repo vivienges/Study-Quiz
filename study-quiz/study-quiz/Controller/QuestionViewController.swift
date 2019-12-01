@@ -17,14 +17,18 @@ class QuestionViewController: UIViewController {
     // For now we will create a Quit in this screen. Later this has to be handed over from the following Views
 //    var currentQuiz = Quiz()
     
-    let questions = ["Age?", "City born?", "Favourite Genre?", "Field of studies?"]
-    let answers = [["22", "21", "19", "20"], ["Blumenthal", "Bremen", "Ritterhude", "Jaja"],["EDM", "Rock", "Psy-Trance", "Hip-Hop"], ["Media computer science", "BWL", "IT", "Hip-Hop"]]
+    var questions: [Question] = []
+    var answers: [[String]] = [[]]
     
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
     var amountCorrectAnswers = 0
     var answeredCorrect = false
     var arrayCorrect: [Int]?
+    
+    var currentQuiz = Quiz()
+    
+    
     
     // ProgressBar
     @IBOutlet weak var quizProgressBar: UIProgressView!
@@ -34,6 +38,25 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         questionViewController = self as QuestionViewController
+        
+        for question in currentQuiz.questions {
+            
+            questions.append(question)
+        }
+        
+//        for answerArray in currentQuiz.answers {
+//
+//            for answer in answerArray {
+//
+//                answerArray.append(answer)
+//
+//            }
+//
+//            answers.append(answerArray)
+//        }
+//
+    
+        
         
 //        // MARK: ProgressBar
 //        let progress = Progress(totalUnitCount: Int64(currentQuiz.totalQuestions))
@@ -51,12 +74,14 @@ class QuestionViewController: UIViewController {
     @IBAction func answerButton(_ sender: AnyObject) {
         if (sender.tag == Int(rightAnswerPlacement)) {
                 amountCorrectAnswers += 1
-                answeredCorrect = true
+            answeredCorrect = true
+            currentQuiz.questions[currentQuestion].answeredRight = true
             } else {
-                answeredCorrect = false
+            answeredCorrect = false
+                currentQuiz.questions[currentQuestion].answeredRight = false
             }
             
-            if (currentQuestion <= questions.count) {
+            if (currentQuestion <= questions.count-1) {
                 performSegue(withIdentifier: "popUpSegue", sender: self)
 
             }
@@ -73,27 +98,34 @@ class QuestionViewController: UIViewController {
     func newQuestion()
     {
 
-        questionNameLabel.text = questions[currentQuestion]
+        questionNameLabel.text = questions[currentQuestion].questionTitle
         rightAnswerPlacement = arc4random_uniform(4)+1
-        
+
         //Create a button
         var button:UIButton = UIButton()
-        
+
         var x = 1
-        
+
         for i in 1...4 {
             //create a button
-            button = (view.viewWithTag(i) as! UIButton)
             
+            button = (view.viewWithTag(i) as! UIButton)
+
             if (i == Int(rightAnswerPlacement)) {
-                button.setTitle(answers[currentQuestion][0], for: .normal)
-                
+                button.setTitle(currentQuiz.answers[currentQuestion][0], for: .normal)  // nicer way to express currentQuiz..?
+
             } else {
-                button.setTitle(answers[currentQuestion][x], for: .normal)
+                button.setTitle(currentQuiz.answers[currentQuestion][x], for: .normal)
                 x += 1
             }
+            
         }
+
+        if (currentQuestion < (questions.count-1)) {
+
         currentQuestion += 1
+
+        }
 
     }
     
@@ -101,7 +133,7 @@ class QuestionViewController: UIViewController {
         let popUpVC = segue.destination as? QuestionFeedbackPopUpViewController
 
        if (segue.identifier == "popUpSegue"){
-            popUpVC?.rightAnswer = answers[currentQuestion-1][0]
+        popUpVC?.rightAnswer = currentQuiz.answers[currentQuestion-1][0]
             popUpVC?.answeredCorrect = answeredCorrect
         }
         

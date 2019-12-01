@@ -20,15 +20,19 @@ class BookViewController: UIViewController {
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
-    var currentBook: Book = Book()
+    var currentBook = Book()
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Set data to book information
         navigationBar.title = currentBook.bookTitle
         bookDescription.text = currentBook.description
+        
         
         // Set the release year
         let releaseYear = "Release year: " + currentBook.getYear()
@@ -37,6 +41,11 @@ class BookViewController: UIViewController {
         // Fetch Cover Image
         fetchCoverImage()
     }
+    
+    @IBAction func pressQuizBtn(_ sender: Any) {
+        performSegue(withIdentifier: "startQuiz", sender: self)
+    }
+    
     
     func fetchCoverImage() {
         let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
@@ -50,6 +59,18 @@ class BookViewController: UIViewController {
                 coverImage.image = UIImage(systemName: "book.fill")
             }
         }
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? QuestionViewController {
+            destination.currentQuiz = currentBook.quiz[0]
+          
+            
+        }
+        
     }
 }
 

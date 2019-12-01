@@ -40,13 +40,13 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         
-        if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
+        if (questionViewController?.currentQuestion == ((questionViewController?.questions.count)!-1)) {
             performSegue(withIdentifier: "quizFeedbackSegue", sender: self)
 
         } else {
             dismiss(animated: true)
             //For every question after the first initial question in viewDidLoad in QuestionViewController
-            questionViewController?.newQuestion()
+           questionViewController?.newQuestion()
         }
     }
     

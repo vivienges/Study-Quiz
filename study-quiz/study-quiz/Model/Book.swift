@@ -10,9 +10,9 @@ struct Book : Codable {
     var summary: String?
     var description: String?
     var quiz : [Quiz]
-
     
-
+    
+    
     
     
     init(isbn : String, bookTitle: String, publisher: String, releaseYear: String, coverImage: String, summary: String, description: String, quiz : [Quiz]) {
@@ -36,28 +36,9 @@ struct Book : Codable {
         self.coverImage = "Empty"
         self.quiz = [Quiz()]
     }
-    
-    func getDate() -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.timeZone = TimeZone.current
-        dateFormatter.locale = Locale.current
-        return dateFormatter.date(from: "2015-04-01") // replace Date String
-        
-    }
-    
-    
+
     func getYear() -> String {
-        
-        let date = self.getDate()
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy"
-        
-        let now = dateFormatter.string(from: Date())
-        
-        return now
-        
+        return self.releaseYear!
     }
     
     

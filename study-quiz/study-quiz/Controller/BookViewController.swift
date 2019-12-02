@@ -12,7 +12,6 @@ import UIKit
 
 class BookViewController: UIViewController {
     
-    
     // UI Elements
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var bookDescription: UILabel!
@@ -20,16 +19,15 @@ class BookViewController: UIViewController {
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
+    // Reference for the book that is handed over from CourseViewController
     var currentBook = Book()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Set data to book information
         navigationBar.title = currentBook.bookTitle
         bookDescription.text = currentBook.description
-        
         
         // Set the release year
         let releaseYear = "Release year: " + currentBook.getYear()

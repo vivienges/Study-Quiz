@@ -80,58 +80,9 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    func addBook(isbn: String) {
-        
-        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn)
-        
-        URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
-            if (error != nil) {
-                print(error?.localizedDescription)
-            } else {
-                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                    if let actorArray = jsonObj.value(forKey: "items") as? NSArray {
-                        for actor in actorArray{
-                            if let actorDict = actor as? NSDictionary {
-                                
-                                // saving the data we need for the user interface
-                                let volumeInfo = actorDict["volumeInfo"] as? [String: AnyObject]
-                                let imageLinks = volumeInfo!["imageLinks"] as? [String: AnyObject]
-                                var title = volumeInfo!["title"] as? String;
-                                
-                                var subTitle = volumeInfo!["subtitle"] as? String;
-                                let publisher = volumeInfo!["publisher"] as? String;
-                                let publishedDate = volumeInfo!["publishedDate"] as? String;
-                                var description = volumeInfo!["description"] as? String;
-                                
-                                // Trimming Characters to correct character set
-                                description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
-                                subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
-                                title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
-                                
-                                if (volumeInfo != nil && imageLinks != nil) {
-                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
-                                    //print(volumeInfo)
-                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
-                                        //                                        self.books.append(Book(isbn: "sample", bookTitle: title!, publisher: publisher ?? "Publisher Missing", releaseYear: publishedDate ?? "PulishedDate Missing", coverImage: smallThumbnail, summary: "Summary Missing", description: subTitle ?? "Description Missing", quiz: [Quiz()]))
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    OperationQueue.main.addOperation({
-                        self.myTableView.reloadData()
-                    })
-                }
-            }
-        }).resume()
-        
-        reloadInputViews();
-        
-    }
-    
     func addBookInfo(isbn: String, index: Int) {
-        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn)
         
+        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn)
         
         URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
             if (error != nil) {
@@ -152,18 +103,20 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 let publishedDate = volumeInfo!["publishedDate"] as? String;
                                 var description = volumeInfo!["description"] as? String;
                                 
-                                // Trimming Characters to correct character set
-                                description = description?.trimmingCharacters(in: .whitespacesAndNewlines);
-                                subTitle = subTitle?.trimmingCharacters(in: .whitespacesAndNewlines);
-                                title = title?.trimmingCharacters(in: .whitespacesAndNewlines);
                                 
                                 if (volumeInfo != nil && imageLinks != nil) {
                                     let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
                                     if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
-                                        print("smallThumnail! : \(smallThumbnail)")
+                                        // Write data from API into the books of our Class
                                         self.currentCourse.books[index].coverImage! = smallThumbnail
                                         self.currentCourse.books[index].description! = subTitle ?? ""
-                                        //print("PLEASE: \(self.currentCourse.books[index].coverImage!)")
+                                        self.currentCourse.books[index].bookTitle! = title ?? self.currentCourse.books[index].bookTitle!
+                                        if publisher != nil && publisher != ""  && publishedDate != nil && publishedDate != "" {
+                                            //print("Release Year from API: \(publishedDate!)")
+                                            self.currentCourse.books[index].publisher = publisher
+                                            self.currentCourse.books[index].releaseYear = publishedDate!
+                                        }
+                                        
                                     }
                                 }
                             }
@@ -240,7 +193,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             //print("Current Book Quiz: \(currentBook.quiz)")
             destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
-
+            
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
             
         }

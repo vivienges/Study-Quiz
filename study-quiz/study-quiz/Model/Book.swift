@@ -37,6 +37,7 @@ struct Book : Codable {
         self.quiz = [Quiz()]
     }
 
+    //MARK: Get release year
     func getYear() -> String {
         return self.releaseYear!
     }

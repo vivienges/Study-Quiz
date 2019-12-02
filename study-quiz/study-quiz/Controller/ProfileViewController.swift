@@ -10,15 +10,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    //MARK: UI Elements
     @IBOutlet weak var profileHeaderContainer: UIView!
-    
     @IBOutlet weak var avatarImage: UIImageView!
-    
     @IBOutlet weak var iconBox1: UIView!
     @IBOutlet weak var iconBox2: UIView!
     @IBOutlet weak var iconBox3: UIView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

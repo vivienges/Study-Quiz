@@ -17,19 +17,16 @@ class bookTableViewCell : UITableViewCell {
     }
 }
 
-
-
 class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //MARK: UI Elements
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var courseDescription: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    
-    // MARK: Book Table View
     @IBOutlet weak var myTableView: UITableView!
     
-    
+    //MARK: Reference for the course that is handed over from CourseTableViewController
     var currentCourse = Course()
     
     override func viewDidLoad() {
@@ -39,7 +36,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        // Set UI to course info
+        //MARK: Set UI to course info
         navigationBar.title = currentCourse.courseTitle
         courseDescription.text = currentCourse.description
         
@@ -51,7 +48,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let progressFloat = Float(progress.fractionCompleted)
         progressBar.setProgress(progressFloat, animated: true)
         
-        // MARK: FETCH INFO FROM GOOGLE BOOKS API
+        // MARK: Fetch book infos from Google API by isbn
         var index = 0
         for book in currentCourse.books {
             if book.isbn != nil && book.isbn != "" {
@@ -115,18 +112,14 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
-    // MARK: TABLE VIEW FUNCTIONS
-    
-    
+    // MARK: TableView Functions
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentCourse.books.count
     }   
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
@@ -149,8 +142,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
-    // MARK: SETUP SEGUEWAYS
-    
+    // MARK: Setup segue
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showBookSegue", sender: self)
     }

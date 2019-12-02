@@ -10,10 +10,13 @@ import UIKit
 
 class QuestionFeedbackPopUpViewController: UIViewController {
 
+    // MARK: UI Elements
     @IBOutlet weak var correctAnswerLabel: UILabel!
     @IBOutlet weak var feedbackImageView: UIImageView!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var nextQuestionOutlet: UIButton!
     
+    //MARK: Properties
     var rightAnswer = ""
     var answeredCorrect = false
     
@@ -39,8 +42,8 @@ class QuestionFeedbackPopUpViewController: UIViewController {
             nextQuestionOutlet.setTitle("End Quiz", for: .normal)
         }
     }
-    @IBOutlet weak var nextQuestionOutlet: UIButton!
     
+    //MARK: Setup segue
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         
         if (questionViewController?.currentQuestion == ((questionViewController?.questions.count)!-1)) {
@@ -52,8 +55,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
            questionViewController?.newQuestion()
         }
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

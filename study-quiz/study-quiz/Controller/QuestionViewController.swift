@@ -11,26 +11,20 @@ import UIKit
 var questionViewController : QuestionViewController?
 
 class QuestionViewController: UIViewController {
-
-    // var currentQuestion = Question(question: "Test", answers: ["Hallo", "Moin"], indexCorrectAnswer: 1)
-//    var currentQuestion = Question()
-    // For now we will create a Quit in this screen. Later this has to be handed over from the following Views
-//    var currentQuiz = Quiz()
     
+    // MARK: Properties
     var questions: [Question] = []
-    var answers: [[String]] = [[]]
-    
+    //var answers: [[String]] = [[]]
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
     var amountCorrectAnswers = 0
     var answeredCorrect = false
     var arrayCorrect: [Int]?
     
+    //MARK: Reference for the quiz that is handed over from QuizViewController
     var currentQuiz = Quiz()
     
-    
-    
-    // ProgressBar
+    //MARK: ProgressBar UI Elements
     @IBOutlet weak var quizProgressBar: UIProgressView!
     @IBOutlet weak var questionNameLabel: UILabel!
     
@@ -55,8 +49,6 @@ class QuestionViewController: UIViewController {
 //            answers.append(answerArray)
 //        }
 //
-    
-        
         
         // MARK: ProgressBar
         let progress = Progress(totalUnitCount: Int64(currentQuiz.questions.count))
@@ -72,44 +64,21 @@ class QuestionViewController: UIViewController {
         
     }
     
-    @IBAction func answerButton(_ sender: AnyObject) {
-        if (sender.tag == Int(rightAnswerPlacement)) {
-                amountCorrectAnswers += 1
-            answeredCorrect = true
-            currentQuiz.questions[currentQuestion].answeredRight = true
-            } else {
-            answeredCorrect = false
-                currentQuiz.questions[currentQuestion].answeredRight = false
-            }
-            
-            if (currentQuestion <= questions.count-1) {
-                performSegue(withIdentifier: "popUpSegue", sender: self)
-
-            }
-            
-        }
-    
-    
         override func viewDidAppear(_ animated: Bool) {
                 newQuestion()
         }
     
     
-    //Function that displays new question
-    func newQuestion()
-    {
-
+    //MARK: Display new question
+    func newQuestion() {
         questionNameLabel.text = questions[currentQuestion].questionTitle
         rightAnswerPlacement = arc4random_uniform(4)+1
 
-        //Create a button
         var button:UIButton = UIButton()
-
         var x = 1
 
+        //MARK: Set answer to buttons
         for i in 1...4 {
-            //create a button
-            
             button = (view.viewWithTag(i) as! UIButton)
 
             if (i == Int(rightAnswerPlacement)) {
@@ -123,9 +92,7 @@ class QuestionViewController: UIViewController {
         }
 
         if (currentQuestion < (questions.count-1)) {
-
         currentQuestion += 1
-
         }
         
         // MARK: ProgressBar
@@ -134,9 +101,23 @@ class QuestionViewController: UIViewController {
         print(currentQuestion)
         let progressFloat = Float(progress.fractionCompleted)
         quizProgressBar.setProgress(progressFloat, animated: true)
+    }
+    
+//MARK: Setup segues
+    @IBAction func answerButton(_ sender: AnyObject) {
+    if (sender.tag == Int(rightAnswerPlacement)) {
+            amountCorrectAnswers += 1
+        answeredCorrect = true
+        currentQuiz.questions[currentQuestion].answeredRight = true
+        } else {
+        answeredCorrect = false
+            currentQuiz.questions[currentQuestion].answeredRight = false
+        }
         
-        
+        if (currentQuestion <= questions.count-1) {
+            performSegue(withIdentifier: "popUpSegue", sender: self)
 
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -12,6 +12,7 @@ import UIKit
 
 class myTableViewCell: UITableViewCell {
     
+    //MARK: UI Elements
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
@@ -22,32 +23,25 @@ class myTableViewCell: UITableViewCell {
         
         containerView.layer.cornerRadius = 12
         cellTitle.font = .boldSystemFont(ofSize: 18)
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
 
 class CoursesTableViewController: UITableViewController {
     
-    var questions: [Question] = []
-    var quizes: [Quiz] = []
-    
-    
+    //MARK: UI Elements
     @IBOutlet var myTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
         myTableView.delegate = self
-        
     }
     
-    // MARK: - Table view data source
+    // MARK: - TableView Functions
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

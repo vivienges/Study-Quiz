@@ -128,7 +128,6 @@ class QuestionViewController: UIViewController {
         popUpVC?.rightAnswer = currentQuiz.answers[currentQuestion-1][0]
         popUpVC?.answeredCorrect = answeredCorrect
         }
-        
     }
     
     //    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {

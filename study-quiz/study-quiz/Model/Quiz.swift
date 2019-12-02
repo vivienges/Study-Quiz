@@ -13,9 +13,12 @@ import UIKit
 
 struct Quiz : Codable {
     
+    //MARK: Properties
     var questions : [Question]
     var answers : [[String]]
     
+    
+    //MARK: Initializer
     init(questions: [Question], answers: [[String]]) {
         self.questions = questions
         self.answers = answers
@@ -25,6 +28,4 @@ struct Quiz : Codable {
         self.questions = [Question()]
         self.answers = [["answer A","answer B","answer C","answer D"]]
     }
-   
-    
 }

@@ -13,7 +13,7 @@ import UIKit
 class BookViewController: UIViewController {
     
     
-    // UI Elements
+    // MARK: UI Elements
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var bookDescription: UILabel!
     @IBOutlet weak var bookReleaseYear: UILabel!
@@ -26,16 +26,16 @@ class BookViewController: UIViewController {
         super.viewDidLoad()
         
         
-        // Set data to book information
+        // MARK: Set data to book information
         navigationBar.title = currentBook.bookTitle
         bookDescription.text = currentBook.description
         
         
-        // Set the release year
+        // MARK: Set the release year
         let releaseYear = "Release year: " + currentBook.getYear()
         bookReleaseYear.text = releaseYear
         
-        //Cover Image
+        //MARK: Cover Image
         fetchCoverImage()
     }
     

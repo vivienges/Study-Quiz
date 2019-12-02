@@ -10,7 +10,7 @@ import UIKit
 
 class bookTableViewCell : UITableViewCell {
     
-    // Cell UI Elements
+    // MARK: Cell UI Elements
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
@@ -35,9 +35,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
-    // Book Table View
+    // MARK: Book Table View
     @IBOutlet weak var myTableView: UITableView!
-    
     
     
     var currentCourse = Course()

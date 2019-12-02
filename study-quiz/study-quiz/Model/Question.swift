@@ -11,11 +11,14 @@ import UIKit
 
 struct Question : Codable {
     
+    //MARK: Properties
     var questionTitle : String
     var answeredRight : Bool
         
+    
+    //MARK: Initializer 
     init(questionTitle: String, answeredRight : Bool) {
-            self.questionTitle = questionTitle
+        self.questionTitle = questionTitle
         self.answeredRight = answeredRight
         }
     
@@ -23,5 +26,5 @@ struct Question : Codable {
         self.questionTitle = "sample question"
         self.answeredRight = false
     }
-    }
+}
 

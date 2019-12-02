@@ -1,11 +1,3 @@
-//
-//  CourseViewController.swift
-//  study-quiz
-//
-//  Created by David Bielenberg on 17.11.19.
-//  Copyright © 2019 David Bielenberg. All rights reserved.
-//
-
 import UIKit
 
 class bookTableViewCell : UITableViewCell {
@@ -23,7 +15,6 @@ class bookTableViewCell : UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
 
 
@@ -53,7 +44,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         navigationBar.title = currentCourse.courseTitle
         courseDescription.text = currentCourse.description
         
-        
         // MARK: ProgressBar
         // TODO: Make use of course info so the info is not hardcoded
         
@@ -68,16 +58,13 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if book.isbn != nil && book.isbn != "" {
                 let isbn = book.isbn!
                 addBookInfo(isbn: isbn, index: index)
-                print("PLEASE: \(book.coverImage!)")
             }
             index = index + 1
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
     }
     
     func addBookInfo(isbn: String, index: Int) {
@@ -86,27 +73,24 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
             if (error != nil) {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "dataTask failed")
             } else {
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                     if let actorArray = jsonObj.value(forKey: "items") as? NSArray {
                         for actor in actorArray{
                             if let actorDict = actor as? NSDictionary {
                                 
-                                // saving the data we need for the user interface
+                                // References to data from the API
                                 let volumeInfo = actorDict["volumeInfo"] as? [String: AnyObject]
                                 let imageLinks = volumeInfo!["imageLinks"] as? [String: AnyObject]
-                                var title = volumeInfo!["title"] as? String;
-                                
-                                var subTitle = volumeInfo!["subtitle"] as? String;
+                                let title = volumeInfo!["title"] as? String;
+                                let subTitle = volumeInfo!["subtitle"] as? String;
                                 let publisher = volumeInfo!["publisher"] as? String;
                                 let publishedDate = volumeInfo!["publishedDate"] as? String;
-                                var description = volumeInfo!["description"] as? String;
-                                
                                 
                                 if (volumeInfo != nil && imageLinks != nil) {
                                     let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
-                                    if (smallThumbnail != nil && title != nil && smallThumbnail != "" && title != "") {
+                                    if (smallThumbnail != "" && title != "") {
                                         // Write data from API into the books of our Class
                                         self.currentCourse.books[index].coverImage! = smallThumbnail
                                         self.currentCourse.books[index].description! = subTitle ?? ""
@@ -128,7 +112,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
         }).resume()
-        
         reloadInputViews();
     }
     
@@ -150,17 +133,11 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
             as! bookTableViewCell
         
-        //let currentBook: Book = books[indexPath.row]
         let currentBook: Book = currentCourse.books[indexPath.row]
         cell.cellTitle?.text = currentBook.bookTitle
         cell.cellDetail?.text = currentBook.publisher
         
-        // TODO: Move the image fetching to the Book class in its own function
-        
-        let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        
-        
-        if let url = URL(string: currentBook.coverImage ?? urlKey){
+        if let url = URL(string: currentBook.coverImage ?? ""){
             do {
                 let data = try Data(contentsOf: url)
                 cell.cellImage?.image = UIImage(data: data)
@@ -169,34 +146,20 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 cell.cellImage.image = UIImage(systemName: "book.fill")
             }
         }
-        
-        
-        
         return cell
-        
     }
     
     
     // MARK: SETUP SEGUEWAYS
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
         self.performSegue(withIdentifier: "showBookSegue", sender: self)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let destination = segue.destination as? BookViewController {
-            
-            //print("Current Book Quiz: \(currentBook.quiz)")
             destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
-            
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
-            
         }
-        
     }
 }

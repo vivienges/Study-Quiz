@@ -13,17 +13,18 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var correctAnswerLabel: UILabel!
     @IBOutlet weak var feedbackImageView: UIImageView!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var nextQuestionOutlet: UIButton!
+
     
     var rightAnswer = ""
     var answeredCorrect = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        container.layer.cornerRadius = 16
-        
+
+        container.layer.cornerRadius = 8
         correctAnswerLabel.text = rightAnswer
-        
+
         if (answeredCorrect) {
             correctAnswerLabel.textColor = UIColor.green
             feedbackImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
@@ -35,25 +36,28 @@ class QuestionFeedbackPopUpViewController: UIViewController {
             feedbackImageView.image = UIImage(systemName: "xmark.rectangle.fill")
             feedbackImageView.tintColor = UIColor.red
         }
-        if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
+        if (questionViewController?.currentQuestion == (questionViewController?.questions.count)!) {
             nextQuestionOutlet.setTitle("End Quiz", for: .normal)
         }
+        
+
     }
-    @IBOutlet weak var nextQuestionOutlet: UIButton!
+    
+
+    
     
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         
-        if (questionViewController?.currentQuestion == ((questionViewController?.questions.count)!-1)) {
+        if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
             performSegue(withIdentifier: "quizFeedbackSegue", sender: self)
 
         } else {
+            print("normale Frage")
             dismiss(animated: true)
             //For every question after the first initial question in viewDidLoad in QuestionViewController
            questionViewController?.newQuestion()
         }
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -61,6 +65,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         if (segue.identifier == "quizFeedbackSegue") {
             quizFeedbackVC?.amountCorrectAnswers = questionViewController!.amountCorrectAnswers
             quizFeedbackVC?.amountOfQuestions = questionViewController!.questions.count
+            questionViewController?.dismiss(animated: true)
         }
     }
 

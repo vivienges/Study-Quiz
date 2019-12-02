@@ -16,6 +16,8 @@ class QuizFeedbackViewController: UIViewController {
     var amountCorrectAnswers = 0
     var amountOfQuestions = 0
     
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

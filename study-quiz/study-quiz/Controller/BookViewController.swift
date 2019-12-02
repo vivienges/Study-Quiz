@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class BookViewController: UIViewController {
     
     // MARK: UI Elements
@@ -17,7 +15,8 @@ class BookViewController: UIViewController {
     @IBOutlet weak var bookDescription: UILabel!
     @IBOutlet weak var bookReleaseYear: UILabel!
     @IBOutlet weak var startQuizBtn: UIButton!
-    @IBOutlet weak var navigationBar: UINavigationItem!
+    @IBOutlet weak var bookTitle: UILabel!
+    
     
     //MARK: Reference for the book that is handed over from CourseViewController
     var currentBook = Book()
@@ -25,9 +24,10 @@ class BookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.largeTitleDisplayMode = .never
 
         // MARK: Set data to book information
-        navigationBar.title = currentBook.bookTitle
+        bookTitle.text = currentBook.bookTitle
         bookDescription.text = currentBook.description
         
         

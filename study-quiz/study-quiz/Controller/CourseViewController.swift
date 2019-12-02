@@ -1,3 +1,11 @@
+//
+//  CourseViewController.swift
+//  study-quiz
+//
+//  Created by David Bielenberg on 15.11.19.
+//  Copyright © 2019 David Bielenberg. All rights reserved.
+//
+
 import UIKit
 
 class bookTableViewCell : UITableViewCell {
@@ -20,11 +28,11 @@ class bookTableViewCell : UITableViewCell {
 class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: UI Elements
-    @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var courseDescription: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var courseTitle: UILabel!
     
     //MARK: Reference for the course that is handed over from CourseTableViewController
     var currentCourse = Course()
@@ -32,12 +40,14 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.largeTitleDisplayMode = .never
+        
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.delegate = self
         
         //MARK: Set UI to course info
-        navigationBar.title = currentCourse.courseTitle
+        courseTitle.text = currentCourse.courseTitle
         courseDescription.text = currentCourse.description
         
         // MARK: ProgressBar

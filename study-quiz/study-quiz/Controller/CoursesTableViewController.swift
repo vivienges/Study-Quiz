@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class myTableViewCell: UITableViewCell {
     
     //MARK: UI Elements

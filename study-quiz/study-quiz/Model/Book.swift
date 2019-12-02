@@ -36,26 +36,8 @@ struct Book : Codable {
         self.coverImage = "Empty"
         self.quiz = [Quiz()]
     }
-    
-    
-    //MARK: Get release date
-    func getDate() -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.timeZone = TimeZone.current
-        dateFormatter.locale = Locale.current
-        return dateFormatter.date(from: "2015-04-01") // replace Date String
-    }
-    
-    
-    //MARK: Get release year
+
     func getYear() -> String {
-        let date = self.getDate()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy"
-        let now = dateFormatter.string(from: Date())
-        
-        return now
-        
+        return self.releaseYear!
     }
 }

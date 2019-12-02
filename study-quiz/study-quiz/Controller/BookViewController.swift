@@ -20,6 +20,7 @@ class BookViewController: UIViewController {
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
+    // Reference for the book that is handed over from CourseViewController
     var currentBook = Book()
     
     override func viewDidLoad() {

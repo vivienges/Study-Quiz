@@ -58,15 +58,16 @@ class QuestionViewController: UIViewController {
     
         
         
-//        // MARK: ProgressBar
-//        let progress = Progress(totalUnitCount: Int64(currentQuiz.totalQuestions))
-//        progress.completedUnitCount = Int64(currentQuiz.completedQuestions)
-//        let progressFloat = Float(progress.fractionCompleted)
-//        quizProgressBar.setProgress(progressFloat, animated: true)
-//
+        // MARK: ProgressBar
+        let progress = Progress(totalUnitCount: Int64(currentQuiz.questions.count))
+        progress.completedUnitCount = Int64(currentQuestion)
+        print(currentQuestion)
+        let progressFloat = Float(progress.fractionCompleted)
+        quizProgressBar.setProgress(progressFloat, animated: true)
+
 //        currentQuestion = currentQuiz.questions[currentQuiz.completedQuestions]
 //        print("You answered: \(currentQuiz.completedQuestions) questions")
-//        
+//
 //        self.navigationItem.title = currentQuestion.question
         
     }
@@ -126,6 +127,15 @@ class QuestionViewController: UIViewController {
         currentQuestion += 1
 
         }
+        
+        // MARK: ProgressBar
+        let progress = Progress(totalUnitCount: Int64(currentQuiz.questions.count))
+        progress.completedUnitCount = Int64(currentQuestion)
+        print(currentQuestion)
+        let progressFloat = Float(progress.fractionCompleted)
+        quizProgressBar.setProgress(progressFloat, animated: true)
+        
+        
 
     }
     
@@ -133,8 +143,9 @@ class QuestionViewController: UIViewController {
         let popUpVC = segue.destination as? QuestionFeedbackPopUpViewController
 
        if (segue.identifier == "popUpSegue"){
+
         popUpVC?.rightAnswer = currentQuiz.answers[currentQuestion-1][0]
-            popUpVC?.answeredCorrect = answeredCorrect
+        popUpVC?.answeredCorrect = answeredCorrect
         }
         
     }

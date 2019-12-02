@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iph-2U-clP">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -79,9 +79,8 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="YHP-32-UUl"/>
                                 </constraints>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-c8-iEi">
-                                <rect key="frame" x="20" y="233" width="374" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-c8-iEi">
+                                <rect key="frame" x="20" y="120" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,15 +97,18 @@
                             <constraint firstItem="X4j-F2-Yf9" firstAttribute="centerX" secondItem="JCt-3N-K2o" secondAttribute="centerX" id="GJE-Fe-5qT"/>
                             <constraint firstItem="BaZ-0C-P04" firstAttribute="leading" secondItem="jot-1j-MKb" secondAttribute="leading" constant="16" id="Its-Hf-FYW"/>
                             <constraint firstItem="jot-1j-MKb" firstAttribute="bottom" secondItem="lBK-qK-TLw" secondAttribute="bottom" constant="16" id="Lme-Em-80V"/>
+                            <constraint firstItem="mRb-c8-iEi" firstAttribute="leading" secondItem="jot-1j-MKb" secondAttribute="leading" constant="20" id="MvM-QU-gtM"/>
                             <constraint firstItem="jot-1j-MKb" firstAttribute="trailing" secondItem="lBK-qK-TLw" secondAttribute="trailing" constant="16" id="NKU-HT-97f"/>
                             <constraint firstItem="lBK-qK-TLw" firstAttribute="centerX" secondItem="JCt-3N-K2o" secondAttribute="centerX" id="Oqh-Nn-9Nj"/>
                             <constraint firstItem="BaZ-0C-P04" firstAttribute="top" secondItem="Bor-Em-yKx" secondAttribute="bottom" constant="16" id="QEz-LL-HzO"/>
                             <constraint firstItem="jot-1j-MKb" firstAttribute="trailing" secondItem="BaZ-0C-P04" secondAttribute="trailing" constant="16" id="Qff-pW-aRX"/>
                             <constraint firstItem="Bor-Em-yKx" firstAttribute="centerX" secondItem="JCt-3N-K2o" secondAttribute="centerX" id="RYj-oG-a97"/>
+                            <constraint firstAttribute="trailing" secondItem="mRb-c8-iEi" secondAttribute="trailing" constant="20" id="h4n-7h-okL"/>
                             <constraint firstItem="ElW-HY-xZA" firstAttribute="top" secondItem="BaZ-0C-P04" secondAttribute="bottom" constant="16" id="lmw-bj-Fuc"/>
                             <constraint firstItem="lBK-qK-TLw" firstAttribute="leading" secondItem="jot-1j-MKb" secondAttribute="leading" constant="16" id="mmR-Ou-whK"/>
                             <constraint firstItem="lBK-qK-TLw" firstAttribute="top" secondItem="ElW-HY-xZA" secondAttribute="bottom" constant="16" id="ppg-p7-z4h"/>
                             <constraint firstItem="jot-1j-MKb" firstAttribute="trailing" secondItem="ElW-HY-xZA" secondAttribute="trailing" constant="16" id="uw4-y5-IFi"/>
+                            <constraint firstItem="mRb-c8-iEi" firstAttribute="top" secondItem="X4j-F2-Yf9" secondAttribute="bottom" constant="20" id="zma-uz-N8R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jot-1j-MKb"/>
                     </view>
@@ -114,7 +116,7 @@
                     <connections>
                         <outlet property="questionNameLabel" destination="mRb-c8-iEi" id="yj3-83-9va"/>
                         <outlet property="quizProgressBar" destination="X4j-F2-Yf9" id="oVX-CB-zYH"/>
-                        <segue destination="LIK-rc-39Z" kind="show" identifier="popUpSegue" id="bbm-wD-80Z"/>
+                        <segue destination="LIK-rc-39Z" kind="presentation" identifier="popUpSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="bbm-wD-80Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeI-cO-lfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

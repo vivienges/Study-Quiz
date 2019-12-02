@@ -263,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGH-Qc-PTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4179.7101449275369" y="-1061.3839285714284"/>
+            <point key="canvasLocation" x="4107" y="-1061"/>
         </scene>
         <!--Courses-->
         <scene sceneID="Irh-a0-j1L">
@@ -413,6 +413,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gks-ST-Jkt"/>
+        <segue reference="Baw-1n-VvU"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,10 +14,12 @@ class bookTableViewCell : UITableViewCell {
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDetail: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var containerView: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        containerView.layer.cornerRadius = 12
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,6 +42,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myTableView.separatorStyle = .none
      
        // navigationItem.largeTitleDisplayMode = .never
         
@@ -101,7 +105,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 let publishedDate = volumeInfo!["publishedDate"] as? String;
                                 
                                 if (volumeInfo != nil && imageLinks != nil) {
-                                    let smallThumbnail = imageLinks!["smallThumbnail"] as! String;
+                                    let smallThumbnail = imageLinks!["thumbnail"] as! String;
                                     if (smallThumbnail != "" && title != "") {
                                         // Write data from API into the books of our Class
                                         self.currentCourse.books[index].coverImage! = smallThumbnail

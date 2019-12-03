@@ -37,6 +37,7 @@ class CoursesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         myTableView.delegate = self
+        myTableView.separatorStyle = .none
     }
     
     // MARK: - TableView Functions

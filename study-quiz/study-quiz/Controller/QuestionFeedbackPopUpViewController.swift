@@ -16,6 +16,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var nextQuestionOutlet: UIButton!
     @IBOutlet weak var endQuizLabel: UILabel!
+    @IBOutlet weak var imageContainer: UIView!
     
     
     //MARK: Properties
@@ -26,19 +27,20 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         super.viewDidLoad()
 //        endQuizLabel.isHidden = true
         
-        container.layer.cornerRadius = 8
+        container.layer.cornerRadius = 12
+        imageContainer.layer.cornerRadius = 8
         correctAnswerLabel.text = rightAnswer
         
         if (answeredCorrect) {
             correctAnswerLabel.textColor = UIColor.green
             feedbackImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
-            feedbackImageView.tintColor = UIColor.green
+            feedbackImageView.tintColor = UIColor(named: "Positive")
             
             
         } else {
             correctAnswerLabel.textColor = UIColor.red
             feedbackImageView.image = UIImage(systemName: "xmark.rectangle.fill")
-            feedbackImageView.tintColor = UIColor.red
+            feedbackImageView.tintColor = UIColor(named: "Negative")
         }
         if (questionViewController?.currentQuestion == (questionViewController?.questions.count)!) {
             nextQuestionOutlet.setTitle("End Quiz", for: .normal)

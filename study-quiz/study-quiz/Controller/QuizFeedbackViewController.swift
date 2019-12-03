@@ -13,11 +13,15 @@ class QuizFeedbackViewController: UIViewController {
 
     @IBOutlet weak var quizFeedbackLabel: UILabel!
     
+    @IBAction func dismissViewController(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+        
+//        self.navigationController?.viewControllers.removeLast()
+
+    }
     var amountCorrectAnswers = 0
     var amountOfQuestions = 0
-    
 
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

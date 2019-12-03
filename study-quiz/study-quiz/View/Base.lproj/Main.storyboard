@@ -23,7 +23,7 @@
         <!--A course-->
         <scene sceneID="De2-AW-Lud">
             <objects>
-                <viewController id="iKX-aa-3yP" customClass="CourseViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hallo" id="iKX-aa-3yP" customClass="CourseViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RBR-s5-vca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -31,6 +31,8 @@ class QuestionViewController: UIViewController {
     
     
     
+    
+    
     // ProgressBar
     @IBOutlet weak var quizProgressBar: UIProgressView!
     @IBOutlet weak var questionNameLabel: UILabel!
@@ -44,8 +46,7 @@ class QuestionViewController: UIViewController {
             
             questions.append(question)
         }
-        newQuestion()
-        
+        newQuestion()        
         
     }
     
@@ -60,9 +61,14 @@ class QuestionViewController: UIViewController {
         }
         
         if (currentQuestion <= questions.count) {
+//            navigationController?.popToRootViewController(animated: true)
             performSegue(withIdentifier: "popUpSegue", sender: self)
         }
         
+    }
+    
+    func pop() {
+        self.navigationController?.viewControllers.removeLast()
     }
     
     
@@ -117,11 +123,9 @@ class QuestionViewController: UIViewController {
         
     }
     
-    //    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-    //        if motion == .motionShake {
-    //           performSegue(withIdentifier: "nextQuestionSegue", sender: nil)
-    //        }
-    //     }
+    
+    
+
     
     
     

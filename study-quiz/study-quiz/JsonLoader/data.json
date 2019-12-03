@@ -5,8 +5,8 @@
 	"totalQuestions": 10,
 	"books": [{
 		"isbn": "9780131489066",
-		"bookTitle": "Applying UML and patterns",
-		"publisher": "Prentice Hall PTR",
+		"bookTitle": "Applying UML and Patterns",
+		"authors": ["Craig Larman"],
 		"releaseYear": "2005",
 		"coverImage": "efwgr",
 		"summary": "ewgr",
@@ -75,7 +75,7 @@
 	"books": [{
 		"isbn": "0201721686",
 		"bookTitle": "C++ from the Beginning",
-		"publisher": "Addison-Wesley;",
+		"authors": ["Jan Skansholm"],
 		"releaseYear": "2010",
 		"coverImage": "efwgr",
 		"summary": "ewgr",
@@ -134,12 +134,12 @@
 }, {
 	"courseTitle": "User Research",
 	"teacher": "Bruce Ferwerda",
-	"description": "The course introduces the students to user research concepts, methods and techniques as they are used throughout the design process to identify needs, behavioral patterns, and functionalities. It provides students with a basic understanding of the differences between interviews and surveys, cultural probes and ethnography, behavioral or attitudinal approaches, qualitative and quantitative methodologies, and practically illustrates how to turn user research results into communicable synthetic deliverables such as personas or user journeys. The course also stresses the importance of culture and context in the practice of user research.",
+	"description": "The course introduces the students to user research concepts, methods and techniques as they are used throughout the design process to identify needs, behavioral patterns, and functionalities. It provides students with a basic understanding of the differences between interviews and surveys, qualitative and quantitative methodologies, and practically illustrates how to turn user research results into communicable synthetic deliverables such as personas or user journeys.",
 	"totalQuestions": 10,
 	"books": [{
 		"isbn": "0123848695",
 		"bookTitle": "Observing the User Experience",
-		"publisher": "Morgan Kaufmann",
+		"authors": [""],
 		"releaseYear": "2010",
 		"coverImage": "efwgr",
 		"summary": "ewgr",
@@ -177,7 +177,7 @@
 	}, {
 		"isbn": "149195129X",
 		"bookTitle": "UX Research",
-		"publisher": "O'Reilly Media",
+		"authors": ["Brad Nunnally", "David K. Farkas"],
 		"releaseYear": "2010",
 		"coverImage": "efwgr",
 		"summary": "ewgr",

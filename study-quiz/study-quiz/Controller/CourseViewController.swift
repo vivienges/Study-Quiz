@@ -29,18 +29,19 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: UI Elements
     @IBOutlet weak var courseDescription: UILabel!
-    @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var courseTitle: UILabel!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    @IBOutlet weak var courseTeacher: UILabel!
     
     //MARK: Reference for the course that is handed over from CourseTableViewController
     var currentCourse = Course()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.largeTitleDisplayMode = .never
+     
+       // navigationItem.largeTitleDisplayMode = .never
         
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -48,15 +49,20 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //MARK: Set UI to course info
         courseTitle.text = currentCourse.courseTitle
+        courseTeacher.text = "Teacher: " + currentCourse.teacher
         courseDescription.text = currentCourse.description
         
+        
+        //MARK: Set Back button to current course
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: currentCourse.courseTitle, style: .plain, target: nil, action: nil)
+
         // MARK: ProgressBar
         // TODO: Make use of course info so the info is not hardcoded
         
-        let progress = Progress(totalUnitCount: 10)
-        progress.completedUnitCount = 3
-        let progressFloat = Float(progress.fractionCompleted)
-        progressBar.setProgress(progressFloat, animated: true)
+//        let progress = Progress(totalUnitCount: 10)
+//        progress.completedUnitCount = 3
+//        let progressFloat = Float(progress.fractionCompleted)
+//        progressBar.setProgress(progressFloat, animated: true)
         
         // MARK: Fetch book infos from Google API by isbn
         var index = 0
@@ -89,9 +95,9 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 // References to data from the API
                                 let volumeInfo = actorDict["volumeInfo"] as? [String: AnyObject]
                                 let imageLinks = volumeInfo!["imageLinks"] as? [String: AnyObject]
-                                let title = volumeInfo!["title"] as? String;
-                                let subTitle = volumeInfo!["subtitle"] as? String;
-                                let publisher = volumeInfo!["publisher"] as? String;
+                                let title = volumeInfo!["title"] as? String
+                                let subTitle = volumeInfo!["subtitle"] as? String
+                                let authors = volumeInfo!["authors"] as? [String]
                                 let publishedDate = volumeInfo!["publishedDate"] as? String;
                                 
                                 if (volumeInfo != nil && imageLinks != nil) {
@@ -101,9 +107,9 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                         self.currentCourse.books[index].coverImage! = smallThumbnail
                                         self.currentCourse.books[index].description! = subTitle ?? ""
                                         self.currentCourse.books[index].bookTitle! = title ?? self.currentCourse.books[index].bookTitle!
-                                        if publisher != nil && publisher != ""  && publishedDate != nil && publishedDate != "" {
+                                        if authors != nil && authors != [""]  && publishedDate != nil && publishedDate != "" {
                                             //print("Release Year from API: \(publishedDate!)")
-                                            self.currentCourse.books[index].publisher = publisher
+                                            self.currentCourse.books[index].authors = authors!
                                             self.currentCourse.books[index].releaseYear = publishedDate!
                                         }
                                         
@@ -121,6 +127,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         reloadInputViews();
     }
     
+   
     
     // MARK: TableView Functions
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -137,7 +144,19 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let currentBook: Book = currentCourse.books[indexPath.row]
         cell.cellTitle?.text = currentBook.bookTitle
-        cell.cellDetail?.text = currentBook.publisher
+        
+         var authors = ""
+        
+        for author in currentBook.authors {
+            
+            if (authors != "") {
+                authors = authors + ", " + author!
+            } else {
+                authors = authors + author!
+            }
+        }
+        
+        cell.cellDetail?.text = authors
         
         if let url = URL(string: currentBook.coverImage ?? ""){
             do {
@@ -160,6 +179,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookViewController {
             destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
+           // destination.authors = authors
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
         }
     }

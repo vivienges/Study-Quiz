@@ -49,7 +49,7 @@ class BookViewController: UIViewController {
         
         
         // MARK: Set the release year
-        let releaseYear = "Release year: " + currentBook.getYear()
+        let releaseYear = currentBook.getYear()
         bookReleaseYear.text = releaseYear
         
         //MARK: fetch book cover

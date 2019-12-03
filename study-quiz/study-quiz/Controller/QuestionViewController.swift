@@ -105,7 +105,6 @@ class QuestionViewController: UIViewController {
             popUpVC?.rightAnswer = currentQuiz.answers[currentQuestion-1][0]
             popUpVC?.answeredCorrect = answeredCorrect
         }
-        
     }
     
     

@@ -16,23 +16,40 @@ class BookViewController: UIViewController {
     @IBOutlet weak var bookReleaseYear: UILabel!
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var bookAuthors: UILabel!
     
     
     //MARK: Reference for the book that is handed over from CourseViewController
     var currentBook = Book()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.titleView?.backgroundColor = .clear
         navigationItem.largeTitleDisplayMode = .never
 
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle
         bookDescription.text = currentBook.description
         
+        var authors = ""
+        
+        for author in currentBook.authors {
+            
+            if (authors != "") {
+                authors = authors + ", " + author!
+            } else {
+                authors = authors + author!
+            }
+        }
+        
+        bookAuthors.text = authors
+        
         
         // MARK: Set the release year
-        let releaseYear = "Release year: " + currentBook.getYear()
+        let releaseYear = currentBook.getYear()
         bookReleaseYear.text = releaseYear
         
         //MARK: fetch book cover

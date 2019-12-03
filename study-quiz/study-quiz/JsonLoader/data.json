@@ -213,4 +213,34 @@
 			]
 		}]
 	}]
+},
+{
+    "courseTitle": "Object-oriented Software Development",
+    "teacher": "Johannes Schmidt",
+    "description": "The purpose of the course is to provide students with knowledge required to carry out object-oriented design in accordance with established practice, and to be able to implement the results of said design in program code.",
+    "totalQuestions": 10,
+    "books": [{
+        "isbn": "9780131489066",
+        "bookTitle": "Applying UML and patterns",
+        "publisher": "Prentice Hall PTR",
+        "releaseYear": "2005",
+        "coverImage": "efwgr",
+        "summary": "ewgr",
+        "description": "wgr",
+        "quiz": [{
+            "questions": [{
+                    "questionTitle": "Which is a reason for IT-project failure?",
+                    "answeredRight": false
+                },
+                {
+                    "questionTitle": "What happens according to the triple contraint if you reduce cost (budget)?",
+                    "answeredRight": false
+                }
+            ],
+            "answers": [
+                ["fast-changing technology", "underuse of the waterfall model", "stable requirements", "overuse of agile methods"],
+                ["increase time and/or reduce scope", "increase time and/or cost", "reduce time and/or increase scope", "increase cost and/or reduce scope"]
+            ]
+        }]
+    }]
 }]

@@ -37,36 +37,30 @@ class QuestionViewController: UIViewController {
             
             questions.append(question)
         }
-        
-//        for answerArray in currentQuiz.answers {
-//
-//            for answer in answerArray {
-//
-//                answerArray.append(answer)
-//
-//            }
-//
-//            answers.append(answerArray)
-//        }
-//
-        
-        // MARK: ProgressBar
-        let progress = Progress(totalUnitCount: Int64(currentQuiz.questions.count))
-        progress.completedUnitCount = Int64(currentQuestion)
-        print(currentQuestion)
-        let progressFloat = Float(progress.fractionCompleted)
-        quizProgressBar.setProgress(progressFloat, animated: true)
-
-//        currentQuestion = currentQuiz.questions[currentQuiz.completedQuestions]
-//        print("You answered: \(currentQuiz.completedQuestions) questions")
-//
-//        self.navigationItem.title = currentQuestion.question
+        newQuestion()        
         
     }
     
-        override func viewDidAppear(_ animated: Bool) {
-                newQuestion()
+    @IBAction func answerButton(_ sender: AnyObject) {
+        if (sender.tag == Int(rightAnswerPlacement)) {
+            amountCorrectAnswers += 1
+            answeredCorrect = true
+            currentQuiz.questions[currentQuestion-1].answeredRight = true
+        } else {
+            answeredCorrect = false
+            currentQuiz.questions[currentQuestion-1].answeredRight = false
         }
+        
+        if (currentQuestion <= questions.count) {
+//            navigationController?.popToRootViewController(animated: true)
+            performSegue(withIdentifier: "popUpSegue", sender: self)
+        }
+        
+    }
+    
+    func pop() {
+        self.navigationController?.viewControllers.removeLast()
+    }
     
     
     //MARK: Display new question
@@ -80,39 +74,29 @@ class QuestionViewController: UIViewController {
         //MARK: Set answer to buttons
         for i in 1...4 {
             button = (view.viewWithTag(i) as! UIButton)
-
+            
             if (i == Int(rightAnswerPlacement)) {
                 button.setTitle(currentQuiz.answers[currentQuestion][0], for: .normal)  // nicer way to express currentQuiz..?
-
+                
             } else {
                 button.setTitle(currentQuiz.answers[currentQuestion][x], for: .normal)
                 x += 1
             }
             
         }
-
-        if (currentQuestion < (questions.count-1)) {
-        currentQuestion += 1
+        
+        if (currentQuestion < (questions.count)) {
+            currentQuestion += 1
+            
         }
         
         // MARK: ProgressBar
         let progress = Progress(totalUnitCount: Int64(currentQuiz.questions.count))
-        progress.completedUnitCount = Int64(currentQuestion)
-        print(currentQuestion)
+        progress.completedUnitCount = Int64(currentQuestion-1)
         let progressFloat = Float(progress.fractionCompleted)
         quizProgressBar.setProgress(progressFloat, animated: true)
-    }
-    
-//MARK: Setup segues
-    @IBAction func answerButton(_ sender: AnyObject) {
-    if (sender.tag == Int(rightAnswerPlacement)) {
-            amountCorrectAnswers += 1
-        answeredCorrect = true
-        currentQuiz.questions[currentQuestion].answeredRight = true
-        } else {
-        answeredCorrect = false
-            currentQuiz.questions[currentQuestion].answeredRight = false
-        }
+        
+        
         
         if (currentQuestion <= questions.count-1) {
             performSegue(withIdentifier: "popUpSegue", sender: self)
@@ -122,33 +106,29 @@ class QuestionViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let popUpVC = segue.destination as? QuestionFeedbackPopUpViewController
-
-       if (segue.identifier == "popUpSegue"){
-
-        popUpVC?.rightAnswer = currentQuiz.answers[currentQuestion-1][0]
-        popUpVC?.answeredCorrect = answeredCorrect
+        if (segue.identifier == "popUpSegue"){
+            popUpVC?.rightAnswer = currentQuiz.answers[currentQuestion-1][0]
+            popUpVC?.answeredCorrect = answeredCorrect
         }
         
     }
     
-    //    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-    //        if motion == .motionShake {
-    //           performSegue(withIdentifier: "nextQuestionSegue", sender: nil)
-    //        }
-    //     }
+    
+    
 
     
     
     
-        
-        
-    }
-
-
-
-
     
     
+    
+}
+
+
+
+
+
+
 
 
 

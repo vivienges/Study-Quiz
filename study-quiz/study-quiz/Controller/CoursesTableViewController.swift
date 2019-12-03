@@ -38,6 +38,7 @@ class CoursesTableViewController: UITableViewController {
         
         myTableView.delegate = self
         myTableView.separatorStyle = .none
+        self.navigationController?.setTransparentNavBar()
     }
     
     // MARK: - TableView Functions

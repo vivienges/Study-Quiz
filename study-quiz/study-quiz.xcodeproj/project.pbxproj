@@ -23,6 +23,7 @@
 		63CA1609237F33C2008DBC88 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1608237F33C2008DBC88 /* Book.swift */; };
 		63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161023800471008DBC88 /* CoursesTableViewController.swift */; };
 		63CA161323800827008DBC88 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA161223800827008DBC88 /* Course.swift */; };
+		63D1302C2396A6C6008749FB /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D1302B2396A6C6008749FB /* CustomNavigationBar.swift */; };
 		A01B707C2392BFE20089B80A /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B707B2392BFE20089B80A /* JsonObject.swift */; };
 		A01B707E2392BFE80089B80A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A01B707D2392BFE70089B80A /* data.json */; };
 		A06D3B7B23914DDB00CF286A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D3B7A23914DDB00CF286A /* CustomButton.swift */; };
@@ -51,6 +52,7 @@
 		63CA1608237F33C2008DBC88 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		63CA161023800471008DBC88 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		63CA161223800827008DBC88 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		63D1302B2396A6C6008749FB /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A01B707B2392BFE20089B80A /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
 		A01B707D2392BFE70089B80A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A06D3B7A23914DDB00CF286A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A06D3B7A23914DDB00CF286A /* CustomButton.swift */,
+				63D1302B2396A6C6008749FB /* CustomNavigationBar.swift */,
 				A0ADC1932393F4C400E69AEE /* coverUIImageView.swift */,
 				A0ADC1912393ECAD00E69AEE /* CustomProgressBar.swift */,
 			);
@@ -244,6 +247,7 @@
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
 				63A3ED71238318CE000C8152 /* ProfileViewController.swift in Sources */,
+				63D1302C2396A6C6008749FB /* CustomNavigationBar.swift in Sources */,
 				636EFE912385D69000499A02 /* Question.swift in Sources */,
 				63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */,
 				A01B707C2392BFE20089B80A /* JsonObject.swift in Sources */,

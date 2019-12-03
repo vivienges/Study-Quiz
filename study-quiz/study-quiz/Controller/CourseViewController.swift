@@ -36,6 +36,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var courseTitle: UILabel!
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var courseTeacher: UILabel!
+    @IBOutlet weak var teacherLabelContainer: UIView!
     
     //MARK: Reference for the course that is handed over from CourseTableViewController
     var currentCourse = Course()
@@ -53,8 +54,10 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //MARK: Set UI to course info
         courseTitle.text = currentCourse.courseTitle
-        courseTeacher.text = "Teacher: " + currentCourse.teacher
+        courseTeacher.text = currentCourse.teacher
         courseDescription.text = currentCourse.description
+        
+        teacherLabelContainer.layer.cornerRadius = teacherLabelContainer.frame.height / 2
         
         
         //MARK: Set Back button to current course

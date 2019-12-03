@@ -171,7 +171,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 cell.cellImage?.image = UIImage(data: data)
             }catch let err {
                 print("Thumbnail Error: \(err.localizedDescription)") //english?
-                cell.cellImage.image = UIImage(systemName: "book.fill")
+//                cell.cellImage.image = UIImage(systemName: "book.fill")
             }
         }
         return cell

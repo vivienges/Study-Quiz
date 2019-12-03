@@ -17,6 +17,8 @@ class BookViewController: UIViewController {
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthors: UILabel!
+    @IBOutlet weak var coverImageContainer: UIView!
+    @IBOutlet weak var bookReleaseLabelContainer: UIView!
     
     
     //MARK: Reference for the book that is handed over from CourseViewController
@@ -29,6 +31,8 @@ class BookViewController: UIViewController {
         
         self.navigationItem.titleView?.backgroundColor = .clear
         navigationItem.largeTitleDisplayMode = .never
+        
+        bookReleaseLabelContainer.layer.cornerRadius = bookReleaseLabelContainer.frame.height / 2
 
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle

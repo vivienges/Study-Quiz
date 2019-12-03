@@ -97,11 +97,6 @@ class QuestionViewController: UIViewController {
         quizProgressBar.setProgress(progressFloat, animated: true)
         
         
-        
-        if (currentQuestion <= questions.count-1) {
-            performSegue(withIdentifier: "popUpSegue", sender: self)
-
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

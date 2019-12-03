@@ -222,7 +222,7 @@
     "books": [{
         "isbn": "9780131489066",
         "bookTitle": "Applying UML and patterns",
-        "publisher": "Prentice Hall PTR",
+        "authors": ["Prentice Hall PTR"],
         "releaseYear": "2005",
         "coverImage": "efwgr",
         "summary": "ewgr",

@@ -24,7 +24,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        endQuizLabel.isHidden = true
+//        endQuizLabel.isHidden = true
         
         container.layer.cornerRadius = 8
         correctAnswerLabel.text = rightAnswer
@@ -42,8 +42,8 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         }
         if (questionViewController?.currentQuestion == (questionViewController?.questions.count)!) {
             nextQuestionOutlet.setTitle("End Quiz", for: .normal)
-            endQuizLabel.isHidden = false
-            endQuizLabel.text = "\(questionViewController!.amountCorrectAnswers) / \(questionViewController!.questions.count) answers correct"
+//            endQuizLabel.isHidden = false
+//            endQuizLabel.text = "\(questionViewController!.amountCorrectAnswers) / \(questionViewController!.questions.count) answers correct"
         }
         
         

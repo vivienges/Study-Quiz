@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iph-2U-clP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iph-2U-clP">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -208,9 +208,8 @@
                         <color key="backgroundColor" red="0.66363746759999998" green="0.66363746759999998" blue="0.66363746759999998" alpha="0.40355413732394368" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="qaO-5n-jHQ" firstAttribute="centerY" secondItem="wbJ-iQ-QGm" secondAttribute="centerY" id="ALc-oA-KHd"/>
-                            <constraint firstItem="cb0-IK-G1s" firstAttribute="trailing" secondItem="qaO-5n-jHQ" secondAttribute="trailing" constant="32" id="FhE-qy-Kf9"/>
-                            <constraint firstItem="qaO-5n-jHQ" firstAttribute="leading" secondItem="cb0-IK-G1s" secondAttribute="leading" constant="32" id="Hwn-kz-6vT"/>
-                            <constraint firstItem="qaO-5n-jHQ" firstAttribute="centerX" secondItem="wbJ-iQ-QGm" secondAttribute="centerX" id="hx7-fv-VJc"/>
+                            <constraint firstItem="qaO-5n-jHQ" firstAttribute="centerX" secondItem="wbJ-iQ-QGm" secondAttribute="centerX" id="I5v-K3-LvX"/>
+                            <constraint firstItem="qaO-5n-jHQ" firstAttribute="width" secondItem="cb0-IK-G1s" secondAttribute="width" multiplier="0.845411" id="NyV-b7-HBI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cb0-IK-G1s"/>
                     </view>
@@ -219,6 +218,7 @@
                         <outlet property="container" destination="qaO-5n-jHQ" id="gIp-0K-TRI"/>
                         <outlet property="correctAnswerLabel" destination="f9f-6R-axw" id="LZw-gO-A6n"/>
                         <outlet property="feedbackImageView" destination="UGh-wP-0pD" id="25R-ta-2In"/>
+                        <outlet property="horizontalConstraint" destination="I5v-K3-LvX" id="iXe-aw-eFw"/>
                         <outlet property="imageContainer" destination="TfK-3N-dph" id="vux-tg-y8A"/>
                         <outlet property="nextQuestionOutlet" destination="YLe-6j-1kC" id="mhJ-si-LJG"/>
                     </connections>

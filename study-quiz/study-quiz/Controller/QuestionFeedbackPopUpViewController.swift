@@ -18,6 +18,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var endQuizLabel: UILabel!
     @IBOutlet weak var imageContainer: UIView!
     
+    @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
     
     //MARK: Properties
     var rightAnswer = ""
@@ -26,13 +27,11 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        endQuizLabel.isHidden = true
-        
+        horizontalConstraint.constant -= view.bounds.width
         container.layer.cornerRadius = 12
         imageContainer.layer.cornerRadius = 8
         correctAnswerLabel.text = rightAnswer
-        container.center.x-=self.view.bounds.width //for animation
 
-        
         if (answeredCorrect) {
             correctAnswerLabel.textColor = UIColor.green
             feedbackImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
@@ -49,15 +48,15 @@ class QuestionFeedbackPopUpViewController: UIViewController {
 //            endQuizLabel.isHidden = false
 //            endQuizLabel.text = "\(questionViewController!.amountCorrectAnswers) / \(questionViewController!.questions.count) answers correct"
         }
-        
-        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         super.viewDidAppear(animated)
+        horizontalConstraint.constant = 0
+        
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
-                //	self.container.center.x+=self.view.bounds.width
+            self.container.superview?.layoutIfNeeded()
             self.feedbackImageView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
 
         }, completion: nil)
@@ -65,15 +64,14 @@ class QuestionFeedbackPopUpViewController: UIViewController {
             self.feedbackImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
-
-    
-    
-    
     
     //MARK: Setup segue
     @IBAction func nextQuestionButton(_ sender: UIButton) {
+        horizontalConstraint.constant += view.bounds.width
+        
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
-           self.container.center.x=self.view.bounds.width
+
+            self.container.superview?.layoutIfNeeded()
         }, completion:nil)
         
         nextQuestion()

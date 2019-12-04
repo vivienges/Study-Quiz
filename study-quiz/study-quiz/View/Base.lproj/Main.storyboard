@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMU-Bx-7fw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMU-Bx-7fw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -222,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-RU-BDI">
-                                <rect key="frame" x="0.0" y="88" width="414" height="243.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="187.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A book" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="h9b-Hm-fvv">
                                         <rect key="frame" x="8" y="8" width="398" height="38.5"/>
@@ -264,28 +264,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-ix-vL0" customClass="CustomProgressBar" customModule="study_quiz" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="187.5" width="398" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="ZxH-A6-lcN"/>
-                                        </constraints>
-                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" name="White"/>
                                 <constraints>
                                     <constraint firstItem="ej1-2S-Q2N" firstAttribute="leading" secondItem="r0r-RU-BDI" secondAttribute="leading" constant="8" id="0wu-J4-qOe"/>
-                                    <constraint firstItem="yA8-ix-vL0" firstAttribute="leading" secondItem="r0r-RU-BDI" secondAttribute="leading" constant="8" id="74X-dS-HRO"/>
-                                    <constraint firstAttribute="bottom" secondItem="yA8-ix-vL0" secondAttribute="bottom" constant="16" id="7zc-nI-2yD"/>
-                                    <constraint firstAttribute="trailing" secondItem="yA8-ix-vL0" secondAttribute="trailing" constant="8" id="9I6-v4-7g2"/>
                                     <constraint firstAttribute="trailing" secondItem="ej1-2S-Q2N" secondAttribute="trailing" constant="8" id="ApV-fd-fAF"/>
                                     <constraint firstItem="X59-jO-oxL" firstAttribute="top" secondItem="ej1-2S-Q2N" secondAttribute="bottom" constant="8" id="LJv-vL-SxO"/>
                                     <constraint firstItem="Ay6-TE-vI2" firstAttribute="top" secondItem="h9b-Hm-fvv" secondAttribute="bottom" constant="8" id="Lle-RB-a3T"/>
                                     <constraint firstItem="Ay6-TE-vI2" firstAttribute="leading" secondItem="r0r-RU-BDI" secondAttribute="leading" constant="8" id="PBU-iG-UY4"/>
                                     <constraint firstAttribute="trailing" secondItem="h9b-Hm-fvv" secondAttribute="trailing" constant="8" id="QRG-Vd-oSR"/>
                                     <constraint firstItem="X59-jO-oxL" firstAttribute="leading" secondItem="r0r-RU-BDI" secondAttribute="leading" constant="8" id="TmE-P8-Ca6"/>
+                                    <constraint firstAttribute="bottom" secondItem="X59-jO-oxL" secondAttribute="bottom" constant="16" id="UjD-MI-07J"/>
                                     <constraint firstItem="ej1-2S-Q2N" firstAttribute="top" secondItem="Ay6-TE-vI2" secondAttribute="bottom" constant="8" id="aIj-b8-bgc"/>
                                     <constraint firstItem="h9b-Hm-fvv" firstAttribute="top" secondItem="r0r-RU-BDI" secondAttribute="top" constant="8" id="i7B-er-KTH"/>
-                                    <constraint firstItem="yA8-ix-vL0" firstAttribute="top" secondItem="X59-jO-oxL" secondAttribute="bottom" constant="16" id="jIS-QR-MHG"/>
                                     <constraint firstAttribute="trailing" secondItem="X59-jO-oxL" secondAttribute="trailing" constant="8" id="n9L-13-r1u"/>
                                     <constraint firstItem="h9b-Hm-fvv" firstAttribute="leading" secondItem="r0r-RU-BDI" secondAttribute="leading" constant="8" id="vPE-3q-fWu"/>
                                 </constraints>
@@ -304,7 +295,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-D5-3cc">
-                                <rect key="frame" x="16" y="363.5" width="382" height="2400"/>
+                                <rect key="frame" x="16" y="307.5" width="382" height="2400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-Fj-NJn" customClass="coverUIImageView" customModule="study_quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="8" width="231" height="240"/>
@@ -345,7 +336,6 @@
                         <outlet property="bookTitle" destination="h9b-Hm-fvv" id="1rW-6t-UEI"/>
                         <outlet property="coverImage" destination="9mg-Fj-NJn" id="XUf-hK-btI"/>
                         <outlet property="coverImageContainer" destination="IrJ-D5-3cc" id="5Ah-Fs-Lw2"/>
-                        <outlet property="progressBar" destination="yA8-ix-vL0" id="lIc-pZ-oy4"/>
                         <outlet property="startQuizBtn" destination="xzg-FD-JAy" id="Ure-dY-0JP"/>
                         <segue destination="Mds-tI-yzk" kind="show" identifier="startQuiz" id="Baw-1n-VvU"/>
                     </connections>

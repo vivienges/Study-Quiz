@@ -13,12 +13,12 @@ class BookViewController: UIViewController {
     // MARK: UI Elements
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var bookDescription: UILabel!
-    @IBOutlet weak var bookReleaseYear: UILabel!
     @IBOutlet weak var startQuizBtn: UIButton!
     @IBOutlet weak var bookTitle: UILabel!
-    @IBOutlet weak var bookAuthors: UILabel!
+    @IBOutlet weak var bookAuthorsContainer: UIView!
     @IBOutlet weak var coverImageContainer: UIView!
-    @IBOutlet weak var bookReleaseLabelContainer: UIView!
+    @IBOutlet weak var bookAuthors: UILabel!
+    @IBOutlet weak var bookReleaseYear: UILabel!
     @IBOutlet weak var progressBar: CustomProgressBar!
     
     
@@ -30,10 +30,11 @@ class BookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.navigationItem.titleView?.backgroundColor = .clear
         navigationItem.largeTitleDisplayMode = .never
         
-        bookReleaseLabelContainer.layer.cornerRadius = bookReleaseLabelContainer.frame.height / 2
+        bookAuthorsContainer.layer.cornerRadius = bookAuthorsContainer.frame.height / 2
 
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle
@@ -41,7 +42,7 @@ class BookViewController: UIViewController {
         
         // MARK: ProgressBar
         var amountOfQuestions = 0
-        var answeredQuestions = 0
+        var answeredQuestions = 3
         
         for quiz in currentBook.quiz {
             
@@ -49,7 +50,7 @@ class BookViewController: UIViewController {
             
             for question in quiz.questions {
                 if question.answeredRight == false {
-                    answeredQuestions += 1
+                    //answeredQuestions += 1
                     print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
                 }
             }
@@ -57,23 +58,11 @@ class BookViewController: UIViewController {
         
         
         
-        let progress = Progress(totalUnitCount: Int64(amountOfQuestions))
-        progress.completedUnitCount = Int64(answeredQuestions)
-        let progressFloat = Float(progress.fractionCompleted)
-        progressBar.setProgress(progressFloat, animated: true)
         
         
+        var authors = currentBook.authors[0]
         
-        var authors = ""
-        
-        for author in currentBook.authors {
-            
-            if (authors != "") {
-                authors = authors + ", " + author!
-            } else {
-                authors = authors + author!
-            }
-        }
+
         
         bookAuthors.text = authors
         

@@ -25,6 +25,7 @@ class CustomButton: UIButton {
     
         let labelColor = UIColor(named: "White")
         self.setTitleColor(labelColor, for: .normal)
+//        self.contentEdgeInsets = UIEdgeInsets(top: 12,left: 12,bottom: 12,right: 12) 
     }
 
 }

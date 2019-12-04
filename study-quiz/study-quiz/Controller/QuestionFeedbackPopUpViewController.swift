@@ -30,6 +30,8 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         container.layer.cornerRadius = 12
         imageContainer.layer.cornerRadius = 8
         correctAnswerLabel.text = rightAnswer
+        container.center.x-=self.view.bounds.width //for animation
+
         
         if (answeredCorrect) {
             correctAnswerLabel.textColor = UIColor.green
@@ -51,11 +53,29 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
+                //	self.container.center.x+=self.view.bounds.width
+            self.feedbackImageView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+
+        }, completion: nil)
+        UIView.animate(withDuration: 0.6, delay: 0.5, animations: {
+            self.feedbackImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+
+    
     
     
     
     //MARK: Setup segue
     @IBAction func nextQuestionButton(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
+           self.container.center.x=self.view.bounds.width
+        }, completion:nil)
+        
         nextQuestion()
     }
     

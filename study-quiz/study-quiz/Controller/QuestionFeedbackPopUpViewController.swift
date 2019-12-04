@@ -29,6 +29,17 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateShakeIcon()
+        
+        horizontalConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
+            self.container.superview?.layoutIfNeeded()
+            self.feedbackImageView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+
+        }, completion: nil)
+        UIView.animate(withDuration: 0.6, delay: 0.5, animations: {
+            self.feedbackImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -58,19 +69,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        horizontalConstraint.constant = 0
-        
-        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
-            self.container.superview?.layoutIfNeeded()
-            self.feedbackImageView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-
-        }, completion: nil)
-        UIView.animate(withDuration: 0.6, delay: 0.5, animations: {
-            self.feedbackImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        }, completion: nil)
-    }
     
     //MARK: Setup segue
     @IBAction func nextQuestionButton(_ sender: UIButton) {

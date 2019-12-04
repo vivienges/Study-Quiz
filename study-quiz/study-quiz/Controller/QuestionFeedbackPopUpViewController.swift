@@ -17,7 +17,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var nextQuestionOutlet: UIButton!
     @IBOutlet weak var endQuizLabel: UILabel!
     @IBOutlet weak var imageContainer: UIView!
-    
     @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
     
     //MARK: Properties
@@ -85,8 +84,9 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     
     func nextQuestion() {
         if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
-            dismiss(animated: true)
-            questionViewController?.pop()
+//            dismiss(animated: true)
+//            questionViewController?.pop()
+            performSegue(withIdentifier: "quizFeedbackSegue", sender: nil)
         } else {
             dismiss(animated: true)
             //For every question after the first initial question in viewDidLoad in QuestionViewController
@@ -94,14 +94,14 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let quizFeedbackVC = segue.destination as? QuizFeedbackViewController
-        if (segue.identifier == "quizFeedbackSegue") {
-            quizFeedbackVC?.amountCorrectAnswers = questionViewController!.amountCorrectAnswers
-            quizFeedbackVC?.amountOfQuestions = questionViewController!.questions.count
-            questionViewController?.dismiss(animated: true)
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        let quizFeedbackVC = segue.destination as? QuizFeedbackViewController
+//        if (segue.identifier == "quizFeedbackSegue") {
+//            quizFeedbackVC?.amountCorrectAnswers = questionViewController!.amountCorrectAnswers
+//            quizFeedbackVC?.amountOfQuestions = questionViewController!.questions.count
+//            questionViewController?.dismiss(animated: true)
+//        }
+//    }
     
 }

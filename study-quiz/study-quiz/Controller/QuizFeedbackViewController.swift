@@ -10,9 +10,12 @@ import UIKit
 
 class QuizFeedbackViewController: UIViewController {
     
+    @IBAction func retakeQuizButton(_ sender: UIButton) {
+    }
     //MARK: UI Elements
-    @IBOutlet weak var quizFeedbackLabel: UILabel!
     
+    @IBOutlet weak var quizCorrectAnswerLabel: UILabel!
+    @IBOutlet weak var feedbackDescLabel: UILabel!
     //MARK: Properties
     var amountCorrectAnswers = 0
     var amountOfQuestions = 0
@@ -20,8 +23,16 @@ class QuizFeedbackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        let percentage = (amountCorrectAnswers/amountOfQuestions) * 100
         
-        quizFeedbackLabel.text = String(amountCorrectAnswers) + "/" + String(amountOfQuestions) + " answers correct"
-            }
+        if (percentage <= 50){
+            feedbackDescLabel.text = "Try it again!"
+        } else {
+            feedbackDescLabel.text = "Good job!"
+        }
+ 
+        quizCorrectAnswerLabel.text = "\(amountCorrectAnswers)/\(amountOfQuestions)"
+        }
 
 }

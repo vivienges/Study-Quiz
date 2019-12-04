@@ -54,15 +54,15 @@
 				}
 			],
 			"answers": [
-				["fast-changing technology", "underuse of the waterfall model", "stable requirements", "overuse of agile methods"],
-				["increase time and/or reduce scope", "increase time and/or cost", "reduce time and/or increase scope", "increase cost and/or reduce scope"],
-				["a temporary endeavour", "a long term goal", "a work evironment", "a permanent endeavor"],
-				["used for requirements analysis", "used for testing", "evaluated by off-stage actors", "created during implementation phase"],
-				["doing and knowing", "having and owning", "knowing and owning", "doing and having"],
+				["Fast-changing technology", "Underuse of the waterfall model", "Stable requirements", "Overuse of agile methods"],
+				["Increase time and/or reduce scope", "Increase time and/or cost", "Reduce time and/or increase scope", "Increase cost and/or reduce scope"],
+                ["A temporary endeavour", "A long term goal", "A work evironment", "A permanent endeavor"],
+				["Used for requirements analysis", "Used for testing", "Evaluated by off-stage actors", "Created during implementation phase"],
+				["Doing and knowing", "Having and owning", "Knowing and owning", "Doing and having"],
 				["Furniture", "Composite", "Facade", "Factory"],
-				["functional and non-functional", "operative and non-operative", "functional and restrictional", "operative and co-operative"],
-				["methods", "associations", "attributes", "multiplicities"],
-				["flexible", "beautiful", "fixed", "determined"],
+				["Functional and non-functional", "Operative and non-operative", "Functional and restrictional", "Operative and co-operative"],
+				["Methods", "Associations", "Attributes", "Multiplicities"],
+				["Flexible", "Beautiful", "Fixed", "Determined"],
 				["Low Cohesion", "Controller", "Indirection", "Low Coupling"]
 			]
 		}]
@@ -90,7 +90,7 @@
 					"answeredRight": false
 				},
 				{
-					"questionTitle": "vid explicit typkonvertering vilken av följande styr hur datatypskonflikter i beräkningsuttryck löses ?",
+					"questionTitle": "Vid explicit typkonvertering vilken av följande styr hur datatypskonflikter i beräkningsuttryck löses ?",
 					"answeredRight": false
 				},
 				{
@@ -102,7 +102,7 @@
 					"answeredRight": false
 				},
 				{
-					"questionTitle": "vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
+					"questionTitle": "Vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
 					"answeredRight": false
 				},
 				{
@@ -115,13 +115,13 @@
 				}
 			],
 			"answers": [
-                ["högre prioritet utförs före lägre prioritet", "operatorer kan företräda varandra", "Operatorer kan inte företräde varandra", "Kallas också selektivitetsregler"],
+                ["Högre prioritet utförs före lägre prioritet", "Operatorer kan företräda varandra", "Operatorer kan inte företräde varandra", "Kallas också selektivitetsregler"],
                 ["Nej", "Tveklöst ja", "Ja om koden inte kan anses ha verkshöjd", "Ja om antalet rader understiger 200"],
-                ["Programmeraren", "användaren", "en automatisk initiering av variabler", "Regler i språkspecifikationen "],
+                ["Programmeraren", "Användaren", "En automatisk initiering av variabler", "Regler i språkspecifikationen "],
                 ["Initieras vid definitionen/deklarationen", "Laddas in vid programkörningen", "Kan inte skrivas ut i en printf-sats", "Måste avallokeras med free()-funktionen"],
                 ["Ett logiskt fel", "Ett exekveringsfel", "Ett syntaxfel", "Ett avgränsningsfel"],
                 ["4", "5", "7", "8"],
-                ["double sphereVolume(double);", "int sphereVolume(double);", "double spereVolume(void);", "double sphereVolume(int);"],
+                ["Double sphereVolume(double);", "Int sphereVolume(double);", "Double spereVolume(void);", "Double sphereVolume(int);"],
 
                 ["Förbättra programvaran", "Titta på källkoden men inte ändra den", "Förändra,men distribuera förändringar", "Distribuera mjukvaran"]
 			]
@@ -157,7 +157,7 @@
                     "answeredRight": false
                 },
                 {
-                    "questionTitle": "vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
+                    "questionTitle": "Vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
                     "answeredRight": false
                 },
                 {
@@ -174,13 +174,13 @@
                 }
             ],
             "answers": [
-                ["högre prioritet utförs före lägre prioritet", "operatorer kan företräda varandra", "Operatorer kan inte företräde varandra", "Kallas också selektivitetsregler"],
+                ["Högre prioritet utförs före lägre prioritet", "Operatorer kan företräda varandra", "Operatorer kan inte företräde varandra", "Kallas också selektivitetsregler"],
                 ["Nej", "Tveklöst ja", "Ja om koden inte kan anses ha verkshöjd", "Ja om antalet rader understiger 200"],
-                ["Programmeraren", "användaren", "en automatisk initiering av variabler", "Regler i språkspecifikationen "],
+                ["Programmeraren", "Användaren", "En automatisk initiering av variabler", "Regler i språkspecifikationen "],
                 ["Initieras vid definitionen/deklarationen", "Laddas in vid programkörningen", "Kan inte skrivas ut i en printf-sats", "Måste avallokeras med free()-funktionen"],
                 ["Ett logiskt fel", "Ett exekveringsfel", "Ett syntaxfel", "Ett avgränsningsfel"],
                 ["4", "5", "7", "8"],
-                ["double sphereVolume(double);", "int sphereVolume(double);", "double spereVolume(void);", "double sphereVolume(int);"],
+                ["Double sphereVolume(double);", "Int sphereVolume(double);", "Double spereVolume(void);", "Double sphereVolume(int);"],
 
                 ["Förbättra programvaran", "Titta på källkoden men inte ändra den", "Förändra,men distribuera förändringar", "Distribuera mjukvaran"]
             ]
@@ -227,7 +227,7 @@
 				["Iterative design and user testing", "An object-oriented development process", "Regular design demonstrations", "Including every function each user wants"],
 				["All the above", "Detailed screen designs", "Final graphical representations", "Illustrations of navigational controls"],
 				["Pleasing the product user", "Pleasing the team", "Pleasing the client/boss", "Pleasing the stakeholders of the strategy that was originally set out in the kick off meeting"],
-				["additional and behavioral method", "An attitudinal method", "A behavioral method", "none of them"],
+				["Additional and behavioral method", "An attitudinal method", "A behavioral method", "None of them"],
 				["Who does what and why", "The overall task broken into its subtasks and actions", "What is the goal and who achieves it", "The job and the people doing the job"]
 			]
 		}]
@@ -264,7 +264,7 @@
 			"answers": [
 				["A,B,and C", "Culture", "Knowledge", "Experience"],
 				["Contextual inquiry", "Focus groups", "Surveys", "Lab experiment"],
-				["Group dynamics", "Group think", "Social demand characteristics", "a clear picture of desires and needs"],
+				["Group dynamics", "Group think", "Social demand characteristics", "A clear picture of desires and needs"],
 				["All the options are right", "Surveys are a set of questions ", "Surveys yield quantitative results ", "Surveys can easily go wrong"],
 				["Feedback", "Affordance", "Mapping", "Visibility"]
 			]
@@ -295,8 +295,8 @@
                 }
             ],
             "answers": [
-                ["fast-changing technology", "underuse of the waterfall model", "stable requirements", "overuse of agile methods"],
-                ["increase time and/or reduce scope", "increase time and/or cost", "reduce time and/or increase scope", "increase cost and/or reduce scope"]
+                ["Fast-changing technology", "Underuse of the waterfall model", "Stable requirements", "Overuse of agile methods"],
+                ["Increase time and/or reduce scope", "Increase time and/or cost", "Reduce time and/or increase scope", "Increase cost and/or reduce scope"]
             ]
         }]
     }]

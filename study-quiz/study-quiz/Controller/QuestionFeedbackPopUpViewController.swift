@@ -34,8 +34,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         super.viewDidLoad()
 //        endQuizLabel.isHidden = true
         
-        
-        
         container.layer.cornerRadius = 12
         imageContainer.layer.cornerRadius = 8
         correctAnswerLabel.text = rightAnswer

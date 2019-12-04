@@ -15,7 +15,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var feedbackImageView: UIImageView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var nextQuestionOutlet: UIButton!
-    @IBOutlet weak var endQuizLabel: UILabel!
     @IBOutlet weak var imageContainer: UIView!
     @IBOutlet weak var shakeIcon: UIImageView!
     @IBOutlet weak var shakeLabel: UILabel!
@@ -29,7 +28,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateShakeIcon()
-        
         horizontalConstraint.constant = 0
         
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
@@ -63,8 +61,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         }
         if (questionViewController?.currentQuestion == (questionViewController?.questions.count)!) {
             nextQuestionOutlet.setTitle("End Quiz", for: .normal)
-//            endQuizLabel.isHidden = false
-//            endQuizLabel.text = "\(questionViewController!.amountCorrectAnswers) / \(questionViewController!.questions.count) answers correct"
         }
 
     }
@@ -91,6 +87,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     func nextQuestion() {
         if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
             performSegue(withIdentifier: "quizFeedbackSegue", sender: nil)
+
         } else {
             dismiss(animated: true)
             //For every question after the first initial question in viewDidLoad in QuestionViewController

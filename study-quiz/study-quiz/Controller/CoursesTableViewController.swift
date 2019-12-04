@@ -57,9 +57,7 @@ class CoursesTableViewController: UITableViewController {
             as! myTableViewCell
         
         let currentCourse: Course = courses[indexPath.row]
-        
-        
-        
+
         cell.cellTitle?.text = currentCourse.courseTitle
         //cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
         cell.cellDetail?.text = currentCourse.teacher

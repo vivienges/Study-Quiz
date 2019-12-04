@@ -1,6 +1,8 @@
 import Foundation
 
-let courses: [Course] = load("data.json")
+var courses: [Course] = load("data.json")
+
+//static let instance = JsonObject()
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

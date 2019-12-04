@@ -19,6 +19,7 @@ class BookViewController: UIViewController {
     @IBOutlet weak var bookAuthors: UILabel!
     @IBOutlet weak var coverImageContainer: UIView!
     @IBOutlet weak var bookReleaseLabelContainer: UIView!
+    @IBOutlet weak var progressBar: CustomProgressBar!
     
     
     //MARK: Reference for the book that is handed over from CourseViewController
@@ -37,6 +38,31 @@ class BookViewController: UIViewController {
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle
         bookDescription.text = currentBook.description
+        
+        // MARK: ProgressBar
+        var amountOfQuestions = 0
+        var answeredQuestions = 0
+        
+        for quiz in currentBook.quiz {
+            
+            amountOfQuestions += quiz.questions.count
+            
+            for question in quiz.questions {
+                if question.answeredRight == false {
+                    answeredQuestions += 1
+                    print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
+                }
+            }
+        }
+        
+        
+        
+        let progress = Progress(totalUnitCount: Int64(amountOfQuestions))
+        progress.completedUnitCount = Int64(answeredQuestions)
+        let progressFloat = Float(progress.fractionCompleted)
+        progressBar.setProgress(progressFloat, animated: true)
+        
+        
         
         var authors = ""
         

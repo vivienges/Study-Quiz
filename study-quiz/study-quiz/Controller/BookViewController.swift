@@ -58,11 +58,6 @@ class BookViewController: UIViewController {
         
         
         
-        let progress = Progress(totalUnitCount: Int64(amountOfQuestions))
-        progress.completedUnitCount = Int64(answeredQuestions)
-        let progressFloat = Float(progress.fractionCompleted)
-        progressBar.setProgress(progressFloat, animated: true)
-        
         
         
         var authors = currentBook.authors[0]

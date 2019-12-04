@@ -284,7 +284,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-Gn-RFi">
-                                <rect key="frame" x="172.33333333333334" y="291" width="69.666666666666657" height="33.666666666666686"/>
+                                <rect key="frame" x="172.33333333333334" y="331" width="69.666666666666657" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
@@ -298,6 +298,14 @@
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOJ-Uf-HcQ" customClass="ProgressCircle" customModule="study_quiz" customModuleProvider="target">
+                                <rect key="frame" x="107" y="247" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Qgc-VK-KUD"/>
+                                    <constraint firstAttribute="height" constant="200" id="aAq-nA-alf"/>
+                                    <constraint firstAttribute="width" secondItem="TOJ-Uf-HcQ" secondAttribute="height" multiplier="1:1" id="yxK-Ay-iuK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="Dark"/>
                         <constraints>
@@ -305,9 +313,11 @@
                             <constraint firstItem="fC0-CO-W90" firstAttribute="leading" secondItem="1CY-Lt-JPz" secondAttribute="leading" constant="77" id="7sZ-5I-OiQ"/>
                             <constraint firstItem="rJf-zR-oqT" firstAttribute="centerX" secondItem="fC0-CO-W90" secondAttribute="centerX" id="8Iq-NG-1cK"/>
                             <constraint firstItem="fC0-CO-W90" firstAttribute="leading" secondItem="eQp-Qf-gqs" secondAttribute="leading" id="AbY-py-53p"/>
-                            <constraint firstItem="DRh-Gn-RFi" firstAttribute="top" secondItem="rJf-zR-oqT" secondAttribute="bottom" constant="85" id="KRv-ue-hKv"/>
+                            <constraint firstItem="DRh-Gn-RFi" firstAttribute="top" secondItem="rJf-zR-oqT" secondAttribute="bottom" constant="125" id="KRv-ue-hKv"/>
                             <constraint firstItem="1CY-Lt-JPz" firstAttribute="bottom" secondItem="eQp-Qf-gqs" secondAttribute="bottom" constant="72" id="Mvn-ba-6ns"/>
                             <constraint firstItem="rJf-zR-oqT" firstAttribute="top" secondItem="1CY-Lt-JPz" secondAttribute="top" constant="119" id="SbJ-va-mcF"/>
+                            <constraint firstItem="TOJ-Uf-HcQ" firstAttribute="top" secondItem="rJf-zR-oqT" secondAttribute="bottom" constant="41" id="VRE-2o-Db5"/>
+                            <constraint firstItem="TOJ-Uf-HcQ" firstAttribute="centerX" secondItem="Afq-Me-XOi" secondAttribute="centerX" id="bM5-CL-iVy"/>
                             <constraint firstItem="rJf-zR-oqT" firstAttribute="centerX" secondItem="Afq-Me-XOi" secondAttribute="centerX" id="iJE-cp-7kG"/>
                             <constraint firstItem="eQp-Qf-gqs" firstAttribute="top" secondItem="fC0-CO-W90" secondAttribute="bottom" constant="16" id="jKy-Jc-cc8"/>
                             <constraint firstItem="rJf-zR-oqT" firstAttribute="centerX" secondItem="eQp-Qf-gqs" secondAttribute="centerX" id="uUv-Iq-cc8"/>
@@ -317,6 +327,7 @@
                     <navigationItem key="navigationItem" id="KFy-54-U82"/>
                     <connections>
                         <outlet property="feedbackDescLabel" destination="rJf-zR-oqT" id="vRn-ro-Y5j"/>
+                        <outlet property="progressCircle" destination="TOJ-Uf-HcQ" id="wvJ-XI-xXt"/>
                         <outlet property="quizCorrectAnswerLabel" destination="DRh-Gn-RFi" id="eLd-PG-AGz"/>
                     </connections>
                 </viewController>

@@ -84,7 +84,13 @@ class BookViewController: UIViewController {
         
         //MARK: fetch book cover
         fetchCoverImage()
+    
     }
+    
+    @IBAction func unwindToBookVC(segue:UIStoryboardSegue) {
+        
+    }
+    
     
     func fetchCoverImage() {
         let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"

@@ -20,6 +20,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var shakeIcon: UIImageView!
     @IBOutlet weak var shakeLabel: UILabel!
     
+    @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
     
     //MARK: Properties
     var rightAnswer = ""
@@ -33,11 +34,11 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        endQuizLabel.isHidden = true
-        
+        horizontalConstraint.constant -= view.bounds.width
         container.layer.cornerRadius = 12
         imageContainer.layer.cornerRadius = 8
         correctAnswerLabel.text = rightAnswer
-        
+
         if (answeredCorrect) {
             correctAnswerLabel.textColor = UIColor.green
             feedbackImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
@@ -54,15 +55,32 @@ class QuestionFeedbackPopUpViewController: UIViewController {
 //            endQuizLabel.isHidden = false
 //            endQuizLabel.text = "\(questionViewController!.amountCorrectAnswers) / \(questionViewController!.questions.count) answers correct"
         }
-        
-        
+
     }
     
-    
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        horizontalConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
+            self.container.superview?.layoutIfNeeded()
+            self.feedbackImageView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+
+        }, completion: nil)
+        UIView.animate(withDuration: 0.6, delay: 0.5, animations: {
+            self.feedbackImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
     
     //MARK: Setup segue
     @IBAction func nextQuestionButton(_ sender: UIButton) {
+        horizontalConstraint.constant += view.bounds.width
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
+
+            self.container.superview?.layoutIfNeeded()
+        }, completion:nil)
+        
         nextQuestion()
     }
     
@@ -74,8 +92,9 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     
     func nextQuestion() {
         if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
-            dismiss(animated: true)
-            questionViewController?.pop()
+//            dismiss(animated: true)
+//            questionViewController?.pop()
+            performSegue(withIdentifier: "quizFeedbackSegue", sender: nil)
         } else {
             dismiss(animated: true)
             //For every question after the first initial question in viewDidLoad in QuestionViewController
@@ -83,15 +102,15 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let quizFeedbackVC = segue.destination as? QuizFeedbackViewController
-        if (segue.identifier == "quizFeedbackSegue") {
-            quizFeedbackVC?.amountCorrectAnswers = questionViewController!.amountCorrectAnswers
-            quizFeedbackVC?.amountOfQuestions = questionViewController!.questions.count
-            questionViewController?.dismiss(animated: true)
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        let quizFeedbackVC = segue.destination as? QuizFeedbackViewController
+//        if (segue.identifier == "quizFeedbackSegue") {
+//            quizFeedbackVC?.amountCorrectAnswers = questionViewController!.amountCorrectAnswers
+//            quizFeedbackVC?.amountOfQuestions = questionViewController!.questions.count
+//            questionViewController?.dismiss(animated: true)
+//        }
+//    }
     
     func animateShakeIcon() {
         // shake Icon to highlight gesture            

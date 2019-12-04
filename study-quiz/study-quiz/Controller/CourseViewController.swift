@@ -152,16 +152,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let currentBook: Book = currentCourse.books[indexPath.row]
         cell.cellTitle?.text = currentBook.bookTitle
         
-         var authors = ""
-        
-        for author in currentBook.authors {
-            
-            if (authors != "") {
-                authors = authors + ", " + author!
-            } else {
-                authors = authors + author!
-            }
-        }
+        var authors = currentBook.authors[0]
         
         cell.cellDetail?.text = authors
         

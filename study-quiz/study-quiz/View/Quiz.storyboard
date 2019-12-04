@@ -262,39 +262,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQp-Qf-gqs" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQp-Qf-gqs" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
                                 <rect key="frame" x="77" y="723" width="261" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Teb-Dy-y6B"/>
+                                </constraints>
                                 <state key="normal" title=" Go Back"/>
                                 <connections>
                                     <segue destination="cGL-6I-KVP" kind="unwind" unwindAction="unwindToBookVCWithSegue:" id="vwk-IA-W7P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC0-CO-W90" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC0-CO-W90" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
                                 <rect key="frame" x="77" y="640" width="261" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="w9N-4E-C2w"/>
+                                </constraints>
                                 <color key="tintColor" name="Dark"/>
                                 <state key="normal" title="Retake Quiz"/>
                                 <connections>
                                     <segue destination="cGL-6I-KVP" kind="unwind" unwindAction="unwindToQuestionVCWithSegue:" id="lk0-9v-mbZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-Gn-RFi">
-                                <rect key="frame" x="158" y="291" width="99" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-Gn-RFi">
+                                <rect key="frame" x="172.33333333333334" y="291" width="69.666666666666657" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJf-zR-oqT">
-                                <rect key="frame" x="20" y="163" width="374" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJf-zR-oqT">
+                                <rect key="frame" x="179.66666666666666" y="163" width="54.666666666666657" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="9EN-ju-Kjd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="Dark"/>
+                        <constraints>
+                            <constraint firstItem="DRh-Gn-RFi" firstAttribute="centerX" secondItem="Afq-Me-XOi" secondAttribute="centerX" id="4Fv-3l-u81"/>
+                            <constraint firstItem="fC0-CO-W90" firstAttribute="leading" secondItem="1CY-Lt-JPz" secondAttribute="leading" constant="77" id="7sZ-5I-OiQ"/>
+                            <constraint firstItem="rJf-zR-oqT" firstAttribute="centerX" secondItem="fC0-CO-W90" secondAttribute="centerX" id="8Iq-NG-1cK"/>
+                            <constraint firstItem="fC0-CO-W90" firstAttribute="leading" secondItem="eQp-Qf-gqs" secondAttribute="leading" id="AbY-py-53p"/>
+                            <constraint firstItem="DRh-Gn-RFi" firstAttribute="top" secondItem="rJf-zR-oqT" secondAttribute="bottom" constant="85" id="KRv-ue-hKv"/>
+                            <constraint firstItem="1CY-Lt-JPz" firstAttribute="bottom" secondItem="eQp-Qf-gqs" secondAttribute="bottom" constant="72" id="Mvn-ba-6ns"/>
+                            <constraint firstItem="rJf-zR-oqT" firstAttribute="top" secondItem="1CY-Lt-JPz" secondAttribute="top" constant="119" id="SbJ-va-mcF"/>
+                            <constraint firstItem="rJf-zR-oqT" firstAttribute="centerX" secondItem="Afq-Me-XOi" secondAttribute="centerX" id="iJE-cp-7kG"/>
+                            <constraint firstItem="eQp-Qf-gqs" firstAttribute="top" secondItem="fC0-CO-W90" secondAttribute="bottom" constant="16" id="jKy-Jc-cc8"/>
+                            <constraint firstItem="rJf-zR-oqT" firstAttribute="centerX" secondItem="eQp-Qf-gqs" secondAttribute="centerX" id="uUv-Iq-cc8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1CY-Lt-JPz"/>
                     </view>
                     <navigationItem key="navigationItem" id="KFy-54-U82"/>

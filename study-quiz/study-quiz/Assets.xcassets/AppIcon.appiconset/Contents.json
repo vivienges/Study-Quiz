@@ -108,49 +108,6 @@
       "idiom" : "mac",
       "size" : "512x512",
       "scale" : "2x"
-    },
-    {
-      "size" : "50x50",
-      "idiom" : "universal",
-      "filename" : "app-icon@50x50.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "universal",
-      "filename" : "app-icon@60x60.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "76x76",
-      "idiom" : "universal",
-      "filename" : "app-icon@76x76.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "app-icon@22x22.png",
-      "unassigned" : true
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "app-icon@25x25.png",
-      "unassigned" : true
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "app-icon@58x58.png",
-      "unassigned" : true
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "app-icon@66x66.png",
-      "unassigned" : true
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "app-icon@75x75.png",
-      "unassigned" : true
     }
   ],
   "info" : {

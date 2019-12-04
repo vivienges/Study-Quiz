@@ -25,9 +25,16 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     var rightAnswer = ""
     var answeredCorrect = false
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateShakeIcon()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        endQuizLabel.isHidden = true
+        
+        
         
         container.layer.cornerRadius = 12
         imageContainer.layer.cornerRadius = 8
@@ -89,12 +96,10 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     }
     
     func animateShakeIcon() {
-        // shake Icon to highlight gesture
-            let duration = 1.0
-            let delay = 0.3
-            
-            shakeIcon.animate(withDuration: duration, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: [.curveLinear, .repeat, .autoreverse], animations: {
-                shakeIcon.transform = CGAffineTransform(rotationAngle: CGFloat(imageRotation))
+        // shake Icon to highlight gesture            
+        UIView.animate(withDuration: 0.5, delay: 0.4,
+        options: [.repeat, .autoreverse, .curveEaseIn], animations: {
+                self.shakeIcon.transform = CGAffineTransform(rotationAngle: -30)
             }) { (_) in
                 // Call when animation is done
             }

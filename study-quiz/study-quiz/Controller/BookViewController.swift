@@ -30,6 +30,7 @@ class BookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.navigationItem.titleView?.backgroundColor = .clear
         navigationItem.largeTitleDisplayMode = .never
         

@@ -14,7 +14,6 @@ class QuestionViewController: UIViewController {
     
     // MARK: Properties
     var questions: [Question] = []
-    //var answers: [[String]] = [[]]
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
     var amountCorrectAnswers = 0
@@ -39,6 +38,11 @@ class QuestionViewController: UIViewController {
         }
         newQuestion()        
         
+    }
+    @IBAction func unwindToQuestionVC(segue:UIStoryboardSegue) {
+        currentQuestion = 0
+        amountCorrectAnswers = 0
+        newQuestion()
     }
     
     @IBAction func answerButton(_ sender: AnyObject) {
@@ -86,8 +90,7 @@ class QuestionViewController: UIViewController {
         }
         
         if (currentQuestion < (questions.count)) {
-            currentQuestion += 1
-            
+            currentQuestion += 1   
         }
         
         // MARK: ProgressBar
@@ -95,8 +98,6 @@ class QuestionViewController: UIViewController {
         progress.completedUnitCount = Int64(currentQuestion-1)
         let progressFloat = Float(progress.fractionCompleted)
         quizProgressBar.setProgress(progressFloat, animated: true)
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

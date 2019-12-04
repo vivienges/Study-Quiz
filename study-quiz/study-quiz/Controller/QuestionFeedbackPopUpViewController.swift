@@ -90,8 +90,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     
     func nextQuestion() {
         if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
-//            dismiss(animated: true)
-//            questionViewController?.pop()
             performSegue(withIdentifier: "quizFeedbackSegue", sender: nil)
         } else {
             dismiss(animated: true)
@@ -100,15 +98,14 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        let quizFeedbackVC = segue.destination as? QuizFeedbackViewController
-//        if (segue.identifier == "quizFeedbackSegue") {
-//            quizFeedbackVC?.amountCorrectAnswers = questionViewController!.amountCorrectAnswers
-//            quizFeedbackVC?.amountOfQuestions = questionViewController!.questions.count
-//            questionViewController?.dismiss(animated: true)
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let quizFeedbackVC = segue.destination as? QuizFeedbackViewController
+        if (segue.identifier == "quizFeedbackSegue") {
+            quizFeedbackVC?.amountCorrectAnswers = questionViewController!.amountCorrectAnswers
+            quizFeedbackVC?.amountOfQuestions = questionViewController!.questions.count
+        }
+    }
     
     func animateShakeIcon() {
         // shake Icon to highlight gesture            

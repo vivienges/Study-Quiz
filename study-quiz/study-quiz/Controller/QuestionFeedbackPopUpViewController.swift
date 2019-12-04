@@ -17,6 +17,8 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var nextQuestionOutlet: UIButton!
     @IBOutlet weak var endQuizLabel: UILabel!
     @IBOutlet weak var imageContainer: UIView!
+    @IBOutlet weak var shakeIcon: UIImageView!
+    @IBOutlet weak var shakeLabel: UILabel!
     
     
     //MARK: Properties
@@ -85,5 +87,18 @@ class QuestionFeedbackPopUpViewController: UIViewController {
             questionViewController?.dismiss(animated: true)
         }
     }
+    
+    func animateShakeIcon() {
+        // shake Icon to highlight gesture
+            let duration = 1.0
+            let delay = 0.3
+            
+            shakeIcon.animate(withDuration: duration, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: [.curveLinear, .repeat, .autoreverse], animations: {
+                shakeIcon.transform = CGAffineTransform(rotationAngle: CGFloat(imageRotation))
+            }) { (_) in
+                // Call when animation is done
+            }
+        }
+        
     
 }

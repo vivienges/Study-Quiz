@@ -40,14 +40,12 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: Reference for the course that is handed over from CourseTableViewController
     var currentCourse = Course()
+    var courseID = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         myTableView.separatorStyle = .none
-     
-       // navigationItem.largeTitleDisplayMode = .never
-        
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.delegate = self

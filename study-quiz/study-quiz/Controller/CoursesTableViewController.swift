@@ -56,10 +56,11 @@ class CoursesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
             as! myTableViewCell
         
-        let currentCourse: Course = courses[indexPath.row]
+        // Load in data from JSON-File
+        AppData.loadJSON()
+        let currentCourse = AppData.courses[indexPath.row]
 
         cell.cellTitle?.text = currentCourse.courseTitle
-        //cell.cellDetail?.text = "0 / \(currentCourse.totalQuestions)"
         cell.cellDetail?.text = currentCourse.teacher
         
         return cell
@@ -74,6 +75,7 @@ class CoursesTableViewController: UITableViewController {
         
         if let destination = segue.destination as? CourseViewController {
             destination.currentCourse = courses[(tableView.indexPathForSelectedRow?.row)!]
+            destination.courseID = 1
             
             tableView.deselectRow(at: tableView!.indexPathForSelectedRow!, animated: true)
             

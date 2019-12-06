@@ -1,10 +1,19 @@
 import Foundation
 
-var courses: [Course] = loadOld("data.json")
 
-//static let instance = JsonObject()
+struct AppData {
+    
+    static var courses: [Course] = [
+        Course()
+    ]
+    
+    static func loadJSON() {
+        self.courses = load("data.json")
+        //print("loading")
+    }
+}
 
-func loadOld<T: Decodable>(_ filename: String) -> T {
+func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

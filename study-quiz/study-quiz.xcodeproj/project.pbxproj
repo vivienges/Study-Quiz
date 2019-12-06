@@ -13,6 +13,7 @@
 		636EFE912385D69000499A02 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636EFE902385D69000499A02 /* Question.swift */; };
 		6394B00A2383215300229B8B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6394B0092383215300229B8B /* Profile.storyboard */; };
 		63A3ED71238318CE000C8152 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3ED70238318CE000C8152 /* ProfileViewController.swift */; };
+		63C2ACCF239A562F00C2437C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C2ACCE239A562F00C2437C /* AppData.swift */; };
 		63CA15F1237EDF6B008DBC88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */; };
 		63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */; };
 		63CA15F8237EDF6B008DBC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CA15F6237EDF6B008DBC88 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		636EFE902385D69000499A02 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		6394B0092383215300229B8B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		63A3ED70238318CE000C8152 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		63C2ACCE239A562F00C2437C /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		63CA15ED237EDF6B008DBC88 /* study-quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "study-quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CA15F0237EDF6B008DBC88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63CA15F2237EDF6B008DBC88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,12 +112,12 @@
 		FE99FDE62392CA37007BA8D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				63184C9723816734004C2781 /* CourseViewController.swift */,
 				63CA1606237F314D008DBC88 /* BookViewController.swift */,
 				63CA1604237EEE7F008DBC88 /* QuestionViewController.swift */,
 				FE6B7AEB2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift */,
 				FE6B7AED2392A52D001488DB /* QuizFeedbackViewController.swift */,
-				63CA161023800471008DBC88 /* CoursesTableViewController.swift */,
 				63A3ED70238318CE000C8152 /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				A01B707B2392BFE20089B80A /* JsonObject.swift */,
+				63C2ACCE239A562F00C2437C /* AppData.swift */,
 				A01B707D2392BFE70089B80A /* data.json */,
 			);
 			path = JsonLoader;
@@ -249,6 +252,7 @@
 				A0ADC1942393F4C400E69AEE /* coverUIImageView.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
+				63C2ACCF239A562F00C2437C /* AppData.swift in Sources */,
 				788DC18F23982A2D00340CF9 /* ProgressCircle.swift in Sources */,
 				63A3ED71238318CE000C8152 /* ProfileViewController.swift in Sources */,
 				63D1302C2396A6C6008749FB /* CustomNavigationBar.swift in Sources */,

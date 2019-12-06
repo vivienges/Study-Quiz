@@ -50,6 +50,7 @@ class QuestionViewController: UIViewController {
             amountCorrectAnswers += 1
             answeredCorrect = true
             currentQuiz.questions[currentQuestion-1].answeredRight = true
+            
         } else {
             answeredCorrect = false
             currentQuiz.questions[currentQuestion-1].answeredRight = false

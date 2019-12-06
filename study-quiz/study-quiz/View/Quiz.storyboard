@@ -327,7 +327,7 @@
                     <navigationItem key="navigationItem" id="KFy-54-U82"/>
                     <connections>
                         <outlet property="feedbackDescLabel" destination="rJf-zR-oqT" id="vRn-ro-Y5j"/>
-                        <outlet property="progressCircle" destination="TOJ-Uf-HcQ" id="wvJ-XI-xXt"/>
+                        <outlet property="progressCircle" destination="TOJ-Uf-HcQ" id="dev-xf-khg"/>
                         <outlet property="quizCorrectAnswerLabel" destination="DRh-Gn-RFi" id="eLd-PG-AGz"/>
                     </connections>
                 </viewController>

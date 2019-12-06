@@ -20,13 +20,9 @@ class QuizFeedbackViewController: UIViewController {
     var amountCorrectAnswers = 0
     var amountOfQuestions = 0
     
-    var countFired: CGFloat = 0
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
         //MARK: Calculating the percentage of correct answers
-        let percentage = Double(amountCorrectAnswers)/Double(amountOfQuestions)
+        let percentage = Float(amountCorrectAnswers)/Float(amountOfQuestions)
         
         //MARK: Show Feedback depending on the percentage of correct answers
         if (percentage <= 0.5){
@@ -35,20 +31,14 @@ class QuizFeedbackViewController: UIViewController {
             feedbackDescLabel.text = "Good job!"
         }
         quizCorrectAnswerLabel.text = "\(amountCorrectAnswers)/\(amountOfQuestions)"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
+        //MARK: Calculating the percentage of correct answers
+        let percentage = Float(amountCorrectAnswers)/Float(amountOfQuestions)
         
-        
-        //MARK: Progress Circle
-        Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { (timer) in
-            self.countFired += 1
-            
-            DispatchQueue.main.async {
-                self.progressCircle.progress = min(0.03 * self.countFired, CGFloat(percentage))
-                
-                if self.progressCircle.progress == CGFloat(percentage) {
-                    timer.invalidate()
-                }
-            }
-        }
+        progressCircle.setProgressWithAnimation(duration: 1.0, value: percentage)
     }
 }

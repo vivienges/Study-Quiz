@@ -39,11 +39,13 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var teacherLabelContainer: UIView!
     
     //MARK: Reference for the course that is handed over from CourseTableViewController
-    var currentCourse = Course()
     var courseID = 0
+    var currentCourse = Course()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentCourse = AppData.courses[courseID]
         
         myTableView.separatorStyle = .none
         myTableView.delegate = self
@@ -150,7 +152,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let currentBook: Book = currentCourse.books[indexPath.row]
         cell.cellTitle?.text = currentBook.bookTitle
         
-        var authors = currentBook.authors[0]
+        let authors = currentBook.authors[0]
         
         cell.cellDetail?.text = authors
         

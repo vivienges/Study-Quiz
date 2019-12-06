@@ -11,9 +11,8 @@ import UIKit
 struct Course: Codable {
 
     //MARK: Properties
-    
-    
     var courseTitle: String
+    let ID: Int
     var teacher: String
     var description: String
     let totalQuestions: Int
@@ -21,7 +20,8 @@ struct Course: Codable {
     
     
     //MARK: Initializer
-    init(courseTitle: String, teacher: String, description: String, totalQuestions: Int, books: [Book]) {
+    init(courseTitle: String, ID: Int, teacher: String, description: String, totalQuestions: Int, books: [Book]) {
+        self.ID = ID
         self.courseTitle = courseTitle
         self.teacher = teacher
         self.description = description
@@ -30,6 +30,7 @@ struct Course: Codable {
     }
     
     init() {
+        self.ID = 5
         self.courseTitle = "Sample"
         self.teacher = "Sample"
         self.description = "Sample"

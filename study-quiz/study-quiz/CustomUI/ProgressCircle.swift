@@ -11,11 +11,8 @@ import UIKit
 
 class ProgressCircle: UIView {
 
-  @IBInspectable public var backGroundCircleColor: UIColor = UIColor.lightGray
+    @IBInspectable public var backGroundCircleColor: UIColor = UIColor.lightGray
     @IBInspectable public var progressColor = UIColor(named: "Secondary")
-
-
-
 
     var backgroundLayer = CAShapeLayer()
     var foregroundLayer = CAShapeLayer()
@@ -35,9 +32,7 @@ class ProgressCircle: UIView {
     let lineWidth = 15
 
     backgroundLayer = createCircularLayer(rect: rect, strokeColor: backGroundCircleColor.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: CGFloat(lineWidth))
-
     foregroundLayer = createCircularLayer(rect: rect, strokeColor: progressColor!.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: CGFloat(lineWidth))
-
 
     layer.addSublayer(backgroundLayer)
     layer.addSublayer(foregroundLayer)
@@ -74,6 +69,5 @@ class ProgressCircle: UIView {
     
     foregroundLayer.strokeEnd = progress
     
-   
  }
 }

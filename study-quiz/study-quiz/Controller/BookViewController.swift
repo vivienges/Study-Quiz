@@ -26,7 +26,6 @@ class BookViewController: UIViewController {
     var currentBook = Book()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,15 +55,8 @@ class BookViewController: UIViewController {
             }
         }
         
-        
-        
-        
-        
-        var authors = currentBook.authors[0]
-        
-
-        
-        bookAuthors.text = authors
+       
+        bookAuthors.text = currentBook.authors[0]
         
         
         // MARK: Set the release year

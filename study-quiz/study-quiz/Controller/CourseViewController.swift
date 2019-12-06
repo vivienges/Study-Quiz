@@ -45,8 +45,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
         myTableView.separatorStyle = .none
-     
-       // navigationItem.largeTitleDisplayMode = .never
         
         myTableView.delegate = self
         myTableView.dataSource = self

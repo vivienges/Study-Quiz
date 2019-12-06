@@ -18,7 +18,6 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     @IBOutlet weak var imageContainer: UIView!
     @IBOutlet weak var shakeIcon: UIImageView!
     @IBOutlet weak var shakeLabel: UILabel!
-    
     @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
     
     //MARK: Properties
@@ -30,6 +29,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         animateShakeIcon()
         horizontalConstraint.constant = 0
         
+        //MARK: Question-feedback animation
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseInOut,.preferredFramesPerSecond60], animations: {
             self.container.superview?.layoutIfNeeded()
             self.feedbackImageView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
@@ -42,7 +42,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        endQuizLabel.isHidden = true
+
         horizontalConstraint.constant -= view.bounds.width
         container.layer.cornerRadius = 12
         imageContainer.layer.cornerRadius = 8
@@ -66,7 +66,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
     }
     
     
-    //MARK: Setup segue
+    //MARK: Fly-out animation of Question-feedback
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         horizontalConstraint.constant += view.bounds.width
         
@@ -84,6 +84,7 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         }
     }
     
+    //MARK: Setup segue
     func nextQuestion() {
         if (questionViewController?.currentQuestion == questionViewController?.questions.count) {
             performSegue(withIdentifier: "quizFeedbackSegue", sender: nil)
@@ -104,8 +105,8 @@ class QuestionFeedbackPopUpViewController: UIViewController {
         }
     }
     
+    //MARK: Shake icon to highlight gesture
     func animateShakeIcon() {
-        // shake Icon to highlight gesture            
         UIView.animate(withDuration: 0.5, delay: 0.4,
         options: [.repeat, .autoreverse, .curveEaseIn], animations: {
                 self.shakeIcon.transform = CGAffineTransform(rotationAngle: -30)
@@ -113,6 +114,4 @@ class QuestionFeedbackPopUpViewController: UIViewController {
                 // Call when animation is done
             }
         }
-        
-    
 }

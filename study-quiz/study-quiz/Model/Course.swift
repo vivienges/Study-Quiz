@@ -11,6 +11,8 @@ import UIKit
 struct Course: Codable {
 
     //MARK: Properties
+    
+    
     var courseTitle: String
     var teacher: String
     var description: String

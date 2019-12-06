@@ -12,14 +12,13 @@ import UIKit
 class ProgressCircle: UIView {
 
   @IBInspectable public var backGroundCircleColor: UIColor = UIColor.lightGray
-    @IBInspectable public var startGradientColor: UIColor = UIColor(red: 129/255.0, green: 128/255.0, blue: 239/255.0, alpha: 1)
-  @IBInspectable public var endGradientColor: UIColor = UIColor(red: 129/255.0, green: 128/255.0, blue: 239/255.0, alpha: 1)
+    @IBInspectable public var progressColor = UIColor(named: "Secondary")
+
 
 
 
     var backgroundLayer = CAShapeLayer()
     var foregroundLayer = CAShapeLayer()
-    var gradientLayer = CAGradientLayer()
 
   public var progress: CGFloat = 0 {
     didSet {
@@ -33,27 +32,15 @@ class ProgressCircle: UIView {
       return
     }
 
-    let width = rect.width
-    let height = rect.height
-
     let lineWidth = 15
 
     backgroundLayer = createCircularLayer(rect: rect, strokeColor: backGroundCircleColor.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: CGFloat(lineWidth))
 
-    foregroundLayer = createCircularLayer(rect: rect, strokeColor: UIColor.red.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: CGFloat(lineWidth))
+    foregroundLayer = createCircularLayer(rect: rect, strokeColor: progressColor!.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: CGFloat(lineWidth))
 
-    gradientLayer = CAGradientLayer()
-    gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
-    gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
 
-    gradientLayer.colors = [startGradientColor.cgColor, endGradientColor.cgColor]
-    gradientLayer.frame = rect
-    gradientLayer.mask = foregroundLayer
-
-    
-    
     layer.addSublayer(backgroundLayer)
-    layer.addSublayer(gradientLayer)
+    layer.addSublayer(foregroundLayer)
    
   }
 

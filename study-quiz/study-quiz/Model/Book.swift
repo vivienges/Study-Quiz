@@ -1,7 +1,7 @@
 import UIKit
 
 
-struct Book : Codable {
+class Book: Codable {
     
     //MARK: Properties
     var isbn : String?
@@ -11,11 +11,11 @@ struct Book : Codable {
     var coverImage: String?
     var summary: String?
     var description: String?
-    var quiz : [Quiz]
+    var quiz : Quiz
 
     
     //MARK: Initializer
-    init(isbn : String, bookTitle: String, authors: [String], releaseYear: String, coverImage: String, summary: String, description: String, quiz : [Quiz]) {
+    init(isbn : String, bookTitle: String, authors: [String], releaseYear: String, coverImage: String, summary: String, description: String, quiz : Quiz) {
         self.isbn = isbn
         self.bookTitle = bookTitle
         self.authors = authors
@@ -34,7 +34,7 @@ struct Book : Codable {
         self.summary = "Empty"
         self.description = "Empty"
         self.coverImage = "Empty"
-        self.quiz = [Quiz()]
+        self.quiz = Quiz()
     }
 
     //MARK: Get release year

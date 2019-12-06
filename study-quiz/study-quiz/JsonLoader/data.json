@@ -12,7 +12,7 @@
         "coverImage": "efwgr",
         "summary": "ewgr",
         "description": "wgr",
-        "quiz": [{
+        "quiz": {
             "questions": [{
                     "questionTitle": "Which is a reason for IT-project failure?",
                     "answeredRight": false
@@ -66,7 +66,7 @@
                 ["Flexible", "Beautiful", "Fixed", "Determined"],
                 ["Low Cohesion", "Controller", "Indirection", "Low Coupling"]
             ]
-        }]
+        }
     }]
 },{
     "courseTitle": "Introduktion till programmering",
@@ -82,7 +82,7 @@
         "coverImage": "efwgr",
         "summary": "ewgr",
         "description": "wgr",
-        "quiz": [{
+        "quiz": {
             "questions": [{
                     "questionTitle": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
                     "answeredRight": false
@@ -127,7 +127,7 @@
 
                 ["Förbättra programvaran", "Titta på källkoden men inte ändra den", "Förändra,men distribuera förändringar", "Distribuera mjukvaran"]
             ]
-        }]
+        }
     },
     {
         "isbn": "9780007477159",
@@ -137,7 +137,7 @@
         "coverImage": "efwgr",
         "summary": "ewgr",
         "description": "wgr",
-        "quiz": [{
+        "quiz": {
             "questions": [{
                     "questionTitle": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
                     "answeredRight": false
@@ -186,7 +186,7 @@
 
                 ["Förbättra programvaran", "Titta på källkoden men inte ändra den", "Förändra,men distribuera förändringar", "Distribuera mjukvaran"]
             ]
-        }]
+        }
     }
     
     ]
@@ -204,7 +204,7 @@
         "coverImage": "efwgr",
         "summary": "ewgr",
         "description": "wgr",
-        "quiz": [{
+        "quiz": {
             "questions": [{
                     "questionTitle": "Which of the following is most important in user-centered design?",
                     "answeredRight": false
@@ -233,7 +233,7 @@
                 ["Additional and behavioral method", "An attitudinal method", "A behavioral method", "None of them"],
                 ["Who does what and why", "The overall task broken into its subtasks and actions", "What is the goal and who achieves it", "The job and the people doing the job"]
             ]
-        }]
+        }
     }, {
         "isbn": "149195129X",
         "bookTitle": "UX Research",
@@ -242,7 +242,7 @@
         "coverImage": "efwgr",
         "summary": "ewgr",
         "description": "wgr",
-        "quiz": [{
+        "quiz": {
             "questions": [{
                     "questionTitle": "Some affordances are obvious and are some learned. What are/is a typical factor(s) that influence peoples’ affordances?",
                     "answeredRight": false
@@ -271,7 +271,7 @@
                 ["All the options are right", "Surveys are a set of questions ", "Surveys yield quantitative results ", "Surveys can easily go wrong"],
                 ["Feedback", "Affordance", "Mapping", "Visibility"]
             ]
-        }]
+        }
     }]
 },
 {
@@ -288,7 +288,7 @@
         "coverImage": "efwgr",
         "summary": "ewgr",
         "description": "wgr",
-        "quiz": [{
+        "quiz": {
             "questions": [{
                     "questionTitle": "Which is a reason for IT-project failure?",
                     "answeredRight": false
@@ -302,6 +302,6 @@
                 ["Fast-changing technology", "Underuse of the waterfall model", "Stable requirements", "Overuse of agile methods"],
                 ["Increase time and/or reduce scope", "Increase time and/or cost", "Reduce time and/or increase scope", "Increase cost and/or reduce scope"]
             ]
-        }]
+        }
     }]
 }]

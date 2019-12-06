@@ -177,7 +177,9 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookViewController {
             destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
-           // destination.authors = authors
+            
+            //destination.currentISBN = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!].isbn
+            
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
         }
     }

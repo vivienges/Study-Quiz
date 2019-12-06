@@ -9,7 +9,7 @@
 import UIKit
 
 
-struct Question : Codable {
+class Question: Codable {
     
     //MARK: Properties
     var questionTitle : String

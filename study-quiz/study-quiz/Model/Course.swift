@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Course: Codable {
+class Course: Codable {
 
     //MARK: Properties
     var courseTitle: String

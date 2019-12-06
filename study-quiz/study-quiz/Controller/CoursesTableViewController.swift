@@ -39,6 +39,7 @@ class CoursesTableViewController: UITableViewController {
         myTableView.delegate = self
         myTableView.separatorStyle = .none
         self.navigationController?.setTransparentNavBar()
+        
     }
     
     // MARK: - TableView Functions
@@ -59,6 +60,10 @@ class CoursesTableViewController: UITableViewController {
         // Load in data from JSON-File
         AppData.loadJSON()
         let currentCourse = AppData.courses[indexPath.row]
+        
+//        currentCourse.courseTitle = "\(currentCourse.courseTitle) IS CHANGED"
+//        print("From current Course: \(currentCourse.courseTitle)")
+//        print("From AppData: \(AppData.courses[indexPath.row].courseTitle)")
 
         cell.cellTitle?.text = currentCourse.courseTitle
         cell.cellDetail?.text = currentCourse.teacher

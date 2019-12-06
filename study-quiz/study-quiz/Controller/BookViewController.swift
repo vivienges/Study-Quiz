@@ -23,6 +23,7 @@ class BookViewController: UIViewController {
     
     
     //MARK: Reference for the book that is handed over from CourseViewController
+    var currentISBN = ""
     var currentBook = Book()
     
     
@@ -44,20 +45,18 @@ class BookViewController: UIViewController {
         var amountOfQuestions = 0
         var answeredQuestions = 3
         
-        for quiz in currentBook.quiz {
-            
-            amountOfQuestions += quiz.questions.count
-            
-            for question in quiz.questions {
-                if question.answeredRight == false {
-                    //answeredQuestions += 1
-                    print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
-                }
+        
+        amountOfQuestions += currentBook.quiz.questions.count
+        
+        for question in currentBook.quiz.questions {
+            if question.answeredRight == false {
+                //answeredQuestions += 1
+                print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
             }
         }
-        
-        
-        
+    
+    
+    
         
         
         var authors = currentBook.authors[0]
@@ -103,7 +102,7 @@ class BookViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? QuestionViewController {
-            destination.currentQuiz = currentBook.quiz[0]
+            destination.currentQuiz = currentBook.quiz
         }
     }
 }

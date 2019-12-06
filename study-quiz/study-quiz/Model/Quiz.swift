@@ -11,7 +11,7 @@ import UIKit
 // This class organized a Quiz. It mainly consists of multiple Questions that can be answered or not
 // Right now this is not able to set the completedQuestions variable automatically
 
-struct Quiz : Codable {
+class Quiz: Codable {
     
     //MARK: Properties
     var questions : [Question]

@@ -33,7 +33,9 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("FROM QUESTION VIEW: \(currentBook.bookTitle)")
+        //courses[0].books[0].bookTitle = "I HAVE CHANGED!"
+        //print(AppData.courses[0].books[0].bookTitle)
+        print("FROM currentBook: \(currentBook.bookTitle)" )
         
         
         
@@ -57,6 +59,8 @@ class QuestionViewController: UIViewController {
             amountCorrectAnswers += 1
             answeredCorrect = true
             currentBook.quiz.questions[currentQuestion-1].answeredRight = true
+            
+            print("PROGRESS: \(currentBook.quiz.questions[currentQuestion-1].answeredRight)")
             
         } else {
             answeredCorrect = false

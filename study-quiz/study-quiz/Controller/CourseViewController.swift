@@ -114,7 +114,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                         // Write data from API into the books of our Class
                                         self.currentCourse.books[index].coverImage! = smallThumbnail
                                         self.currentCourse.books[index].description! = subTitle ?? ""
-                                        self.currentCourse.books[index].bookTitle! = title ?? self.currentCourse.books[index].bookTitle!
+//                                        self.currentCourse.books[index].bookTitle! = title ?? self.currentCourse.books[index].bookTitle!
                                         if authors != nil && authors != [""]  && publishedDate != nil && publishedDate != "" {
                                             //print("Release Year from API: \(publishedDate!)")
                                             self.currentCourse.books[index].authors = authors!

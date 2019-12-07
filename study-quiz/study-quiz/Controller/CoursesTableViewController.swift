@@ -40,6 +40,13 @@ class CoursesTableViewController: UITableViewController {
         myTableView.separatorStyle = .none
         self.navigationController?.setTransparentNavBar()
         
+        print("PROGRESS: \(AppData.courses[0].books[0].quiz.questions[0].answeredRight)")
+        
+        if AppData.courses[0].books[0].quiz.questions[0].answeredRight == true {
+            print("PROGRESS HAS BEEN MADE!")
+        }
+        
+        
     }
     
     // MARK: - TableView Functions
@@ -49,7 +56,7 @@ class CoursesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        
         return courses.count
     }
     
@@ -61,11 +68,9 @@ class CoursesTableViewController: UITableViewController {
         AppData.loadJSON()
         let currentCourse = AppData.courses[indexPath.row]
         
-        AppData.courses[indexPath.row].books[0].bookTitle = "IS CHANGED"
-        //currentCourse.books[0].bookTitle! = "\(currentCourse.books[0].bookTitle!) IS CHANGED"
-        //print("From current Course: \(currentCourse.courseTitle)")
-        print("From AppData: \(AppData.courses[indexPath.row].books[0].bookTitle!)")
-
+        AppData.courses[0].books[0].bookTitle = "I HAVE CHANGED!"
+        print(AppData.courses[0].books[0].bookTitle)
+        
         cell.cellTitle?.text = currentCourse.courseTitle
         cell.cellDetail?.text = currentCourse.teacher
         

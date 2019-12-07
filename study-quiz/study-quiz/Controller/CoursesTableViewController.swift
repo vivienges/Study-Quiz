@@ -79,9 +79,7 @@ class CoursesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? CourseViewController {
-            //destination.currentCourse = courses[(tableView.indexPathForSelectedRow?.row)!]
-            destination.courseID = (tableView.indexPathForSelectedRow?.row)!
-            
+            destination.currentCourse = AppData.courses[(tableView.indexPathForSelectedRow?.row)!]
             tableView.deselectRow(at: tableView!.indexPathForSelectedRow!, animated: true)
         }
     }

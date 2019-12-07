@@ -28,7 +28,6 @@
 		63D1302C2396A6C6008749FB /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D1302B2396A6C6008749FB /* CustomNavigationBar.swift */; };
 		7859D77D239BEB9F00DB96D2 /* study_quizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7859D77C239BEB9F00DB96D2 /* study_quizTests.swift */; };
 		788DC18F23982A2D00340CF9 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC18E23982A2D00340CF9 /* ProgressCircle.swift */; };
-		A01B707C2392BFE20089B80A /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B707B2392BFE20089B80A /* JsonObject.swift */; };
 		A01B707E2392BFE80089B80A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A01B707D2392BFE70089B80A /* data.json */; };
 		A06D3B7B23914DDB00CF286A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D3B7A23914DDB00CF286A /* CustomButton.swift */; };
 		A0ADC1922393ECAD00E69AEE /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADC1912393ECAD00E69AEE /* CustomProgressBar.swift */; };
@@ -73,7 +72,6 @@
 		7859D77C239BEB9F00DB96D2 /* study_quizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = study_quizTests.swift; sourceTree = "<group>"; };
 		7859D77E239BEB9F00DB96D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		788DC18E23982A2D00340CF9 /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
-		A01B707B2392BFE20089B80A /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
 		A01B707D2392BFE70089B80A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A06D3B7A23914DDB00CF286A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A0ADC1912393ECAD00E69AEE /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		FE99FDE92392CB42007BA8D2 /* JsonLoader */ = {
 			isa = PBXGroup;
 			children = (
-				A01B707B2392BFE20089B80A /* JsonObject.swift */,
 				63C2ACCE239A562F00C2437C /* AppData.swift */,
 				A01B707D2392BFE70089B80A /* data.json */,
 			);
@@ -324,7 +321,6 @@
 				63D1302C2396A6C6008749FB /* CustomNavigationBar.swift in Sources */,
 				636EFE912385D69000499A02 /* Question.swift in Sources */,
 				63CA161123800471008DBC88 /* CoursesTableViewController.swift in Sources */,
-				A01B707C2392BFE20089B80A /* JsonObject.swift in Sources */,
 				63CA1605237EEE7F008DBC88 /* QuestionViewController.swift in Sources */,
 				63CA15F3237EDF6B008DBC88 /* SceneDelegate.swift in Sources */,
 			);

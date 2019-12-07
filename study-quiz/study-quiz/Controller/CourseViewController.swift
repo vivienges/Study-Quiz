@@ -45,8 +45,10 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("COURSE: \(currentCourse.books)")
+        
         // Set the course that was selected
-        currentCourse = AppData.courses[courseID]
+        //currentCourse = AppData.courses[courseID]
         
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -63,6 +65,19 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //MARK: Set Back button to current course
         navigationItem.backBarButtonItem = UIBarButtonItem(title: currentCourse.courseTitle, style: .plain, target: nil, action: nil)
+        
+        // MARK: Fetch book infos from Google API by isbn
+        var index = 0
+        for book in currentCourse.books {
+            if book.isbn != nil && book.isbn != "" {
+                let isbn = book.isbn!
+                addBookInfo(isbn: isbn, index: index)
+            }
+            index = index + 1
+        }
+        
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,7 +85,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func addBookInfo(isbn: String, index: Int) {
-
+        
         let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn)
         
         URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
@@ -116,7 +131,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         reloadInputViews();
     }
     
-   
+    
     
     // MARK: TableView Functions
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -160,7 +175,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             destination.currentISBN = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!].isbn!
             destination.courseID = courseID
-            
+
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
         }
     }

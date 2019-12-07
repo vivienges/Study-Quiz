@@ -10,83 +10,60 @@ import Foundation
 import UIKit
 
 class ProgressCircle: UIView {
+    
 
-  @IBInspectable public var backGroundCircleColor: UIColor = UIColor.lightGray
-    @IBInspectable public var startGradientColor: UIColor = UIColor(red: 129/255.0, green: 128/255.0, blue: 239/255.0, alpha: 1)
-  @IBInspectable public var endGradientColor: UIColor = UIColor(red: 129/255.0, green: 128/255.0, blue: 239/255.0, alpha: 1)
-
-
-
-    var backgroundLayer = CAShapeLayer()
-    var foregroundLayer = CAShapeLayer()
-    var gradientLayer = CAGradientLayer()
-
-  public var progress: CGFloat = 0 {
-    didSet {
-        didProgressUpdated()
+        @IBInspectable public var trackColor: UIColor = UIColor.lightGray
+        @IBInspectable public var progressColor = UIColor(named: "Secondary")
+    
+     var progressLayer = CAShapeLayer()
+     var trackLayer = CAShapeLayer()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        createCircularPath()
     }
-  }
-
-  override func draw(_ rect: CGRect) {
-
-    guard layer.sublayers == nil else {
-      return
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        createCircularPath()
     }
+    
 
-    let width = rect.width
-    let height = rect.height
-
+    
     let lineWidth = 15
-
-    backgroundLayer = createCircularLayer(rect: rect, strokeColor: backGroundCircleColor.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: CGFloat(lineWidth))
-
-    foregroundLayer = createCircularLayer(rect: rect, strokeColor: UIColor.red.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: CGFloat(lineWidth))
-
-    gradientLayer = CAGradientLayer()
-    gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
-    gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
-
-    gradientLayer.colors = [startGradientColor.cgColor, endGradientColor.cgColor]
-    gradientLayer.frame = rect
-    gradientLayer.mask = foregroundLayer
-
     
+    func createCircularPath() {
+        self.backgroundColor = UIColor.clear
+        self.layer.cornerRadius = self.frame.size.width/2
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: (frame.size.width - 1.5)/2, startAngle: CGFloat(-0.5 * .pi), endAngle: CGFloat(1.5 * .pi), clockwise: true)
+        trackLayer.path = circlePath.cgPath
+        trackLayer.fillColor = UIColor.clear.cgColor
+        trackLayer.strokeColor = trackColor.cgColor
+        trackLayer.lineWidth = CGFloat(lineWidth)
+        trackLayer.strokeEnd = 1.0
+        trackLayer.lineCap = .round
+        layer.addSublayer(trackLayer)
+        
+        progressLayer.path = circlePath.cgPath
+        progressLayer.fillColor = UIColor.clear.cgColor
+        progressLayer.strokeColor = progressColor?.cgColor
+        progressLayer.lineWidth = CGFloat(lineWidth)
+        progressLayer.lineCap = .round
+        
+        progressLayer.strokeEnd = 0.0
+        layer.addSublayer(progressLayer)
+    }
     
-    layer.addSublayer(backgroundLayer)
-    layer.addSublayer(gradientLayer)
-   
-  }
-
-  private func createCircularLayer(rect: CGRect, strokeColor: CGColor,
-                                   fillColor: CGColor, lineWidth: CGFloat) -> CAShapeLayer {
-
-    let width = rect.width
-    let height = rect.height
-
-    let center = CGPoint(x: width / 2, y: height / 2)
-    let radius = (min(width, height) - lineWidth) / 2
-
-    let startAngle = -CGFloat.pi / 2
-    let endAngle = startAngle + 2 * CGFloat.pi
-
-    let circularPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-
-    let shapeLayer = CAShapeLayer()
-
-    shapeLayer.path = circularPath.cgPath
-    shapeLayer.strokeColor = strokeColor
-    shapeLayer.fillColor = fillColor
-    shapeLayer.lineWidth = lineWidth
-    shapeLayer.lineCap = .round
-
-    return shapeLayer
-  }
-
-
-  private func didProgressUpdated() {
+    func setProgressWithAnimation(value: Float) {
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.duration = 1
+        animation.fromValue = 0
+        animation.toValue = value
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        progressLayer.strokeEnd = CGFloat(value)
+        progressLayer.add(animation, forKey: "animateprogress")
+    }
     
-    foregroundLayer.strokeEnd = progress
-    
-   
- }
+
+
 }

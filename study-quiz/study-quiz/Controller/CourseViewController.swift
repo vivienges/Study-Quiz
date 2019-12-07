@@ -49,6 +49,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         currentCourse = AppData.courses[courseID]
         
         myTableView.separatorStyle = .none
+        
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.delegate = self

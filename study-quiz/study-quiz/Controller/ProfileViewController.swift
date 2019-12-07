@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("PROGRESS: \(AppData.courses[0].books[0].quiz.questions[0].answeredRight)")
+        //print("PROGRESS: \(AppData.courses[0].books[0].quiz.questions[0].answeredRight)")
         
         iconBox1.layer.cornerRadius = 4
         iconBox2.layer.cornerRadius = 4

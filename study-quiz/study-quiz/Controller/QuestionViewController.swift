@@ -32,9 +32,7 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //courses[0].books[0].bookTitle = "I HAVE CHANGED!"
-        //print(AppData.courses[0].books[0].bookTitle)
+
         print("FROM currentBook: \(currentBook.bookTitle)" )
         
         

@@ -491,10 +491,10 @@
             </objects>
             <point key="canvasLocation" x="3776" y="-486"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="g79-v7-XcC">
             <objects>
-                <viewController id="LNa-O6-gnG" sceneMemberID="viewController">
+                <viewController id="LNa-O6-gnG" customClass="StartViewController" customModule="study_quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mby-mG-Rl8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

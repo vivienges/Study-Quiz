@@ -63,24 +63,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //MARK: Set Back button to current course
         navigationItem.backBarButtonItem = UIBarButtonItem(title: currentCourse.courseTitle, style: .plain, target: nil, action: nil)
-
-        // MARK: ProgressBar
-        // TODO: Make use of course info so the info is not hardcoded
-        
-//        let progress = Progress(totalUnitCount: 10)
-//        progress.completedUnitCount = 3
-//        let progressFloat = Float(progress.fractionCompleted)
-//        progressBar.setProgress(progressFloat, animated: true)
-        
-        // MARK: Fetch book infos from Google API by isbn
-        var index = 0
-        for book in currentCourse.books {
-            if book.isbn != nil && book.isbn != "" {
-                let isbn = book.isbn!
-                addBookInfo(isbn: isbn, index: index)
-            }
-            index = index + 1
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

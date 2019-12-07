@@ -39,15 +39,15 @@ class CoursesTableViewController: UITableViewController {
         myTableView.delegate = self
         myTableView.separatorStyle = .none
         self.navigationController?.setTransparentNavBar()
-        
-        print("PROGRESS: \(AppData.courses[0].books[0].quiz.questions[0].answeredRight)")
-        
-        if AppData.courses[0].books[0].quiz.questions[0].answeredRight == true {
-            print("PROGRESS HAS BEEN MADE!")
-        }
-        
+
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("PROGRESS: \(AppData.courses[0].books[0].quiz.questions[0].answeredRight)")
+    }
+    
     
     // MARK: - TableView Functions
     
@@ -63,9 +63,7 @@ class CoursesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
             as! myTableViewCell
-        
-        // Load in data from JSON-File
-        AppData.loadJSON()
+    
         let currentCourse = AppData.courses[indexPath.row]
         
         AppData.courses[0].books[0].bookTitle = "I HAVE CHANGED!"

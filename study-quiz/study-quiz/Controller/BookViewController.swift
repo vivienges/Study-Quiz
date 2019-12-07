@@ -28,6 +28,27 @@ class BookViewController: UIViewController {
     var currentBook = Book()
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // MARK: ProgressBar
+        var amountOfQuestions = currentBook.quiz.questions.count
+        var answeredQuestions = 0
+        
+        for question in currentBook.quiz.questions {
+            if question.answeredRight == true {
+                answeredQuestions += 1
+                print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
+            }
+        }
+        
+        let progress = Progress(totalUnitCount: Int64(amountOfQuestions))
+        progress.completedUnitCount = Int64(answeredQuestions)
+        let progressFloat = Float(progress.fractionCompleted)
+        progressBar.setProgress(progressFloat, animated: true)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,32 +69,16 @@ class BookViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         
         bookAuthorsContainer.layer.cornerRadius = bookAuthorsContainer.frame.height / 2
-
+        
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle
         bookDescription.text = currentBook.description
         
-        // MARK: ProgressBar
-        var amountOfQuestions = 0
-        var answeredQuestions = 3
-        
-        
-        amountOfQuestions += currentBook.quiz.questions.count
-        
-        for question in currentBook.quiz.questions {
-            if question.answeredRight == false {
-                //answeredQuestions += 1
-                print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
-            }
-        }
     
-    
-    
-        
         
         var authors = currentBook.authors[0]
         
-
+        
         
         bookAuthors.text = authors
         
@@ -84,7 +89,7 @@ class BookViewController: UIViewController {
         
         //MARK: fetch book cover
         fetchCoverImage()
-    
+        
     }
     
     @IBAction func unwindToBookVC(segue:UIStoryboardSegue) {

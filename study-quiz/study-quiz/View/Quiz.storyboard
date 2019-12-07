@@ -264,6 +264,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQp-Qf-gqs" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
                                 <rect key="frame" x="77" y="723" width="261" height="67"/>
+                                <color key="backgroundColor" name="Primary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="Teb-Dy-y6B"/>
                                 </constraints>
@@ -274,6 +275,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC0-CO-W90" customClass="CustomButton" customModule="study_quiz" customModuleProvider="target">
                                 <rect key="frame" x="77" y="640" width="261" height="67"/>
+                                <color key="backgroundColor" name="Primary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="w9N-4E-C2w"/>
                                 </constraints>
@@ -290,11 +292,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJf-zR-oqT">
-                                <rect key="frame" x="179.66666666666666" y="163" width="54.666666666666657" height="43"/>
+                                <rect key="frame" x="171.66666666666666" y="163" width="71" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="9EN-ju-Kjd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -344,6 +346,9 @@
         </namedColor>
         <namedColor name="Light-Gray">
             <color red="0.92941176470588238" green="0.94117647058823528" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.27450980392156865" green="0.70980392156862748" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

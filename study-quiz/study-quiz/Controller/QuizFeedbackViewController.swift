@@ -39,6 +39,6 @@ class QuizFeedbackViewController: UIViewController {
         //MARK: Calculating the percentage of correct answers
         let percentage = Float(amountCorrectAnswers)/Float(amountOfQuestions)
         
-        progressCircle.setProgressWithAnimation(duration: 1.0, value: percentage)
+        progressCircle.setProgressWithAnimation(value: percentage)
     }
 }

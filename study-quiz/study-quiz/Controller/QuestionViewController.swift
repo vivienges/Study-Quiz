@@ -21,7 +21,10 @@ class QuestionViewController: UIViewController {
     var arrayCorrect: [Int]?
     
     //MARK: Reference for the quiz that is handed over from QuizViewController
-    var currentQuiz = Quiz()
+    var currentBook = Book()
+//    var currentBook.quiz = Quiz()
+//    var currentISBN = ""
+//    var courseID = 0
     
     //MARK: ProgressBar UI Elements
     @IBOutlet weak var quizProgressBar: UIProgressView!
@@ -30,9 +33,13 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("FROM QUESTION VIEW: \(currentBook.bookTitle)")
+        
+        
+        
         questionViewController = self as QuestionViewController
         
-        for question in currentQuiz.questions {
+        for question in currentBook.quiz.questions {
             
             questions.append(question)
         }
@@ -49,11 +56,11 @@ class QuestionViewController: UIViewController {
         if (sender.tag == Int(rightAnswerPlacement)) {
             amountCorrectAnswers += 1
             answeredCorrect = true
-            currentQuiz.questions[currentQuestion-1].answeredRight = true
+            currentBook.quiz.questions[currentQuestion-1].answeredRight = true
             
         } else {
             answeredCorrect = false
-            currentQuiz.questions[currentQuestion-1].answeredRight = false
+            currentBook.quiz.questions[currentQuestion-1].answeredRight = false
         }
         
         if (currentQuestion <= questions.count) {
@@ -81,10 +88,10 @@ class QuestionViewController: UIViewController {
             button = (view.viewWithTag(i) as! UIButton)
             
             if (i == Int(rightAnswerPlacement)) {
-                button.setTitle(currentQuiz.answers[currentQuestion][0], for: .normal)  // nicer way to express currentQuiz..?
+                button.setTitle(currentBook.quiz.answers[currentQuestion][0], for: .normal)  // nicer way to express currentBook.quiz..?
                 
             } else {
-                button.setTitle(currentQuiz.answers[currentQuestion][x], for: .normal)
+                button.setTitle(currentBook.quiz.answers[currentQuestion][x], for: .normal)
                 x += 1
             }
             
@@ -95,7 +102,7 @@ class QuestionViewController: UIViewController {
         }
         
         // MARK: ProgressBar
-        let progress = Progress(totalUnitCount: Int64(currentQuiz.questions.count))
+        let progress = Progress(totalUnitCount: Int64(currentBook.quiz.questions.count))
         progress.completedUnitCount = Int64(currentQuestion-1)
         let progressFloat = Float(progress.fractionCompleted)
         quizProgressBar.setProgress(progressFloat, animated: true)
@@ -104,7 +111,7 @@ class QuestionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let popUpVC = segue.destination as? QuestionFeedbackPopUpViewController
         if (segue.identifier == "popUpSegue"){
-            popUpVC?.rightAnswer = currentQuiz.answers[currentQuestion-1][0]
+            popUpVC?.rightAnswer = currentBook.quiz.answers[currentQuestion-1][0]
             popUpVC?.answeredCorrect = answeredCorrect
         }
     }

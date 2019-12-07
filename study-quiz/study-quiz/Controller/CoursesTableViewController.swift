@@ -61,9 +61,10 @@ class CoursesTableViewController: UITableViewController {
         AppData.loadJSON()
         let currentCourse = AppData.courses[indexPath.row]
         
-//        currentCourse.courseTitle = "\(currentCourse.courseTitle) IS CHANGED"
-//        print("From current Course: \(currentCourse.courseTitle)")
-//        print("From AppData: \(AppData.courses[indexPath.row].courseTitle)")
+        AppData.courses[indexPath.row].books[0].bookTitle = "IS CHANGED"
+        //currentCourse.books[0].bookTitle! = "\(currentCourse.books[0].bookTitle!) IS CHANGED"
+        //print("From current Course: \(currentCourse.courseTitle)")
+        print("From AppData: \(AppData.courses[indexPath.row].books[0].bookTitle!)")
 
         cell.cellTitle?.text = currentCourse.courseTitle
         cell.cellDetail?.text = currentCourse.teacher

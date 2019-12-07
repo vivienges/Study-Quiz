@@ -45,6 +45,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set the course that was selected
         currentCourse = AppData.courses[courseID]
         
         myTableView.separatorStyle = .none
@@ -176,9 +177,10 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookViewController {
-            destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
+            //destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
             
-            //destination.currentISBN = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!].isbn
+            destination.currentISBN = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!].isbn!
+            destination.courseID = courseID
             
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
         }

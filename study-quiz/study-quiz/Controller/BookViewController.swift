@@ -24,12 +24,24 @@ class BookViewController: UIViewController {
     
     //MARK: Reference for the book that is handed over from CourseViewController
     var currentISBN = ""
+    var courseID = 0
     var currentBook = Book()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        for book in AppData.courses[courseID].books {
+            if book.isbn == currentISBN {
+                currentBook = book
+            } else {
+                print("This book does not exist")
+            }
+        }
+        
+        print("FROM QUESTION VIEW: \(AppData.courses[0].books[0].bookTitle!)")
         
         
         self.navigationItem.titleView?.backgroundColor = .clear
@@ -102,7 +114,9 @@ class BookViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? QuestionViewController {
-            destination.currentQuiz = currentBook.quiz
+            destination.currentBook = currentBook
+            //destination.courseID
+            //destination.currentISBN
         }
     }
 }

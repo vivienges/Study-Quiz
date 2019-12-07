@@ -527,8 +527,8 @@
                                     <segue destination="tMU-Bx-7fw" kind="presentation" modalPresentationStyle="fullScreen" id="H3n-bf-6B7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to learn?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nu9-yK-shI">
-                                <rect key="frame" x="16" y="279" width="382" height="45.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to learn?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nu9-yK-shI">
+                                <rect key="frame" x="64" y="279" width="286" height="91"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
@@ -545,11 +545,11 @@
                         <constraints>
                             <constraint firstItem="46O-NA-5u2" firstAttribute="leading" secondItem="H6s-bx-GVc" secondAttribute="leading" constant="16" id="CKN-NX-iNP"/>
                             <constraint firstItem="H6s-bx-GVc" firstAttribute="bottom" secondItem="46O-NA-5u2" secondAttribute="bottom" constant="16" id="EDV-yV-sE2"/>
-                            <constraint firstItem="H6s-bx-GVc" firstAttribute="trailing" secondItem="Nu9-yK-shI" secondAttribute="trailing" constant="16" id="Hqd-u8-2AU"/>
+                            <constraint firstItem="H6s-bx-GVc" firstAttribute="trailing" secondItem="Nu9-yK-shI" secondAttribute="trailing" constant="64" id="Hqd-u8-2AU"/>
                             <constraint firstItem="H6s-bx-GVc" firstAttribute="trailing" secondItem="lpO-Jm-sGL" secondAttribute="trailing" constant="16" id="IHm-9f-ryE"/>
                             <constraint firstItem="lpO-Jm-sGL" firstAttribute="height" secondItem="46O-NA-5u2" secondAttribute="height" id="LDc-VO-jGl"/>
                             <constraint firstItem="lpO-Jm-sGL" firstAttribute="leading" secondItem="H6s-bx-GVc" secondAttribute="leading" constant="16" id="Vh9-y8-qcZ"/>
-                            <constraint firstItem="Nu9-yK-shI" firstAttribute="leading" secondItem="H6s-bx-GVc" secondAttribute="leading" constant="16" id="Xwd-NI-2X4"/>
+                            <constraint firstItem="Nu9-yK-shI" firstAttribute="leading" secondItem="H6s-bx-GVc" secondAttribute="leading" constant="64" id="Xwd-NI-2X4"/>
                             <constraint firstItem="H6s-bx-GVc" firstAttribute="trailing" secondItem="46O-NA-5u2" secondAttribute="trailing" constant="16" id="YGl-8w-nKg"/>
                             <constraint firstItem="KzV-go-w3u" firstAttribute="top" secondItem="H6s-bx-GVc" secondAttribute="top" multiplier="2" constant="100" id="Yyv-rO-cuZ"/>
                             <constraint firstItem="KzV-go-w3u" firstAttribute="centerX" secondItem="mby-mG-Rl8" secondAttribute="centerX" id="byh-ZA-A8p"/>

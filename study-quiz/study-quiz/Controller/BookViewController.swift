@@ -32,13 +32,8 @@ class BookViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
-        
+
         setupProgressBar()
-        
-        
-        
-        
     }
     
     
@@ -64,7 +59,7 @@ class BookViewController: UIViewController {
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle
         bookDescription.text = currentBook.description
-        var authors = currentBook.authors[0]
+        let authors = currentBook.authors[0]
         bookAuthors.text = authors
         let releaseYear = currentBook.getYear()
         bookReleaseYear.text = releaseYear

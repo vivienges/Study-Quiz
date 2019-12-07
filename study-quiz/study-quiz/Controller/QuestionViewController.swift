@@ -32,8 +32,6 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("FROM currentBook: \(currentBook.bookTitle)" )
         
         
         

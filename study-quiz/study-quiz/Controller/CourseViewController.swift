@@ -48,8 +48,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Set the course that was selected
         currentCourse = AppData.courses[courseID]
         
-        myTableView.separatorStyle = .none
-        
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.delegate = self
@@ -59,8 +57,9 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         courseTeacher.text = currentCourse.teacher
         courseDescription.text = currentCourse.description
         
+        //MARK: Style UI
+        myTableView.separatorStyle = .none
         teacherLabelContainer.layer.cornerRadius = teacherLabelContainer.frame.height / 2
-        
         
         //MARK: Set Back button to current course
         navigationItem.backBarButtonItem = UIBarButtonItem(title: currentCourse.courseTitle, style: .plain, target: nil, action: nil)
@@ -71,7 +70,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func addBookInfo(isbn: String, index: Int) {
-        
+
         let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn)
         
         URLSession.shared.dataTask(with: ((url)! as URL), completionHandler: {(data, response, error) -> Void in
@@ -97,9 +96,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                         // Write data from API into the books of our Class
                                         self.currentCourse.books[index].coverImage! = smallThumbnail
                                         self.currentCourse.books[index].description! = subTitle ?? ""
-//                                        self.currentCourse.books[index].bookTitle! = title ?? self.currentCourse.books[index].bookTitle!
+                                        self.currentCourse.books[index].bookTitle! = title ?? self.currentCourse.books[index].bookTitle!
                                         if authors != nil && authors != [""]  && publishedDate != nil && publishedDate != "" {
-                                            //print("Release Year from API: \(publishedDate!)")
                                             self.currentCourse.books[index].authors = authors!
                                             self.currentCourse.books[index].releaseYear = publishedDate!
                                         }
@@ -145,8 +143,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let data = try Data(contentsOf: url)
                 cell.cellImage?.image = UIImage(data: data)
             }catch let err {
-                print("Thumbnail Error: \(err.localizedDescription)") //english?
-//                cell.cellImage.image = UIImage(systemName: "book.fill")
+                print("Thumbnail Error: \(err.localizedDescription)")
             }
         }
         return cell
@@ -160,7 +157,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookViewController {
-            //destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
             
             destination.currentISBN = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!].isbn!
             destination.courseID = courseID

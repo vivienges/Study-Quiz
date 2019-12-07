@@ -45,7 +45,6 @@ class CoursesTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print("PROGRESS: \(AppData.courses[0].books[0].quiz.questions[0].answeredRight)")
     }
     
     
@@ -57,7 +56,7 @@ class CoursesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return courses.count
+        return AppData.courses.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,9 +64,6 @@ class CoursesTableViewController: UITableViewController {
             as! myTableViewCell
     
         let currentCourse = AppData.courses[indexPath.row]
-        
-        AppData.courses[0].books[0].bookTitle = "I HAVE CHANGED!"
-        print(AppData.courses[0].books[0].bookTitle)
         
         cell.cellTitle?.text = currentCourse.courseTitle
         cell.cellDetail?.text = currentCourse.teacher
@@ -87,12 +83,6 @@ class CoursesTableViewController: UITableViewController {
             destination.courseID = (tableView.indexPathForSelectedRow?.row)!
             
             tableView.deselectRow(at: tableView!.indexPathForSelectedRow!, animated: true)
-            
-            
         }
-        
-        
     }
-    
-    
 }

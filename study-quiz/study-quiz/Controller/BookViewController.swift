@@ -28,24 +28,16 @@ class BookViewController: UIViewController {
     var currentBook = Book()
     
     
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        // MARK: ProgressBar
-        var amountOfQuestions = currentBook.quiz.questions.count
-        var answeredQuestions = 0
         
-        for question in currentBook.quiz.questions {
-            if question.answeredRight == true {
-                answeredQuestions += 1
-                print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
-            }
-        }
+        setupProgressBar()
         
-        let progress = Progress(totalUnitCount: Int64(amountOfQuestions))
-        progress.completedUnitCount = Int64(answeredQuestions)
-        let progressFloat = Float(progress.fractionCompleted)
-        progressBar.setProgress(progressFloat, animated: true)
+        
+        
         
     }
     
@@ -62,28 +54,18 @@ class BookViewController: UIViewController {
             }
         }
         
-        print("FROM QUESTION VIEW: \(AppData.courses[0].books[0].bookTitle!)")
         
         
         self.navigationItem.titleView?.backgroundColor = .clear
         navigationItem.largeTitleDisplayMode = .never
-        
+
         bookAuthorsContainer.layer.cornerRadius = bookAuthorsContainer.frame.height / 2
         
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle
         bookDescription.text = currentBook.description
-        
-    
-        
         var authors = currentBook.authors[0]
-        
-        
-        
         bookAuthors.text = authors
-        
-        
-        // MARK: Set the release year
         let releaseYear = currentBook.getYear()
         bookReleaseYear.text = releaseYear
         
@@ -120,10 +102,31 @@ class BookViewController: UIViewController {
         
         if let destination = segue.destination as? QuestionViewController {
             destination.currentBook = currentBook
-            //destination.courseID
-            //destination.currentISBN
         }
     }
+    
+    
+    func setupProgressBar() {
+        
+        // MARK: ProgressBar
+        let amountOfQuestions = currentBook.quiz.questions.count
+        var answeredQuestions = 0
+        
+        for question in currentBook.quiz.questions {
+            if question.answeredRight == true {
+                answeredQuestions += 1
+                print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
+            }
+        }
+        
+        let progress = Progress(totalUnitCount: Int64(amountOfQuestions))
+        progress.completedUnitCount = Int64(answeredQuestions)
+        let progressFloat = Float(progress.fractionCompleted)
+        progressBar.setProgress(progressFloat, animated: true)
+    }
+    
+    
+    
 }
 
 

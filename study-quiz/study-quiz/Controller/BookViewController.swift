@@ -87,7 +87,6 @@ class BookViewController: UIViewController {
         for question in currentBook.quiz.questions {
             if question.answeredRight == true {
                 answeredQuestions += 1
-                print("Amount of correctly answered Questions in all Book Quizes: \(answeredQuestions)")
             }
         }
         

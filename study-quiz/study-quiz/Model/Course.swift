@@ -34,4 +34,30 @@ class Course: Codable {
         self.description = "Sample"
         self.books = [Book()]
     }
+    
+    func getCorrectAnswers() -> Int {
+        var amountCorrect = 0
+        
+        for book in self.books {
+            for question in book.quiz.questions {
+                if question.answeredRight {
+                    amountCorrect += 1
+                }
+            }
+        }
+        return amountCorrect
+    }
+    
+    func getTotalAnswers() -> Int {
+        var totalQuestions = 0
+        
+        for book in self.books {
+            for question in book.quiz.questions {
+                if question.answered {
+                    totalQuestions += 1
+                }
+            }
+        }
+        return totalQuestions
+    }
 }

@@ -40,12 +40,17 @@ class QuestionViewController: UIViewController {
     @IBAction func answerButton(_ sender: AnyObject) {
         if (sender.tag == Int(rightAnswerPlacement)) {
             amountCorrectAnswers += 1
+            
             answeredCorrect = true
             currentBook.quiz.questions[currentQuestion-1].answeredRight = true
+            currentBook.quiz.questions[currentQuestion-1].answered = true
+
                         
         } else {
             answeredCorrect = false
             currentBook.quiz.questions[currentQuestion-1].answeredRight = false
+            currentBook.quiz.questions[currentQuestion-1].answered = true
+
         }
         
         if (currentQuestion <= questions.count) {

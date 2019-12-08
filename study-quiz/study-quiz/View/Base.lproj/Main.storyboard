@@ -245,7 +245,7 @@
                                         <rect key="frame" x="8" y="54.5" width="83" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-ie-3Kc">
-                                                <rect key="frame" x="12" y="12" width="59" height="20"/>
+                                                <rect key="frame" x="12" y="10" width="59" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" name="White"/>
                                                 <nil key="highlightedColor"/>
@@ -254,8 +254,8 @@
                                         <color key="backgroundColor" name="Primary"/>
                                         <constraints>
                                             <constraint firstItem="4fa-ie-3Kc" firstAttribute="leading" secondItem="Ay6-TE-vI2" secondAttribute="leading" constant="12" id="0mF-C6-2Bv"/>
-                                            <constraint firstAttribute="bottom" secondItem="4fa-ie-3Kc" secondAttribute="bottom" constant="8" id="Fsb-4b-7wC"/>
-                                            <constraint firstItem="4fa-ie-3Kc" firstAttribute="top" secondItem="Ay6-TE-vI2" secondAttribute="top" constant="12" id="XZd-vN-ZYE"/>
+                                            <constraint firstAttribute="bottom" secondItem="4fa-ie-3Kc" secondAttribute="bottom" constant="10" id="Fsb-4b-7wC"/>
+                                            <constraint firstItem="4fa-ie-3Kc" firstAttribute="top" secondItem="Ay6-TE-vI2" secondAttribute="top" constant="10" id="XZd-vN-ZYE"/>
                                             <constraint firstAttribute="trailing" secondItem="4fa-ie-3Kc" secondAttribute="trailing" constant="12" id="dqf-OD-JZG"/>
                                             <constraint firstAttribute="height" constant="40" id="u9n-Se-Zng"/>
                                         </constraints>

@@ -12,45 +12,55 @@
         "description": "Empty description",
         "quiz": {
             "questions": [{
-                    "questionTitle": "Which is a reason for IT-project failure?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "What happens according to the triple contraint if you reduce cost (budget)?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "A Project is ...?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Use cases are...?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "We consider responsibilities in the following two categories?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Which of the following is no GoF pattern?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "In the context of software development, which two types of requirements did we define?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "A domain model does not contain…",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "What is good design?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Which of the following is no GRASPattern?",
-                    "answeredRight": false
-                }
+                "questionTitle": "Which is a reason for IT-project failure?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "What happens according to the triple contraint if you reduce cost (budget)?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "A Project is ...?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Use cases are...?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "We consider responsibilities in the following two categories?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Which of the following is no GoF pattern?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "In the context of software development, which two types of requirements did we define?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "A domain model does not contain…",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "What is good design?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Which of the following is no GRASPattern?",
+                "answeredRight": false,
+                "answered": false
+            }
             ],
             "answers": [
                 ["Fast-changing technology", "Underuse of the waterfall model", "Stable requirements", "Overuse of agile methods"],
@@ -80,37 +90,45 @@
         "description": "Empty description",
         "quiz": {
             "questions": [{
-                    "questionTitle": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Får jag klippa och klistra kod från internet och använda denna i program som jag själv gör publikt tillgängligt?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vid explicit typkonvertering vilken av följande styr hur datatypskonflikter i beräkningsuttryck löses ?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilka av följande alternativ beskriver tre viktiga egenskaper för en konstant i C",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilket av följande feltyper innebär att programmet ser ut att fungera men ger sporadiskt felaktiga beräkningar?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Öppen Källkod, Free Software är namn på mjukvara som är släppt under en licens som tillåter ett dig till?",
-                    "answeredRight": false
-                }
+                "questionTitle": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Får jag klippa och klistra kod från internet och använda denna i program som jag själv gör publikt tillgängligt?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Vid explicit typkonvertering vilken av följande styr hur datatypskonflikter i beräkningsuttryck löses ?",
+                "answeredRight": false,
+                "answered": false,
+            },
+            {
+                "questionTitle": "Vilka av följande alternativ beskriver tre viktiga egenskaper för en konstant i C",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Vilket av följande feltyper innebär att programmet ser ut att fungera men ger sporadiskt felaktiga beräkningar?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Öppen Källkod, Free Software är namn på mjukvara som är släppt under en licens som tillåter ett dig till?",
+                "answeredRight": false,
+                "answered": false
+            }
             ],
             "answers": [
                 ["Högre prioritet utförs före lägre prioritet", "Operatorer kan företräda varandra", "Operatorer kan inte företräde varandra", "Kallas också selektivitetsregler"],
@@ -120,7 +138,7 @@
                 ["Ett logiskt fel", "Ett exekveringsfel", "Ett syntaxfel", "Ett avgränsningsfel"],
                 ["4", "5", "7", "8"],
                 ["Double sphereVolume(double);", "Int sphereVolume(double);", "Double spereVolume(void);", "Double sphereVolume(int);"],
-
+                
                 ["Förbättra programvaran", "Titta på källkoden men inte ändra den", "Förändra,men distribuera förändringar", "Distribuera mjukvaran"]
             ]
         }
@@ -140,25 +158,30 @@
         "description": "Empty description",
         "quiz": {
             "questions": [{
-                    "questionTitle": "Which of the following is most important in user-centered design?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Usability testing for a Web site can be performed with:",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Which is most important to a user experience designer?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Diaries allow a researcher to collect, in situ, longitudinal data from a large sample.Diaries are: ",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "There are many definitions for task analysis, but a simple interpretation is:",
-                    "answeredRight": false
-                }
+                "questionTitle": "Which of the following is most important in user-centered design?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Usability testing for a Web site can be performed with:",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Which is most important to a user experience designer?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "Diaries allow a researcher to collect, in situ, longitudinal data from a large sample.Diaries are: ",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "There are many definitions for task analysis, but a simple interpretation is:",
+                "answeredRight": false,
+                "answered": false
+            }
             ],
             "answers": [
                 ["Iterative design and user testing", "An object-oriented development process", "Regular design demonstrations", "Including every function each user wants"],
@@ -177,25 +200,30 @@
         "description": "Empty description",
         "quiz": {
             "questions": [{
-                    "questionTitle": "Some affordances are obvious and are some learned. What are/is a typical factor(s) that influence peoples’ affordances?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "If one wished to understand how people engage in tasks in the “real world” in order to design interactions to support this, what method would you use?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "What is an advantage of focus groups?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "What is true about surveys?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "You drag a folder to make a copy of its contents. An animation appears on the screen, showing files moving from one folder to another. This is an example of which of the following:",
-                    "answeredRight": false
-                }
+                "questionTitle": "Some affordances are obvious and are some learned. What are/is a typical factor(s) that influence peoples’ affordances?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "If one wished to understand how people engage in tasks in the “real world” in order to design interactions to support this, what method would you use?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "What is an advantage of focus groups?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "What is true about surveys?",
+                "answeredRight": false,
+                "answered": false
+            },
+            {
+                "questionTitle": "You drag a folder to make a copy of its contents. An animation appears on the screen, showing files moving from one folder to another. This is an example of which of the following:",
+                "answeredRight": false,
+                "answered": false
+            }
             ],
             "answers": [
                 ["A,B,and C", "Culture", "Knowledge", "Experience"],
@@ -203,35 +231,6 @@
                 ["Group dynamics", "Group think", "Social demand characteristics", "A clear picture of desires and needs"],
                 ["All the options are right", "Surveys are a set of questions ", "Surveys yield quantitative results ", "Surveys can easily go wrong"],
                 ["Feedback", "Affordance", "Mapping", "Visibility"]
-            ]
-        }
-    }]
-},
-{
-    "courseTitle": "Object-oriented Software Development",
-    "ID": 4,
-    "teacher": "Johannes Schmidt",
-    "description": "The purpose of the course is to provide students with knowledge required to carry out object-oriented design in accordance with established practice, and to be able to implement the results of said design in program code.",
-    "books": [{
-        "isbn": "9780131489066",
-        "bookTitle": "Applying UML and patterns",
-        "authors": ["Prentice Hall PTR"],
-        "releaseYear": "2005",
-        "coverImage": "Empty coverImage",
-        "description": "Empty description",
-        "quiz": {
-            "questions": [{
-                    "questionTitle": "Which is a reason for IT-project failure?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "What happens according to the triple contraint if you reduce cost (budget)?",
-                    "answeredRight": false
-                }
-            ],
-            "answers": [
-                ["Fast-changing technology", "Underuse of the waterfall model", "Stable requirements", "Overuse of agile methods"],
-                ["Increase time and/or reduce scope", "Increase time and/or cost", "Reduce time and/or increase scope", "Increase cost and/or reduce scope"]
             ]
         }
     }]

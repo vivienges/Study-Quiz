@@ -23,8 +23,8 @@ class BookViewController: UIViewController {
     
     
     //MARK: Reference for the book that is handed over from CourseViewController
-    var currentISBN = ""
-    var courseID = 0
+    //var currentISBN = ""
+    //var courseID = 0
     var currentBook = Book()
     
     
@@ -41,13 +41,15 @@ class BookViewController: UIViewController {
         super.viewDidLoad()
         
         
-        for book in AppData.courses[courseID].books {
-            if book.isbn == currentISBN {
-                currentBook = book
-            } else {
-                print("This book does not exist")
-            }
-        }
+        
+        
+//        for book in AppData.courses[courseID].books {
+//            if book.isbn == currentISBN {
+//                currentBook = book
+//            } else {
+//                print("This book does not exist")
+//            }
+//        }
         
         
         

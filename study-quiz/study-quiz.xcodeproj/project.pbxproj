@@ -31,7 +31,7 @@
 		A01B707E2392BFE80089B80A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A01B707D2392BFE70089B80A /* data.json */; };
 		A06D3B7B23914DDB00CF286A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D3B7A23914DDB00CF286A /* CustomButton.swift */; };
 		A0ADC1922393ECAD00E69AEE /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADC1912393ECAD00E69AEE /* CustomProgressBar.swift */; };
-		A0ADC1942393F4C400E69AEE /* coverUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADC1932393F4C400E69AEE /* coverUIImageView.swift */; };
+		A0ADC1942393F4C400E69AEE /* CoverUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADC1932393F4C400E69AEE /* CoverUIImageView.swift */; };
 		FE6B7AEC2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B7AEB2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift */; };
 		FE6B7AEE2392A52D001488DB /* QuizFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B7AED2392A52D001488DB /* QuizFeedbackViewController.swift */; };
 /* End PBXBuildFile section */
@@ -75,7 +75,7 @@
 		A01B707D2392BFE70089B80A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A06D3B7A23914DDB00CF286A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A0ADC1912393ECAD00E69AEE /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
-		A0ADC1932393F4C400E69AEE /* coverUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coverUIImageView.swift; sourceTree = "<group>"; };
+		A0ADC1932393F4C400E69AEE /* CoverUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverUIImageView.swift; sourceTree = "<group>"; };
 		FE6B7AEB2392A4B1001488DB /* QuestionFeedbackPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFeedbackPopUpViewController.swift; sourceTree = "<group>"; };
 		FE6B7AED2392A52D001488DB /* QuizFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFeedbackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +193,7 @@
 				A06D3B7A23914DDB00CF286A /* CustomButton.swift */,
 				788DC18E23982A2D00340CF9 /* ProgressCircle.swift */,
 				63D1302B2396A6C6008749FB /* CustomNavigationBar.swift */,
-				A0ADC1932393F4C400E69AEE /* coverUIImageView.swift */,
+				A0ADC1932393F4C400E69AEE /* CoverUIImageView.swift */,
 				A0ADC1912393ECAD00E69AEE /* CustomProgressBar.swift */,
 			);
 			path = CustomUI;
@@ -312,7 +312,7 @@
 				63184C9823816734004C2781 /* CourseViewController.swift in Sources */,
 				A0ADC1922393ECAD00E69AEE /* CustomProgressBar.swift in Sources */,
 				63C2ACD3239C0EDD00C2437C /* StartViewController.swift in Sources */,
-				A0ADC1942393F4C400E69AEE /* coverUIImageView.swift in Sources */,
+				A0ADC1942393F4C400E69AEE /* CoverUIImageView.swift in Sources */,
 				63CA1609237F33C2008DBC88 /* Book.swift in Sources */,
 				63CA1607237F314D008DBC88 /* BookViewController.swift in Sources */,
 				63C2ACCF239A562F00C2437C /* AppData.swift in Sources */,

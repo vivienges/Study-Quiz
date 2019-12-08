@@ -14,7 +14,6 @@ class Question: Codable {
     //MARK: Properties
     var questionTitle : String
     var answeredRight : Bool
-        
     
     //MARK: Initializer 
     init(questionTitle: String, answeredRight : Bool) {

@@ -21,10 +21,6 @@ class bookTableViewCell : UITableViewCell {
         super.awakeFromNib()
         containerView.layer.cornerRadius = 12
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }
 
 class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -39,20 +35,13 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var teacherLabelContainer: UIView!
     
     //MARK: Reference for the course that is handed over from CourseTableViewController
-    //var courseID = 0
     var currentCourse = Course()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("COURSE: \(currentCourse.books)")
-        
-        // Set the course that was selected
-        //currentCourse = AppData.courses[courseID]
-        
         myTableView.delegate = self
         myTableView.dataSource = self
-        myTableView.delegate = self
         
         //MARK: Set UI to course info
         courseTitle.text = currentCourse.courseTitle
@@ -75,8 +64,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             index = index + 1
         }
-        
-        
         
     }
     
@@ -106,17 +93,16 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 let publishedDate = volumeInfo!["publishedDate"] as? String;
                                 
                                 if (volumeInfo != nil && imageLinks != nil) {
-                                    let smallThumbnail = imageLinks!["thumbnail"] as! String;
-                                    if (smallThumbnail != "" && title != "") {
+                                    let thumbnail = imageLinks!["thumbnail"] as! String;
+                                    if (thumbnail != "" && title != "") {
                                         // Write data from API into the books of our Class
-                                        self.currentCourse.books[index].coverImage! = smallThumbnail
+                                        self.currentCourse.books[index].coverImage! = thumbnail
                                         self.currentCourse.books[index].description! = subTitle ?? ""
                                         self.currentCourse.books[index].bookTitle! = title ?? self.currentCourse.books[index].bookTitle!
                                         if authors != nil && authors != [""]  && publishedDate != nil && publishedDate != "" {
                                             self.currentCourse.books[index].authors = authors!
                                             self.currentCourse.books[index].releaseYear = publishedDate!
                                         }
-                                        
                                     }
                                 }
                             }
@@ -130,8 +116,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }).resume()
         reloadInputViews();
     }
-    
-    
     
     // MARK: TableView Functions
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -148,10 +132,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let currentBook: Book = currentCourse.books[indexPath.row]
         cell.cellTitle?.text = currentBook.bookTitle
-        
-        let authors = currentBook.authors[0]
-        
-        cell.cellDetail?.text = authors
+        let author = currentBook.authors[0]
+        cell.cellDetail?.text = author
         
         if let url = URL(string: currentBook.coverImage ?? ""){
             do {
@@ -164,7 +146,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-    
     // MARK: Setup segue
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showBookSegue", sender: self)
@@ -172,14 +153,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookViewController {
-            
-            //courseID = (myTableView.indexPathForSelectedRow?.row)!
-            
             destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
-            //destination.courseID = courseID
-            
-
-            myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
         }
     }
 }

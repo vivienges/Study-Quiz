@@ -18,13 +18,9 @@ class QuestionViewController: UIViewController {
     var rightAnswerPlacement:UInt32 = 0
     var amountCorrectAnswers = 0
     var answeredCorrect = false
-    var arrayCorrect: [Int]?
     
     //MARK: Reference for the quiz that is handed over from QuizViewController
     var currentBook = Book()
-//    var currentBook.quiz = Quiz()
-//    var currentISBN = ""
-//    var courseID = 0
     
     //MARK: ProgressBar UI Elements
     @IBOutlet weak var quizProgressBar: UIProgressView!
@@ -33,20 +29,11 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         questionViewController = self as QuestionViewController
         
         for question in currentBook.quiz.questions {
-            
             questions.append(question)
         }
-        newQuestion()        
-        
-    }
-    @IBAction func unwindToQuestionVC(segue:UIStoryboardSegue) {
-        currentQuestion = 0
-        amountCorrectAnswers = 0
         newQuestion()
     }
     
@@ -55,23 +42,15 @@ class QuestionViewController: UIViewController {
             amountCorrectAnswers += 1
             answeredCorrect = true
             currentBook.quiz.questions[currentQuestion-1].answeredRight = true
-            
-            print("PROGRESS: \(currentBook.quiz.questions[currentQuestion-1].answeredRight)")
-            
+                        
         } else {
             answeredCorrect = false
             currentBook.quiz.questions[currentQuestion-1].answeredRight = false
         }
         
         if (currentQuestion <= questions.count) {
-//            navigationController?.popToRootViewController(animated: true)
             performSegue(withIdentifier: "popUpSegue", sender: self)
         }
-        
-    }
-    
-    func pop() {
-        self.navigationController?.viewControllers.removeLast()
     }
     
     
@@ -115,15 +94,11 @@ class QuestionViewController: UIViewController {
             popUpVC?.answeredCorrect = answeredCorrect
         }
     }
-    
-    
-    
-
-    
-    
-    
-    
-    
+    @IBAction func unwindToQuestionVC(segue:UIStoryboardSegue) {
+        currentQuestion = 0
+        amountCorrectAnswers = 0
+        newQuestion()
+    }
     
 }
 

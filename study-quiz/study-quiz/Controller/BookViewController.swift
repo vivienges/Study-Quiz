@@ -23,40 +23,16 @@ class BookViewController: UIViewController {
     
     
     //MARK: Reference for the book that is handed over from CourseViewController
-    //var currentISBN = ""
-    //var courseID = 0
     var currentBook = Book()
-    
-    
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-
-        setupProgressBar()
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-//        for book in AppData.courses[courseID].books {
-//            if book.isbn == currentISBN {
-//                currentBook = book
-//            } else {
-//                print("This book does not exist")
-//            }
-//        }
-        
-        
-        
         self.navigationItem.titleView?.backgroundColor = .clear
         navigationItem.largeTitleDisplayMode = .never
-
         bookAuthorsContainer.layer.cornerRadius = bookAuthorsContainer.frame.height / 2
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: currentBook.bookTitle, style: .plain, target: nil, action: nil)
         
         // MARK: Set data to book information
         bookTitle.text = currentBook.bookTitle
@@ -71,10 +47,10 @@ class BookViewController: UIViewController {
         
     }
     
-    @IBAction func unwindToBookVC(segue:UIStoryboardSegue) {
-        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        setupProgressBar()
     }
-    
     
     func fetchCoverImage() {
         let urlKey = "http://books.google.com/books/content?id=YnteDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
@@ -102,7 +78,6 @@ class BookViewController: UIViewController {
         }
     }
     
-    
     func setupProgressBar() {
         
         // MARK: ProgressBar
@@ -122,8 +97,8 @@ class BookViewController: UIViewController {
         progressBar.setProgress(progressFloat, animated: true)
     }
     
-    
-    
+    @IBAction func unwindToBookVC(segue:UIStoryboardSegue) {
+    }
 }
 
 

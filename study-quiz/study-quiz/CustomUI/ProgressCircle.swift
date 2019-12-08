@@ -60,6 +60,4 @@ class ProgressCircle: UIView {
         progressLayer.add(animation, forKey: "animateprogress")
     }
     
-
-
 }

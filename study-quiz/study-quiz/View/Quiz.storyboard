@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7X5-4f-W1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6053.6231884057979" y="-326.11607142857139"/>
+            <point key="canvasLocation" x="5870" y="-844"/>
         </scene>
         <!--Quiz Feedback View Controller-->
         <scene sceneID="8ms-V3-u3r">
@@ -285,14 +285,14 @@
                                     <segue destination="cGL-6I-KVP" kind="unwind" unwindAction="unwindToQuestionVCWithSegue:" id="lk0-9v-mbZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-Gn-RFi">
-                                <rect key="frame" x="172.33333333333334" y="331" width="69.666666666666657" height="33.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-Gn-RFi">
+                                <rect key="frame" x="185" y="331" width="44.333333333333343" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJf-zR-oqT">
-                                <rect key="frame" x="171.66666666666666" y="163" width="71" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJf-zR-oqT">
+                                <rect key="frame" x="144" y="163" width="126" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="9EN-ju-Kjd"/>
                                 </constraints>
@@ -336,7 +336,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDM-Kh-PdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="cGL-6I-KVP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7271.0144927536239" y="-1054.0178571428571"/>
+            <point key="canvasLocation" x="6891" y="-844"/>
         </scene>
     </scenes>
     <resources>

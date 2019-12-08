@@ -31,14 +31,6 @@ class study_quizTests: XCTestCase {
         }
     }
     
-    func testGetYear() {
-        let book = Book(isbn: "123456", bookTitle: "Thsis is a sample book", authors: ["Max Mustermann"], releaseYear: "2014", coverImage: "sample.jpg", summary: "Lorem Ipsum", description: "Lorem Ipsum", quiz: [Quiz()])
-        
-        book.getYear()
-        XCTAssertEqual(book.releaseYear, "2014", "The release year was not fetched correctly")
-    }
-    
-    
     func testCustomButton() {
         let button = CustomButton()
         XCTAssertEqual(button.backgroundColor, UIColor(named: "Secondary"), "The button has the incorrect background color")

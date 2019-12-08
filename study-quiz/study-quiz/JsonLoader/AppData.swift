@@ -3,9 +3,7 @@ import Foundation
 
 struct AppData {
     
-    static var courses: [Course] = [
-        Course()
-    ]
+    static var courses: [Course] = []
     
     static func loadJSON() {
         self.courses = load("data.json")

@@ -22,10 +22,6 @@ class myTableViewCell: UITableViewCell {
         containerView.layer.cornerRadius = 12
         cellTitle.font = .boldSystemFont(ofSize: 18)
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }
 
 class CoursesTableViewController: UITableViewController {
@@ -39,23 +35,15 @@ class CoursesTableViewController: UITableViewController {
         myTableView.delegate = self
         myTableView.separatorStyle = .none
         self.navigationController?.setTransparentNavBar()
-
-        
+ 
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-    }
-    
     
     // MARK: TableView Functions
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return AppData.courses.count
     }
     

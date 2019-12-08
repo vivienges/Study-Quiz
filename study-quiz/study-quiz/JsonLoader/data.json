@@ -3,15 +3,13 @@
     "ID": 1,
     "teacher": "Johannes Schmidt",
     "description": "The purpose of the course is to provide students with knowledge required to carry out object-oriented design in accordance with established practice, and to be able to implement the results of said design in program code.",
-    "totalQuestions": 10,
     "books": [{
         "isbn": "9780131489066",
         "bookTitle": "Applying UML and Patterns",
         "authors": ["Craig Larman"],
         "releaseYear": "2005",
         "coverImage": "Empty coverImage",
-        "summary": "ewgr",
-        "description": "wgr",
+        "description": "Empty description",
         "quiz": {
             "questions": [{
                     "questionTitle": "Which is a reason for IT-project failure?",
@@ -73,15 +71,13 @@
     "ID": 2,
     "teacher": "Anders Cartensen",
     "description": "Kursen ämnar ge studenten grundläggande förståelse för och kunskaper i strukturerad programmering, inklusive modellering, programdesign, och implementation med hjälp av imperativ programmering. Kursen ämnar även ge studenten en kortare introduktion till olika licensformer och andra för programmerare relevanta immaterialrättsliga frågor.",
-    "totalQuestions": 8,
     "books": [{
         "isbn": "0201721686",
         "bookTitle": "C++ from the Beginning",
         "authors": ["Jan Skansholm"],
         "releaseYear": "2010",
         "coverImage": "Empty coverImage",
-        "summary": "ewgr",
-        "description": "wgr",
+        "description": "Empty description",
         "quiz": {
             "questions": [{
                     "questionTitle": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
@@ -128,82 +124,20 @@
                 ["Förbättra programvaran", "Titta på källkoden men inte ändra den", "Förändra,men distribuera förändringar", "Distribuera mjukvaran"]
             ]
         }
-    },
-    {
-        "isbn": "9780007477159",
-        "bookTitle": "A Song of Ice and Fire",
-        "authors": ["George R. R. Martin"],
-        "releaseYear": "2010",
-        "coverImage": "efwgr",
-        "summary": "ewgr",
-        "description": "wgr",
-        "quiz": {
-            "questions": [{
-                    "questionTitle": "Vad menas med företrädesregler för operatorer i beräkningsuttryck?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Får jag klippa och klistra kod från internet och använda denna i program som jag själv gör publikt tillgängligt?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vad innebär explicit typkonvertering?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilka av följande alternativ beskriver tre viktiga egenskaper för en konstant i C",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilket av följande feltyper innebär att programmet ser ut att fungera men ger sporadiskt felaktiga beräkningar?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilket av följande svar ät rätt för följände beräkningsuttry: var1+var2*var3var3 ?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Vilken av följande funktionsdeklarationer är mest lämplig för att räkna ut volymen av en sfär , om globala variabler inte är tillåtna?",
-                    "answeredRight": false
-                },
-                {
-                    "questionTitle": "Öppen Källkod, Free Software är namn på mjukvara som är släppt under en licens som tillåter ett dig till?",
-                    "answeredRight": false
-                }
-            ],
-            "answers": [
-                ["Högre prioritet utförs före lägre prioritet", "Operatorer kan företräda varandra", "Operatorer kan inte företräde varandra", "Kallas också selektivitetsregler"],
-                ["Nej", "Tveklöst ja", "Ja om koden inte kan anses ha verkshöjd", "Ja om antalet rader understiger 200"],
-                ["Programmeraren", "Användaren", "En automatisk initiering av variabler", "Regler i språkspecifikationen "],
-                ["Initieras vid definitionen/deklarationen", "Laddas in vid programkörningen", "Kan inte skrivas ut i en printf-sats", "Måste avallokeras med free()-funktionen"],
-                ["Ett logiskt fel", "Ett exekveringsfel", "Ett syntaxfel", "Ett avgränsningsfel"],
-                ["4", "5", "7", "8"],
-                ["Double sphereVolume(double);", "Int sphereVolume(double);", "Double spereVolume(void);", "Double sphereVolume(int);"],
-
-                ["Förbättra programvaran", "Titta på källkoden men inte ändra den", "Förändra,men distribuera förändringar", "Distribuera mjukvaran"]
-            ]
-        }
     }
-    
     ]
 }, {
     "courseTitle": "User Research",
     "ID": 3,
     "teacher": "Bruce Ferwerda",
     "description": "The course introduces the students to user research concepts, methods and techniques as they are used throughout the design process to identify needs, behavioral patterns, and functionalities. It provides students with a basic understanding of the differences between interviews and surveys, qualitative and quantitative methodologies, and practically illustrates how to turn user research results into communicable synthetic deliverables such as personas or user journeys.",
-    "totalQuestions": 10,
     "books": [{
         "isbn": "0123848695",
         "bookTitle": "Observing the User Experience",
         "authors": [""],
         "releaseYear": "2010",
-        "coverImage": "efwgr",
-        "summary": "ewgr",
-        "description": "wgr",
+        "coverImage": "Empty coverImage",
+        "description": "Empty description",
         "quiz": {
             "questions": [{
                     "questionTitle": "Which of the following is most important in user-centered design?",
@@ -239,9 +173,8 @@
         "bookTitle": "UX Research",
         "authors": ["Brad Nunnally", "David K. Farkas"],
         "releaseYear": "2010",
-        "coverImage": "efwgr",
-        "summary": "ewgr",
-        "description": "wgr",
+        "coverImage": "Empty coverImage",
+        "description": "Empty description",
         "quiz": {
             "questions": [{
                     "questionTitle": "Some affordances are obvious and are some learned. What are/is a typical factor(s) that influence peoples’ affordances?",
@@ -279,15 +212,13 @@
     "ID": 4,
     "teacher": "Johannes Schmidt",
     "description": "The purpose of the course is to provide students with knowledge required to carry out object-oriented design in accordance with established practice, and to be able to implement the results of said design in program code.",
-    "totalQuestions": 10,
     "books": [{
         "isbn": "9780131489066",
         "bookTitle": "Applying UML and patterns",
         "authors": ["Prentice Hall PTR"],
         "releaseYear": "2005",
-        "coverImage": "efwgr",
-        "summary": "ewgr",
-        "description": "wgr",
+        "coverImage": "Empty coverImage",
+        "description": "Empty description",
         "quiz": {
             "questions": [{
                     "questionTitle": "Which is a reason for IT-project failure?",

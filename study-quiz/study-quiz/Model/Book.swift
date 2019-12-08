@@ -9,18 +9,16 @@ class Book: Codable {
     var authors: [String?]
     var releaseYear: String?
     var coverImage: String?
-    var summary: String?
     var description: String?
     var quiz : Quiz
 
     
     //MARK: Initializer
-    init(isbn : String, bookTitle: String, authors: [String], releaseYear: String, coverImage: String, summary: String, description: String, quiz : Quiz) {
+    init(isbn : String, bookTitle: String, authors: [String], releaseYear: String, coverImage: String, description: String, quiz : Quiz) {
         self.isbn = isbn
         self.bookTitle = bookTitle
         self.authors = authors
         self.releaseYear = releaseYear
-        self.summary = summary
         self.description = description
         self.coverImage = coverImage
         self.quiz = quiz
@@ -31,7 +29,6 @@ class Book: Codable {
         self.authors = ["Empty"]
         self.bookTitle = "Empty"
         self.releaseYear = "0"
-        self.summary = "Empty"
         self.description = "Empty"
         self.coverImage = "Empty"
         self.quiz = Quiz()

@@ -39,7 +39,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var teacherLabelContainer: UIView!
     
     //MARK: Reference for the course that is handed over from CourseTableViewController
-    var courseID = 0
+    //var courseID = 0
     var currentCourse = Course()
     
     override func viewDidLoad() {
@@ -173,8 +173,11 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookViewController {
             
-            destination.currentISBN = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!].isbn!
-            destination.courseID = courseID
+            //courseID = (myTableView.indexPathForSelectedRow?.row)!
+            
+            destination.currentBook = currentCourse.books[(myTableView.indexPathForSelectedRow?.row)!]
+            //destination.courseID = courseID
+            
 
             myTableView.deselectRow(at: myTableView!.indexPathForSelectedRow!, animated: true)
         }

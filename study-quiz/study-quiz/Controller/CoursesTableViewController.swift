@@ -48,7 +48,7 @@ class CoursesTableViewController: UITableViewController {
     }
     
     
-    // MARK: - TableView Functions
+    // MARK: TableView Functions
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

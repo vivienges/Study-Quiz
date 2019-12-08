@@ -9,7 +9,6 @@ struct AppData {
     
     static func loadJSON() {
         self.courses = load("data.json")
-        //print("loading")
     }
 }
 

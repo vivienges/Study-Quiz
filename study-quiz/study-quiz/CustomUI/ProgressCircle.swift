@@ -11,9 +11,8 @@ import UIKit
 
 class ProgressCircle: UIView {
     
-
-        @IBInspectable public var trackColor: UIColor = UIColor.lightGray
-        @IBInspectable public var progressColor = UIColor(named: "Secondary")
+     var trackColor: UIColor = UIColor.lightGray
+     var progressColor = UIColor(named: "Secondary")
     
      var progressLayer = CAShapeLayer()
      var trackLayer = CAShapeLayer()
@@ -27,8 +26,6 @@ class ProgressCircle: UIView {
         super.init(coder: aDecoder)
         createCircularPath()
     }
-    
-
     
     let lineWidth = 15
     
@@ -49,7 +46,6 @@ class ProgressCircle: UIView {
         progressLayer.strokeColor = progressColor?.cgColor
         progressLayer.lineWidth = CGFloat(lineWidth)
         progressLayer.lineCap = .round
-        
         progressLayer.strokeEnd = 0.0
         layer.addSublayer(progressLayer)
     }
@@ -59,7 +55,7 @@ class ProgressCircle: UIView {
         animation.duration = 1
         animation.fromValue = 0
         animation.toValue = value
-        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         progressLayer.strokeEnd = CGFloat(value)
         progressLayer.add(animation, forKey: "animateprogress")
     }

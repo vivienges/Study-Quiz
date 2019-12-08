@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LNa-O6-gnG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LNa-O6-gnG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -269,7 +269,7 @@
                                         <color key="textColor" name="Dark"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-ix-vL0" customClass="CustomProgressBar" customModule="study_quiz" customModuleProvider="target">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-ix-vL0" customClass="CustomProgressBar" customModule="study_quiz" customModuleProvider="target">
                                         <rect key="frame" x="8" y="187.5" width="398" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ZxH-A6-lcN"/>
@@ -420,8 +420,8 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-BE-Hxy" customClass="coverUIImageView" customModule="study_quiz" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8.5" width="84" height="125"/>
-                                                    <color key="backgroundColor" name="Light-Gray"/>
-                                                    <color key="tintColor" name="White"/>
+                                                    <color key="backgroundColor" name="Dark"/>
+                                                    <color key="tintColor" name="Secondary"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="DEt-BE-Hxy" secondAttribute="height" multiplier="2:3" id="aTr-tK-2qK"/>
                                                     </constraints>

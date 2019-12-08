@@ -12,7 +12,7 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Load in data from JSON-File
+        //MARK: Load in data from JSON-File
         AppData.loadJSON()
 
     }

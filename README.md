@@ -12,16 +12,16 @@ In the app a student has an overview of the courses he is attending. Each course
 
 The features of the app are shown below:
 
-a list of courses 
-a quiz about the course content in general
-a list of books (if literature was specified) 
-quizzes corresponding to each book
-a brief summary of each book 
-multiple choice questions
-each student has a profile 
-each student can see their statistics
-amount of answered questions
-amount of correct and wrong answers
+- a list of courses 
+- a quiz about the course content in general
+- a list of books (if literature was specified) 
+- quizzes corresponding to each book
+- a brief summary of each book 
+- multiple choice questions
+- each student has a profile 
+- each student can see their statistics
+- amount of answered questions
+- amount of correct and wrong answers
 
 
 Some extra features that may be added:

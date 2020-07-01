@@ -26,10 +26,10 @@ The features of the app are shown below:
 
 Some extra features that may be added:
 
-students can add courses manually depending on what courses they are attending
-each quiz has a limited time
-other types of questions are available, not only multiple choice 
-when the student receives the result of each question, a quotation of the text passage from the book and/or the corresponding page number is shown as well so that they can look it up in the book 
-amount of hours the students “studied” 
-the course the students have the most correct answers : “Favorite course” 
-each student can add a profile picture to their profile with his phone camera 
+- students can add courses manually depending on what courses they are attending
+- each quiz has a limited time
+- other types of questions are available, not only multiple choice 
+- when the student receives the result of each question, a quotation of the text passage from the book and/or the corresponding page number is shown as well so that they can look it up in the book 
+- amount of hours the students “studied” 
+- the course the students have the most correct answers : “Favorite course” 
+- each student can add a profile picture to their profile with his phone camera 
